@@ -1,0 +1,3212 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fizika Düsturları</title>
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(145deg, #10192d 0%, #0b1120 50%, #080c14 100%);
+      --html-bg: #090d16;
+      --panel-bg: #0d1424;
+      --box-bg: rgba(14, 21, 38, 0.94);
+      --card-bg: #141e33;
+      --card-hover: #18243d;
+      --sub-bg: #101829;
+      --input-bg: #151f36;
+      --text-main: #f8fafc;
+      --text-sub: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-soft: rgba(248, 250, 252, 0.22);
+      --border-subtle: rgba(248, 250, 252, 0.14);
+      --accent-1: #38bdf8;
+      --accent-2: #fbbf24;
+      --accent-2-text: #fcd34d;
+      --btn-grad: linear-gradient(135deg, #0284c7, #d97706);
+      --active-grad: linear-gradient(135deg, #0284c7, #0369a1);
+      --badge-bg: rgba(248, 250, 252, 0.10);
+      --badge-text: #f8fafc;
+      --dustur-olcu: 20px;
+      --izah-olcu: 14px;
+    }
+
+    /* 2. Ağ & Qızılı Gündüz (Açıq-ağ tema) */
+    body[data-tema="ag-gunduz"] {
+      --bg-gradient: linear-gradient(145deg, #f8fafc 0%, #eef2f6 55%, #e2e8f0 100%);
+      --html-bg: #f1f5f9;
+      --panel-bg: #ffffff;
+      --box-bg: rgba(255, 255, 255, 0.96);
+      --card-bg: #f8fafc;
+      --card-hover: #f1f5f9;
+      --sub-bg: #ffffff;
+      --input-bg: #f1f5f9;
+      --text-main: #0f172a;
+      --text-sub: #334155;
+      --text-muted: #64748b;
+      --border-soft: rgba(15, 23, 42, 0.18);
+      --border-subtle: rgba(15, 23, 42, 0.12);
+      --accent-1: #0284c7;
+      --accent-2: #d97706;
+      --accent-2-text: #b45309;
+      --btn-grad: linear-gradient(135deg, #0284c7, #d97706);
+      --active-grad: linear-gradient(135deg, #0284c7, #0369a1);
+      --badge-bg: rgba(2, 132, 199, 0.10);
+      --badge-text: #0369a1;
+    }
+/* 3. Zümrüd & Ağ */
+    body[data-tema="zumrud"] {
+      --bg-gradient: linear-gradient(145deg, #071e1a 0%, #051412 52%, #030c0a 100%);
+      --html-bg: #04100e;
+      --panel-bg: #081c18;
+      --box-bg: rgba(9, 28, 24, 0.94);
+      --card-bg: #0e2923;
+      --card-hover: #13352e;
+      --sub-bg: #091e1a;
+      --input-bg: #102d27;
+      --text-main: #f8fafc;
+      --text-sub: #d1fae5;
+      --text-muted: #86efac;
+      --border-soft: rgba(248, 250, 252, 0.22);
+      --border-subtle: rgba(248, 250, 252, 0.14);
+      --accent-1: #34d399;
+      --accent-2: #f8fafc;
+      --accent-2-text: #ffffff;
+      --btn-grad: linear-gradient(135deg, #059669, #0d9488);
+      --active-grad: linear-gradient(135deg, #059669, #047857);
+      --badge-bg: rgba(52, 211, 153, 0.14);
+      --badge-text: #a7f3d0;
+    }
+
+    /* 4. Bənövşəyi & Gümüşü Ağ */
+    body[data-tema="benovseyi"] {
+      --bg-gradient: linear-gradient(145deg, #18102b 0%, #100b1e 52%, #090612 100%);
+      --html-bg: #0c0817;
+      --panel-bg: #130d24;
+      --box-bg: rgba(22, 15, 41, 0.94);
+      --card-bg: #1d1436;
+      --card-hover: #251a45;
+      --sub-bg: #150e28;
+      --input-bg: #20163b;
+      --text-main: #f8fafc;
+      --text-sub: #e2e8f0;
+      --text-muted: #c4b5fd;
+      --border-soft: rgba(248, 250, 252, 0.24);
+      --border-subtle: rgba(248, 250, 252, 0.14);
+      --accent-1: #c084fc;
+      --accent-2: #f8fafc;
+      --accent-2-text: #f3e8ff;
+      --btn-grad: linear-gradient(135deg, #9333ea, #6366f1);
+      --active-grad: linear-gradient(135deg, #7e22ce, #4f46e5);
+      --badge-bg: rgba(192, 132, 252, 0.15);
+      --badge-text: #e9d5ff;
+    }
+
+    /* 5. Yaqut Qırmızı & Ağ */
+    body[data-tema="yaqut"] {
+      --bg-gradient: linear-gradient(145deg, #240d14 0%, #17080d 52%, #0d0407 100%);
+      --html-bg: #110609;
+      --panel-bg: #1b0a10;
+      --box-bg: rgba(30, 12, 18, 0.94);
+      --card-bg: #291119;
+      --card-hover: #351621;
+      --sub-bg: #1e0b12;
+      --input-bg: #2e131c;
+      --text-main: #fff1f2;
+      --text-sub: #ffe4e6;
+      --text-muted: #fda4af;
+      --border-soft: rgba(255, 241, 242, 0.24);
+      --border-subtle: rgba(255, 241, 242, 0.14);
+      --accent-1: #fb7185;
+      --accent-2: #ffffff;
+      --accent-2-text: #ffe4e6;
+      --btn-grad: linear-gradient(135deg, #e11d48, #be123c);
+      --active-grad: linear-gradient(135deg, #be123c, #9f1239);
+      --badge-bg: rgba(251, 113, 133, 0.15);
+      --badge-text: #fecdd3;
+    }
+
+    /* 6. Qrafit Boz & Ağ */
+    body[data-tema="qrafit"] {
+      --bg-gradient: linear-gradient(145deg, #1f2229 0%, #15171c 52%, #0d0e12 100%);
+      --html-bg: #111317;
+      --panel-bg: #181a20;
+      --box-bg: rgba(26, 29, 36, 0.95);
+      --card-bg: #232730;
+      --card-hover: #2b303b;
+      --sub-bg: #1b1e25;
+      --input-bg: #262a34;
+      --text-main: #ffffff;
+      --text-sub: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-soft: rgba(255, 255, 255, 0.28);
+      --border-subtle: rgba(255, 255, 255, 0.15);
+      --accent-1: #ffffff;
+      --accent-2: #38bdf8;
+      --accent-2-text: #7dd3fc;
+      --btn-grad: linear-gradient(135deg, #475569, #0284c7);
+      --active-grad: linear-gradient(135deg, #334155, #0369a1);
+      --badge-bg: rgba(255, 255, 255, 0.12);
+      --badge-text: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--html-bg); }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--accent-1), var(--accent-2));
+      border-radius: 999px;
+    }
+
+    html { background-color: var(--html-bg); }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      display: flex;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+/* ===================== RƏNG KOMBİNASİYASI PANELİ ===================== */
+    .tema-secici-qutu {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 5px 9px;
+    }
+    .tema-etiket {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-sub);
+      margin-right: 2px;
+    }
+    .tema-btn {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.38);
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      position: relative;
+    }
+    .tema-btn:hover {
+      transform: scale(1.15);
+    }
+    .tema-btn.aktiv-tema {
+      transform: scale(1.18);
+      box-shadow: 0 0 0 2px var(--panel-bg), 0 0 0 4px var(--accent-1);
+    }
+    .t-gece-ag   { background: linear-gradient(135deg, #0b1120 48%, #ffffff 52%); }
+    .t-ag-gunduz { background: linear-gradient(135deg, #ffffff 52%, #0284c7 55%); border-color: #94a3b8; }
+    .t-zumrud    { background: linear-gradient(135deg, #051412 48%, #34d399 52%); }
+    .t-benovseyi { background: linear-gradient(135deg, #100b1e 48%, #c084fc 52%); }
+    .t-yaqut     { background: linear-gradient(135deg, #17080d 48%, #fb7185 52%); }
+    .t-qrafit    { background: linear-gradient(135deg, #15171c 48%, #e2e8f0 52%); }
+
+    /* ===================== GİRİŞ (TANITIM) SƏHİFƏSİ ===================== */
+    .giris-sehifesi {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: var(--bg-gradient);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 36px 22px 48px;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+    .giris-sehifesi.gizli {
+      opacity: 0;
+      transform: translateY(-12px);
+      pointer-events: none;
+    }
+
+    .giris-fon-dusturlar {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .giris-fon-dusturlar span {
+      position: absolute;
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-weight: 800;
+      user-select: none;
+      white-space: nowrap;
+      opacity: 0.14;
+      color: var(--accent-1);
+      animation: suzenDustur 7s ease-in-out infinite alternate;
+    }
+    @keyframes suzenDustur {
+      from { transform: translateY(0px) rotate(-6deg); }
+      to { transform: translateY(-12px) rotate(6deg); }
+    }
+    .gf-1 { top: 9%;  left: 7%;  font-size: 28px; animation-delay: 0s; }
+    .gf-2 { top: 18%; right: 9%; font-size: 24px; color: var(--accent-2); animation-delay: 1s; }
+    .gf-3 { top: 46%; left: 5%;  font-size: 26px; animation-delay: 2s; }
+    .gf-4 { top: 58%; right: 6%; font-size: 29px; color: var(--accent-2); animation-delay: 1.5s; }
+    .gf-5 { bottom: 10%; left: 12%; font-size: 22px; animation-delay: 0.5s; }
+    .gf-6 { bottom: 12%; right: 14%; font-size: 24px; color: var(--accent-2); animation-delay: 2.5s; }
+
+    .giris-konteyner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 880px;
+      margin: auto;
+      background: var(--box-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 22px;
+      padding: 32px 36px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+
+    .giris-ust-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .dil-secici-qutu {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 5px 7px;
+    }
+    .dil-qlobus { font-size: 15px; padding: 0 4px 0 3px; user-select: none; }
+    .dil-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-sub);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 9px;
+      border-radius: 9px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s ease;
+    }
+    .dil-btn .dil-ad { font-weight: 500; font-size: 11px; opacity: 0.85; }
+    .dil-btn:hover {
+      color: var(--text-main);
+      background: var(--badge-bg);
+      border-color: var(--border-soft);
+    }
+    .dil-btn.aktiv-dil {
+      background: var(--btn-grad);
+      color: #ffffff;
+    }
+    .dil-btn.aktiv-dil .dil-ad { opacity: 1; font-weight: 600; }
+
+    @keyframes gloryYaziGelisi {
+      0% { opacity: 0; transform: translate3d(0, 14px, 0); }
+      100% { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+    @keyframes herfAcilisi {
+      0% { opacity: 0; transform: translateY(14px) scale(0.85) rotateX(40deg); filter: blur(4px); }
+      100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0deg); filter: blur(0); }
+    }
+    .anim-soz { display: inline-block; white-space: nowrap; }
+    .anim-herf {
+      display: inline-block;
+      opacity: 0;
+      animation: herfAcilisi 0.48s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .giris-anim { opacity: 0; animation: gloryYaziGelisi 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .giris-d-1 { animation-delay: 0.04s; }
+    .giris-d-2 { animation-delay: 0.08s; }
+    .giris-d-3 { animation-delay: 0.14s; }
+    .giris-d-4 { animation-delay: 0.20s; }
+    .giris-d-5 { animation-delay: 0.26s; }
+    .giris-d-6 { animation-delay: 0.32s; }
+
+    .giris-rozet {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      border: 1px solid var(--border-soft);
+    }
+
+    .giris-basliq {
+      margin: 0;
+      font-size: 31px;
+      font-weight: 800;
+      line-height: 1.28;
+      color: var(--text-main);
+      perspective: 600px;
+    }
+
+    .giris-alt-xett {
+      width: 120px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+      margin: 14px 0 18px;
+    }
+
+    .giris-meqsed { margin: 0 0 22px; font-size: 15.5px; line-height: 1.7; color: var(--text-sub); }
+    .giris-meqsed strong { color: var(--accent-2-text); }
+
+    .giris-kartlar {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .giris-kart {
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--accent-1);
+      border-radius: 14px;
+      padding: 15px 17px;
+      transition: transform 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+    }
+    .giris-kart:nth-child(even) { border-left-color: var(--accent-2); }
+    .giris-kart:hover {
+      transform: translate3d(0, -3px, 0);
+      background: var(--card-hover);
+      border-color: var(--border-soft);
+    }
+    .giris-kart h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; color: var(--text-main); }
+    .giris-kart p { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--text-sub); }
+
+    .giris-alt-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .giris-qisa-not { font-size: 13.5px; color: var(--text-sub); }
+
+    .daxil-ol-btn {
+      background: var(--btn-grad);
+      color: #ffffff;
+      border: none;
+      padding: 13px 26px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      transition: transform 0.18s ease, filter 0.18s ease;
+    }
+    .daxil-ol-btn:hover { transform: translate3d(0, -2px, 0); filter: brightness(1.06); }
+/* ===================== ƏSAS DÜSTURLAR SƏHİFƏSİ ===================== */
+    .esas-tetbiq {
+      display: none;
+      width: 100%;
+      min-height: 100vh;
+    }
+    .esas-tetbiq.aktiv-tetbiq {
+      display: flex;
+    }
+
+    .sepelənmiş-dusturlar {
+      position: fixed;
+      inset: 0;
+      left: 295px;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+      will-change: transform;
+    }
+    .sepelənmiş-dusturlar span {
+      position: absolute;
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-weight: 700;
+      user-select: none;
+      white-space: nowrap;
+      opacity: 0.10;
+      color: var(--accent-1);
+    }
+    .sd-1  { top: 8%;  left: 7%;  font-size: 24px; transform: rotate(-9deg); }
+    .sd-2  { top: 18%; left: 32%; font-size: 20px; color: var(--accent-2); transform: rotate(7deg); }
+    .sd-3  { top: 29%; left: 15%; font-size: 26px; transform: rotate(11deg); }
+    .sd-4  { top: 41%; left: 36%; font-size: 22px; color: var(--accent-2); transform: rotate(-6deg); }
+    .sd-5  { top: 53%; left: 6%;  font-size: 21px; transform: rotate(8deg); }
+    .sd-6  { top: 65%; left: 29%; font-size: 25px; color: var(--accent-2); transform: rotate(-11deg); }
+    .sd-7  { top: 76%; left: 12%; font-size: 22px; transform: rotate(6deg); }
+    .sd-8  { top: 87%; left: 34%; font-size: 20px; color: var(--accent-2); transform: rotate(-8deg); }
+
+    .sol-yan-sutun {
+      position: fixed;
+      top: 14px;
+      bottom: 14px;
+      left: 304px;
+      width: 248px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      pointer-events: none;
+    }
+
+    .reklam-panel {
+      width: 100%;
+      min-height: 92px;
+      flex-shrink: 0;
+      background: var(--box-bg);
+      border: 1px dashed var(--border-soft);
+      border-radius: 13px;
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      pointer-events: auto;
+      overflow: hidden;
+    }
+
+    .reklam-basliq {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: var(--badge-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      padding: 2px 8px;
+    }
+
+    .reklam-icerik {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4px;
+      overflow: hidden;
+    }
+
+    .sol-dalga-qutu {
+      width: 100%;
+      height: 290px;
+      flex-shrink: 0;
+      pointer-events: none;
+      overflow: hidden;
+      background: var(--panel-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 13px;
+    }
+    .sol-dalga-qutu svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .qrafik-etiket {
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      fill: var(--text-muted);
+    }
+    .qrafik-etiket.mavi { fill: var(--accent-1); }
+    .qrafik-etiket.qum { fill: var(--accent-2); }
+
+    .elave-sol-panel {
+      width: 100%;
+      flex: 1;
+      min-height: 150px;
+      background: var(--box-bg);
+      border: 1px dashed var(--border-soft);
+      border-radius: 13px;
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      pointer-events: auto;
+      overflow: hidden;
+    }
+
+    .mobil-reklam-qutu {
+      display: none;
+    }
+
+    @keyframes yaziGelisi {
+      from { opacity: 0; transform: translate3d(0, 12px, 0); }
+      to { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+    @keyframes kartGelisi {
+      from { opacity: 0; transform: translate3d(12px, 0, 0); }
+      to { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+
+    .sol-panel {
+      width: 295px;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      background-color: var(--panel-bg);
+      border-right: 1px solid var(--border-soft);
+      padding: 24px 14px 36px;
+      flex-shrink: 0;
+      z-index: 4;
+    }
+
+    .sol-ust-setir,
+    .movzu-siyahi-qutu {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sol-ust-setir {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0 14px 6px;
+    }
+
+    .sol-basliq {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--accent-1);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .mobil-menyu-btn {
+      display: none;
+      background: var(--badge-bg);
+      border: 1px solid var(--border-soft);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: 9px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .axtaris-qutu {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .axtaris-input {
+      width: 100%;
+      background: var(--input-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 11px;
+      padding: 10px 14px 10px 36px;
+      color: var(--text-main);
+      font-size: 13.5px;
+      outline: none;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .axtaris-input::placeholder { color: var(--text-muted); }
+    .axtaris-input:focus {
+      border-color: var(--accent-1);
+      background: var(--card-hover);
+    }
+    .axtaris-ikon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 13px;
+      color: var(--accent-1);
+      pointer-events: none;
+    }
+    .axtaris-bos {
+      display: none;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 14px 8px;
+    }
+
+    .dustur-axtaris-panel {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 13px;
+      padding: 8px 12px;
+      margin-bottom: 18px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .dustur-axtaris-panel:focus-within {
+      border-color: var(--accent-1);
+      box-shadow: 0 0 0 3px rgba(248, 250, 252, 0.10);
+    }
+    .dustur-axtaris-ikon {
+      font-size: 14px;
+      color: var(--accent-1);
+      flex-shrink: 0;
+    }
+    .dustur-axtaris-input {
+      flex: 1;
+      min-width: 0;
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      font-size: 14px;
+      padding: 4px 2px;
+      outline: none;
+    }
+    .dustur-axtaris-input::placeholder {
+      color: var(--text-muted);
+    }
+    .dustur-axtaris-temizle {
+      background: var(--sub-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: none;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+    .dustur-axtaris-temizle.gorunen {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .dustur-axtaris-temizle:hover {
+      border-color: var(--accent-2);
+    }
+
+    .axtaris-tapilmadi-qutu {
+      display: none;
+      background: var(--box-bg);
+      border: 1px dashed var(--border-soft);
+      border-radius: 14px;
+      padding: 24px 18px;
+      text-align: center;
+      color: var(--text-sub);
+      margin-top: 8px;
+      animation: yaziGelisi 0.25s ease-out;
+    }
+    .axtaris-tapilmadi-qutu .tapilmadi-ikon {
+      font-size: 26px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .axtaris-tapilmadi-qutu strong {
+      color: var(--accent-2-text);
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .axtaris-tapilmadi-qutu span {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .movzu-btn {
+      width: 100%;
+      text-align: left;
+      background: var(--card-bg);
+      color: var(--text-sub);
+      border: 1px solid var(--border-subtle);
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-size: 13.8px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      transition: all 0.2s ease;
+    }
+    .movzu-sira {
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--text-main);
+      background: var(--badge-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 6px;
+      padding: 2px 6px;
+      flex-shrink: 0;
+    }
+    .movzu-btn:hover {
+      background: var(--card-hover);
+      border-color: var(--border-soft);
+      color: var(--text-main);
+      transform: translate3d(3px, 0, 0);
+    }
+    .movzu-btn.aktiv {
+      background: var(--active-grad);
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .movzu-btn.aktiv .movzu-sira {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.38);
+      color: #ffffff;
+    }
+
+    .vahidler-ayirici {
+      height: 1px;
+      background: var(--border-subtle);
+      margin: 14px 0 12px;
+    }
+
+    .vahidler-btn {
+      width: 100%;
+      text-align: left;
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border-soft);
+      padding: 12px 15px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .vahidler-btn:hover {
+      background: var(--card-hover);
+      border-color: var(--accent-2);
+      transform: translate3d(3px, 0, 0);
+    }
+    .vahidler-btn.aktiv {
+      background: var(--btn-grad);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+    }
+
+    .giris-qayit-btn {
+      width: 100%;
+      margin-top: 4px;
+      background: var(--sub-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border-soft);
+      padding: 10px 14px;
+      border-radius: 11px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .giris-qayit-btn:hover {
+      border-color: var(--accent-1);
+      background: var(--card-hover);
+    }
+
+    .sag-panel {
+      flex: 1;
+      padding: 28px 34px 92px;
+      overflow-x: hidden;
+      position: relative;
+      z-index: 2;
+    }
+    .ust-basliq {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 20px;
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 18px;
+      margin-bottom: 26px;
+    }
+    .sayt-adi { text-align: right; margin-left: auto; max-width: 760px; }
+    .ust-etiket {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      border: 1px solid var(--border-soft);
+      margin-bottom: 8px;
+    }
+    .sayt-adi h2 {
+      margin: 0;
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.3;
+      color: var(--text-main);
+    }
+    .sayt-adi p { margin: 6px 0 0; font-size: 14px; color: var(--text-sub); }
+
+    .movzu-mezmun {
+      display: none;
+      background: var(--box-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 26px;
+      max-width: 760px;
+      margin-left: auto;
+      counter-reset: dustur-saygac;
+    }
+    .movzu-mezmun.gorunen { display: block; animation: yaziGelisi 0.28s ease-out; }
+    .movzu-mezmun h1 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      color: var(--text-main);
+      letter-spacing: 0.2px;
+      animation: yaziGelisi 0.32s ease-out;
+    }
+    .qisa-izah { color: var(--text-sub); margin: 0 0 20px; line-height: 1.65; animation: yaziGelisi 0.35s ease-out; }
+
+    .vahid-siyahi {
+      list-style: none;
+      margin: 12px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .vahid-siyahi li {
+      background: var(--sub-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .vahid-no {
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--accent-2-text);
+      background: var(--badge-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 6px;
+      padding: 2px 7px;
+      flex-shrink: 0;
+    }
+    .vahid-simvol {
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-weight: 800;
+      color: var(--accent-1);
+    }
+    .vahid-qiymet {
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-weight: 700;
+      color: var(--accent-2-text);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .vahid-qiymet sup {
+      font-size: 0.72em;
+      line-height: 0;
+    }
+
+    .ortaq-vahid-qutu {
+      display: flex;
+      align-items: stretch;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .ortaq-vahid-siyahi {
+      flex: 1;
+      margin-top: 0;
+    }
+    .ortaq-moterize-panel {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      padding: 4px 4px 4px 0;
+    }
+    .fiqurlu-moterize-svg {
+      width: 22px;
+      height: 100%;
+      min-height: 200px;
+      display: block;
+    }
+    .ortaq-vahid-etiket {
+      background: var(--badge-bg);
+      border: 1px solid var(--border-soft);
+      color: var(--accent-2-text);
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 10px 13px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .ortaq-vahid-acilisi {
+      font-size: 13.5px;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .dustur-kart {
+      counter-increment: dustur-saygac;
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-left: 4px solid var(--accent-1);
+      padding: 16px 18px 16px 56px;
+      border-radius: 13px;
+      margin-bottom: 14px;
+      opacity: 0;
+      transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .dustur-kart::before {
+      content: counter(dustur-saygac, decimal-leading-zero);
+      position: absolute;
+      left: 14px;
+      top: 17px;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--sub-bg);
+      border: 1px solid var(--border-soft);
+      color: var(--text-main);
+      font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .dustur-kart:hover {
+      transform: translate3d(0, -2px, 0);
+      background: var(--card-hover);
+      border-color: var(--accent-2);
+      border-left-color: var(--accent-2);
+    }
+    .dustur-kart:hover::before {
+      background: var(--btn-grad);
+      border-color: transparent;
+      color: #ffffff;
+    }
+    .movzu-mezmun.gorunen .dustur-kart { animation: kartGelisi 0.3s ease-out forwards; }
+
+    .dustur-ust {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .dustur-dustur {
+      font-family: 'Cascadia Code', 'Consolas', 'Segoe UI', monospace;
+      font-size: var(--dustur-olcu, 20px);
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 10px;
+      flex: 1;
+      min-width: 0;
+    }
+    .dustur-setir {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .sol-teref { color: var(--accent-1); }
+    .beraber {
+      color: var(--text-main);
+      margin: 0 7px;
+    }
+    .sag-teref { color: var(--accent-2-text); }
+
+    .kesr {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      vertical-align: middle;
+      margin: 0 4px;
+      line-height: 1.15;
+    }
+    .kesr .suret {
+      padding: 0 6px 3px;
+      border-bottom: 2px solid currentColor;
+      font-size: 0.86em;
+      white-space: nowrap;
+    }
+    .kesr .mexrec {
+      padding: 3px 6px 0;
+      font-size: 0.86em;
+      white-space: nowrap;
+    }
+    .kesr.kicik .suret,
+    .kesr.kicik .mexrec {
+      font-size: 0.78em;
+      padding: 1px 4px;
+    }
+    .kesr sup {
+      font-size: 0.72em;
+      line-height: 0;
+    }
+
+    .kopyala-btn {
+      background: var(--sub-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border-soft);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+    .kopyala-btn:hover {
+      background: var(--card-hover);
+      border-color: var(--accent-1);
+    }
+    .kopyala-btn.kopyalandi {
+      background: var(--btn-grad);
+      border-color: transparent;
+      color: #ffffff;
+    }
+
+    .dustur-menasi {
+      font-size: var(--izah-olcu, 14px);
+      color: var(--text-sub);
+      line-height: 1.55;
+    }
+
+    .kecid-panel {
+      position: fixed;
+      bottom: 24px;
+      right: 34px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--panel-bg);
+      padding: 8px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border-soft);
+      z-index: 50;
+    }
+    .kecid-btn {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border-soft);
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .kecid-btn:hover:not(:disabled) {
+      background: var(--active-grad);
+      border-color: transparent;
+      color: #ffffff;
+    }
+    .kecid-btn:disabled {
+      opacity: 0.32;
+      cursor: not-allowed;
+    }
+    .olcu-ayirici {
+      width: 1px;
+      height: 22px;
+      background: var(--border-soft);
+      margin: 0 2px;
+    }
+
+    @media (max-width: 1220px) and (min-width: 761px) {
+      .sol-yan-sutun {
+        left: 300px;
+        width: 170px;
+      }
+      .reklam-panel {
+        min-height: 82px;
+      }
+      .sol-dalga-qutu {
+        height: 250px;
+      }
+    }
+
+    /* Mobil (telefon) görünüşü */
+    @media (max-width: 760px) {
+      .giris-sehifesi {
+        align-items: flex-start;
+        padding: 18px 12px 36px;
+      }
+      .giris-fon-dusturlar {
+        display: none;
+      }
+      .giris-konteyner {
+        margin: 0 auto;
+        padding: 18px 14px 24px;
+        border-radius: 18px;
+      }
+      .dil-secici-qutu {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .tema-secici-qutu {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .dil-btn {
+        padding: 5px 7px;
+        font-size: 11.5px;
+      }
+      .giris-basliq {
+        font-size: 22px;
+        line-height: 1.3;
+      }
+      .giris-kartlar {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .daxil-ol-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .esas-tetbiq.aktiv-tetbiq { flex-direction: column; }
+
+      .sepelənmiş-dusturlar,
+      .sol-yan-sutun {
+        display: none;
+      }
+
+      .sol-panel {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-soft);
+        padding: 12px 14px;
+        position: sticky;
+        top: 0;
+        z-index: 40;
+      }
+      .sol-ust-setir { margin: 0; }
+      .mobil-menyu-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .movzu-siyahi-qutu {
+        display: none;
+        margin-top: 12px;
+      }
+      .sol-panel.menyu-aciq .movzu-siyahi-qutu { display: block; }
+
+      .sag-panel { padding: 14px 12px 86px; }
+      .ust-basliq {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+      }
+      .sayt-adi { text-align: left; margin-left: 0; max-width: 100%; }
+      .sayt-adi h2 { font-size: 18px; }
+      .sayt-adi p { font-size: 13px; }
+
+      /* Telefonda böyüdülmüş reklam panelləri */
+      .mobil-reklam-qutu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      .mobil-reklam-qutu .reklam-panel {
+        width: 100%;
+        min-height: 158px;
+        padding: 12px 14px;
+        border-radius: 15px;
+      }
+      .mobil-reklam-qutu .reklam-icerik {
+        min-height: 112px;
+        padding: 8px 6px;
+      }
+
+      .movzu-mezmun {
+        max-width: 100%;
+        margin-left: 0;
+        padding: 16px 12px;
+        border-radius: 15px;
+        background: var(--panel-bg);
+      }
+      .movzu-mezmun h1 { font-size: 20px; }
+      .qisa-izah { font-size: 13.5px; margin-bottom: 16px; }
+
+      .vahid-siyahi li {
+        font-size: 13.5px;
+        padding: 9px 11px;
+      }
+
+      .ortaq-vahid-qutu {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .fiqurlu-moterize-svg {
+        display: none;
+      }
+      .ortaq-moterize-panel {
+        padding: 0;
+      }
+      .ortaq-vahid-etiket {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 12px;
+      }
+
+      .dustur-kart {
+        padding: 14px 12px 14px 44px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+      }
+      .dustur-kart::before {
+        left: 10px;
+        top: 14px;
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+      }
+
+      .dustur-ust {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .dustur-dustur {
+        font-size: calc(var(--dustur-olcu, 20px) * 0.82);
+        line-height: 1.45;
+        row-gap: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px dashed var(--border-subtle);
+      }
+      .beraber {
+        margin: 0 5px;
+      }
+      .kopyala-btn {
+        align-self: flex-start;
+        padding: 6px 12px;
+        font-size: 12px;
+      }
+      .dustur-menasi {
+        font-size: calc(var(--izah-olcu, 14px) * 0.95);
+        line-height: 1.5;
+      }
+
+      .kecid-panel {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        justify-content: space-between;
+        padding: 7px 9px;
+      }
+      .kecid-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body data-tema="gece-ag">
+
+  <!-- ===================== İLK AÇILAN GİRİŞ SƏHİFƏSİ ===================== -->
+  <section id="giris-sehifesi" class="giris-sehifesi" aria-label="Sayt haqqında məlumat">
+    <div class="giris-fon-dusturlar" aria-hidden="true">
+      <span class="gf-1">v = S / t</span>
+      <span class="gf-2">a = Δv / Δt</span>
+      <span class="gf-3">F = m · a</span>
+      <span class="gf-4">F = G·m₁m₂ / r²</span>
+      <span class="gf-5">ω = 2πn = 2π / T</span>
+      <span class="gf-6">a = v² / R = ω²R</span>
+    </div>
+
+    <div class="giris-konteyner">
+      <div class="giris-ust-bar giris-anim giris-d-1">
+        <div id="giris-rozet" class="giris-rozet">Fizika Düstur Bələdçisi</div>
+
+        <div class="tema-secici-qutu" role="group" aria-label="Rəng kombinasiyası seçimi">
+          <span class="tema-etiket">Rəng:</span>
+          <button type="button" class="tema-btn t-gece-ag aktiv-tema" data-tema="gece-ag" title="Gecə & Ağ vurğu" onclick="temaDeyis('gece-ag')"></button>
+          <button type="button" class="tema-btn t-ag-gunduz" data-tema="ag-gunduz" title="Ağ & Gündüz" onclick="temaDeyis('ag-gunduz')"></button>
+          <button type="button" class="tema-btn t-zumrud" data-tema="zumrud" title="Zümrüd & Ağ" onclick="temaDeyis('zumrud')"></button>
+          <button type="button" class="tema-btn t-benovseyi" data-tema="benovseyi" title="Bənövşəyi & Ağ" onclick="temaDeyis('benovseyi')"></button>
+          <button type="button" class="tema-btn t-yaqut" data-tema="yaqut" title="Yaqut & Ağ" onclick="temaDeyis('yaqut')"></button>
+          <button type="button" class="tema-btn t-qrafit" data-tema="qrafit" title="Qrafit & Ağ" onclick="temaDeyis('qrafit')"></button>
+        </div>
+
+        <div class="dil-secici-qutu" role="group" aria-label="Language / Dil seçimi">
+          <span class="dil-qlobus" title="Language / Dil">🌐</span>
+          <button type="button" class="dil-btn aktiv-dil" data-dil="az" onclick="girisDiliDeyis('az')">🇦🇿 AZ <span class="dil-ad">Az</span></button>
+          <button type="button" class="dil-btn" data-dil="en" onclick="girisDiliDeyis('en')">🇬🇧 EN <span class="dil-ad">Eng</span></button>
+          <button type="button" class="dil-btn" data-dil="ru" onclick="girisDiliDeyis('ru')">🇷🇺 RU <span class="dil-ad">Рус</span></button>
+          <button type="button" class="dil-btn" data-dil="tr" onclick="girisDiliDeyis('tr')">🇹🇷 TR <span class="dil-ad">Tür</span></button>
+          <button type="button" class="dil-btn" data-dil="fr" onclick="girisDiliDeyis('fr')">🇫🇷 FR <span class="dil-ad">Fra</span></button>
+        </div>
+      </div>
+
+      <h1 id="giris-basliq" class="giris-basliq">Düsturlar əlinin altında olsun — vaxt itirmədən tap, bax, kopyala.</h1>
+      <div class="giris-alt-xett"></div>
+
+      <p id="giris-meqsed" class="giris-meqsed giris-anim giris-d-3">
+        Bu sayt <strong>dərs, ev tapşırığı, hazırlıq və imtahan vaxtı</strong> əsas fizika düsturlarını qarışıq səhifələrdə axtarmadan, səliqəli və sürətli şəkildə görmək məqsədilə yaradılıb. Hər düsturda dəyişənlərin mənasını, vahidlərini və əsas düstur ifadələrini bir yerdə tapa bilərsən.
+      </p>
+
+      <div class="giris-kartlar">
+        <div class="giris-kart giris-anim giris-d-3">
+          <h3 id="giris-k1-basliq">Hazır Mövzu Bölmələri</h3>
+          <p id="giris-k1-metn">Düzxətli bərabərsürətli hərəkət, düzxətli bərabərtəcilli hərəkət, çevrə üzrə bərabərsürətli hərəkət, Nyutonun qanunları, Ümumdünya cazibə qanunu və Elastiklik qüvvəsi bölmələri.</p>
+        </div>
+        <div class="giris-kart giris-anim giris-d-4">
+          <h3 id="giris-k2-basliq">Kəmiyyətlər və Onların Vahidləri</h3>
+          <p id="giris-k2-metn">Beynəlxalq Sistemdəki (BS) əsas və törəmə fiziki kəmiyyətlər, onların simvolları və əsas vahidlərlə tam açılışları (məsələn: <strong>1 N = 1 kq·m/san²</strong>, <strong>1 C = 1 kq·m²/san²</strong>) bir bölmədə toplanıb.</p>
+        </div>
+        <div class="giris-kart giris-anim giris-d-5">
+          <h3 id="giris-k3-basliq">Albert Eynşteyn</h3>
+          <p id="giris-k3-metn">“Təxəyyül bilikdən daha vacibdir. Çünki bilik məhduddur, təxəyyül isə bütün dünyanı əhatə edir.”</p>
+        </div>
+        <div class="giris-kart giris-anim giris-d-6">
+          <h3 id="giris-k4-basliq">İsaak Nyuton</h3>
+          <p id="giris-k4-metn">“Əgər mən digərlərindən uzağı görə bilmişəmsə, bu, nəhənglərin çiyinlərində dayandığıma görədir.”</p>
+        </div>
+      </div>
+
+      <div class="giris-alt-panel giris-anim giris-d-6">
+        <span id="giris-qisa-not" class="giris-qisa-not">Hazırsansa, mövzular və düsturlar bölməsinə keçək.</span>
+        <button type="button" class="daxil-ol-btn" onclick="girisdenKeç()">
+          <span id="giris-btn-metn">Düsturlara keç</span> <span>→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ƏSAS DÜSTURLAR SƏHİFƏSİ ===================== -->
+  <div id="esas-tetbiq" class="esas-tetbiq">
+
+    <!-- Arxa planda ortalığa səpələnmiş zəif fizika düsturları -->
+    <div id="sepelənmiş-dusturlar" class="sepelənmiş-dusturlar" aria-hidden="true">
+      <span class="sd-1">F = m · a</span>
+      <span class="sd-2">F = G·m₁m₂ / r²</span>
+      <span class="sd-3">v = v₀ + a·t</span>
+      <span class="sd-4">ω = 2πn = 2π / T</span>
+      <span class="sd-5">φ = l / R</span>
+      <span class="sd-6">a = v² / R</span>
+      <span class="sd-7">F_ağ = m · g</span>
+      <span class="sd-8">v = S / t</span>
+    </div>
+
+    <!-- Kompüterdə sol boşluqda: Reklam 1 + Dalğa qrafiki + Reklam 2 + Reklam 3 -->
+    <div class="sol-yan-sutun">
+      <aside id="reklam-panel-1" class="reklam-panel" aria-label="Reklam yeri 1">
+        <span class="reklam-basliq">Reklam</span>
+        <div id="reklam-icerik-1" class="reklam-icerik"></div>
+      </aside>
+
+      <div class="sol-dalga-qutu" aria-hidden="true">
+        <svg id="sol-dalga-svg" viewBox="0 0 248 290" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="dalgaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15"/>
+              <stop offset="22%" stop-color="#38bdf8" stop-opacity="0.9"/>
+              <stop offset="78%" stop-color="#fbbf24" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.15"/>
+            </linearGradient>
+            <linearGradient id="dalgaGradIkinci" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#fbbf24" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#7dd3fc" stop-opacity="0.26"/>
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+
+          <line x1="62"  y1="32" x2="62"  y2="266" stroke="rgba(148, 163, 184, 0.14)" stroke-width="1" stroke-dasharray="3 5"/>
+          <line x1="186" y1="32" x2="186" y2="266" stroke="rgba(148, 163, 184, 0.14)" stroke-width="1" stroke-dasharray="3 5"/>
+
+          <line x1="22" y1="44" x2="224" y2="44" stroke="rgba(226, 232, 240, 0.28)" stroke-width="1.3"/>
+          <polygon points="224,41 232,44 224,47" fill="rgba(226, 232, 240, 0.4)"/>
+          <polygon points="22,41 14,44 22,47" fill="rgba(226, 232, 240, 0.4)"/>
+
+          <line x1="124" y1="26" x2="124" y2="272" stroke="rgba(226, 232, 240, 0.3)" stroke-width="1.4"/>
+          <polygon points="120,272 124,282 128,272" fill="rgba(226, 232, 240, 0.42)"/>
+
+          <text x="52"  y="33" class="qrafik-etiket mavi">-A</text>
+          <text x="180" y="33" class="qrafik-etiket qum">+A</text>
+          <text x="214" y="58" class="qrafik-etiket">A(t)</text>
+          <text x="132" y="280" class="qrafik-etiket">t</text>
+          <text x="112" y="57" class="qrafik-etiket">0</text>
+
+          <line x1="120" y1="116" x2="128" y2="116" stroke="rgba(226, 232, 240, 0.28)" stroke-width="1.2"/>
+          <text x="132" y="120" class="qrafik-etiket">T/2</text>
+
+          <line x1="120" y1="188" x2="128" y2="188" stroke="rgba(226, 232, 240, 0.28)" stroke-width="1.2"/>
+          <text x="132" y="192" class="qrafik-etiket">T</text>
+
+          <path id="dalga-xett-2" fill="none" stroke="url(#dalgaGradIkinci)" stroke-width="2" stroke-linecap="round"/>
+          <path id="dalga-xett-1" fill="none" stroke="url(#dalgaGrad)" stroke-width="3.2" stroke-linecap="round"/>
+
+          <circle id="dalga-noqte-1" r="4.2" fill="#38bdf8"/>
+          <circle id="dalga-noqte-2" r="4.2" fill="#fbbf24"/>
+        </svg>
+      </div>
+
+      <aside id="reklam-panel-2" class="reklam-panel" aria-label="Reklam yeri 2">
+        <span class="reklam-basliq">Reklam</span>
+        <div id="reklam-icerik-2" class="reklam-icerik"></div>
+      </aside>
+
+      <aside id="elave-sol-panel" class="elave-sol-panel" aria-label="Reklam yeri 3">
+        <span class="reklam-basliq">Reklam</span>
+        <div id="elave-panel-icerik" class="reklam-icerik"></div>
+      </aside>
+    </div>
+
+    <aside id="sol-panel" class="sol-panel">
+      <div class="sol-ust-setir">
+        <div class="sol-basliq">Fizika Mövzuları</div>
+        <button type="button" id="mobil-menyu-btn" class="mobil-menyu-btn" onclick="mobilMenyuAcBagla()">☰ Mövzular</button>
+      </div>
+
+      <div class="movzu-siyahi-qutu">
+        <div class="axtaris-qutu">
+          <span class="axtaris-ikon">🔍</span>
+          <input type="text" id="movzu-axtaris" class="axtaris-input" placeholder="Mövzu axtar..." oninput="movzuAxtar()">
+        </div>
+        <div id="axtaris-bos" class="axtaris-bos">Uyğun mövzu tapılmadı</div>
+
+        <button type="button" class="movzu-btn aktiv" onclick="movzuAc('duzxetli', this)">
+          <span class="movzu-sira">1.</span>
+          <span>Düzxətli bərabərsürətli hərəkət</span>
+        </button>
+        <button type="button" class="movzu-btn" onclick="movzuAc('beraberttecilli', this)">
+          <span class="movzu-sira">2.</span>
+          <span>Düzxətli bərabərtəcilli hərəkət</span>
+        </button>
+        <button type="button" class="movzu-btn" onclick="movzuAc('cevre-uzre', this)">
+          <span class="movzu-sira">3.</span>
+          <span>Çevrə üzrə bərabərsürətli hərəkət</span>
+        </button>
+        <button type="button" class="movzu-btn" onclick="movzuAc('nyuton', this)">
+          <span class="movzu-sira">4.</span>
+          <span>Nyutonun qanunları</span>
+        </button>
+        <button type="button" class="movzu-btn" onclick="movzuAc('cazibe', this)">
+          <span class="movzu-sira">5.</span>
+          <span>Ümumdünya cazibə qanunu</span>
+        </button>
+        <button type="button" class="movzu-btn" onclick="movzuAc('elastiklik', this)">
+          <span class="movzu-sira">6.</span>
+          <span>Elastiklik qüvvəsi</span>
+        </button>
+
+        <div class="vahidler-ayirici"></div>
+        <button type="button" id="vahidler-btn" class="vahidler-btn" onclick="movzuAc('vahidler', this)">
+          <span>Kəmiyyətlərin vahidləri</span>
+          <span>→</span>
+        </button>
+
+        <button type="button" class="giris-qayit-btn" onclick="giriseQayit()">← Giriş səhifəsi</button>
+      </div>
+    </aside>
+<main class="sag-panel">
+      <header class="ust-basliq">
+        <div class="sayt-adi">
+          <span class="ust-etiket">Sürətli Düstur Bələdçisi</span>
+          <h2>Axtardığın hər düstur buradadır. Bir klik, sıfır vaxt itkisi.</h2>
+          <p>İmtahan, dərs və gündəlik məsələlər üçün hazır xülasə.</p>
+        </div>
+      </header>
+
+      <!-- Telefonda böyüdülmüş iki reklam paneli -->
+      <div class="mobil-reklam-qutu" aria-label="Mobil reklam panelləri">
+        <aside class="reklam-panel">
+          <span class="reklam-basliq">Reklam</span>
+          <div class="reklam-icerik"></div>
+        </aside>
+        <aside class="reklam-panel">
+          <span class="reklam-basliq">Reklam</span>
+          <div class="reklam-icerik"></div>
+        </aside>
+      </div>
+
+      <section id="duzxetli" class="movzu-mezmun gorunen">
+        <h1>1. Düzxətli bərabərsürətli hərəkət</h1>
+        <p class="qisa-izah">Cisim bərabər zaman fasilələrində bərabər yerdəyişmələr icra edir; sürətin modulu və istiqaməti dəyişmir (a = 0).</p>
+
+        <div class="dustur-axtaris-panel">
+          <span class="dustur-axtaris-ikon">🔎</span>
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: sürət, yol, zaman, nisbi)..." oninput="dusturlariAxtar()">
+          <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">x - x₀</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">tgα</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v = S/t = (x - x₀)/t = tgα" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">v — sürət (m/s), S — gedilən yol / yerdəyişmə (m), x - x₀ — koordinat dəyişməsi, t — zaman (s), tgα — S(t) qrafikinin meyl bucağı (α₁ &gt; α₂ &gt; α₃ ⇒ v₁ &gt; v₂ &gt; v₃)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">|S|</span><span class="beraber">=</span><span class="sag-teref">v · t</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="|S| = v · t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Bərabərsürətli hərəkətdə yerdəyişmənin ədədi qiyməti (modulu)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">l</span><span class="beraber">=</span><span class="sag-teref">v · t</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="l = v · t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Sabit sürətlə hərəkət edən cismin qət etdiyi yolun düsturu</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">x</span><span class="beraber">=</span><span class="sag-teref">x₀ + Sₓ</span></span>
+              <span class="dustur-setir"><span class="sol-teref">x</span><span class="beraber">=</span><span class="sag-teref">x₀ + vₓ · t</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="x = x₀ + Sₓ = x₀ + vₓ · t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Hərəkət tənliyi: x — son koordinat, x₀ — başlanğıc koordinat, Sₓ — yerdəyişmənin proyeksiyası</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">l</span><span class="beraber">=</span><span class="sag-teref">|S|</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="l = |S|" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Düzxətli bərabər sürətli hərəkətdə gedilən yol (l) yerdəyişmənin moduluna (|S|) bərabərdir</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">l</span><span class="beraber">&gt;</span><span class="sag-teref">|S|</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="l > |S|" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Düzxətli dəyişənistiqamətli və əyrixətli hərəkətdə gedilən yol yerdəyişmənin modulundan böyükdür</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">km/s</span><span class="beraber">=</span><span class="sag-teref">m/s : 3,6</span></span>
+              <span class="dustur-setir"><span class="sol-teref">m/s</span><span class="beraber">=</span><span class="sag-teref">km/s · 3,6</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="km/s = m/s : 3,6 | m/s = km/s · 3,6" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Sürət vahidlərinin çevrilməsi: km/saat-dan m/s-ya keçmək üçün 3,6-ya bölünür; m/s-dan km/saat-a keçmək üçün 3,6-ya vurulur</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_yol</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S_yol</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_yerdəyişmə</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S_yerdəyişmə</span><span class="mexrec">t</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_yol = S_yol / t | v_yerdəyişmə = S_yerdəyişmə / t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Yola və yerdəyişməyə görə orta sürətlərin tapılması</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₁ + v₂ + v₃</span><span class="mexrec">3</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_or = (v₁ + v₂ + v₃) / 3" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisim zamanın birinci 1/3, ikinci 1/3 və üçüncü 1/3 hissəsini uyğun olaraq v₁, v₂, v₃ sürətlə gedirsə orta sürət</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2v₁v₂</span><span class="mexrec">v₁ + v₂</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">3v₁v₂v₃</span><span class="mexrec">v₁v₂ + v₂v₃ + v₁v₃</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_or = 2v₁v₂ / (v₁ + v₂) | v_or = 3v₁v₂v₃ / (v₁v₂ + v₂v₃ + v₁v₃)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Yolun iki bərabər (1/2) və ya üç bərabər (1/3) hissəsini fərqli sürətlərlə gedərkən orta sürət</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂(→)</span><span class="beraber">=</span><span class="sag-teref">v₁(→) - v₂(→)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v₂,₁(→)</span><span class="beraber">=</span><span class="sag-teref">v₂(→) - v₁(→)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂(→) = v₁(→) - v₂(→) | v₂,₁(→) = v₂(→) - v₁(→)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Vektorial nisbi sürət: v₁,₂(→) — 1-ci cismin 2-ciyə nəzərən sürəti; v₂,₁(→) — 2-ci cismin 1-ciyə nəzərən sürəti</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂</span><span class="beraber">=</span><span class="sag-teref">v₁ - v₂</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v₂,₁</span><span class="beraber">=</span><span class="sag-teref">v₂ - v₁</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂ = v₁ - v₂ | v₂,₁ = v₂ - v₁" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">İki cisim bir düz xətt üzrə eyni istiqamətdə hərəkət edərkən nisbi sürətlərin proyeksiyaları</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂ = v₂,₁</span><span class="beraber">=</span><span class="sag-teref">v₁ + v₂</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂ = v₂,₁ = v₁ + v₂" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisimlər əks istiqamətlərdə və ya qarşı-qarşıya hərəkət edərkən nisbi sürətin modulu</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂ = v₂,₁</span><span class="beraber">=</span><span class="sag-teref">√(v₁² + v₂²)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂ = v₂,₁ = √(v₁² + v₂²)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisimlər bir-birinə perpendikulyar (90°) istiqamətdə hərəkət edərkən nisbi sürətin modulu</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂ = v₂,₁</span><span class="beraber">=</span><span class="sag-teref">√(v₁² + v₂² - 2v₁v₂cosα)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂ = v₂,₁ = √(v₁² + v₂² - 2v₁v₂cosα)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisimlər aralarında α bucağı əmələ gətirərkən nisbi sürətin modulu (kosinuslar teoremi)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_yer</span><span class="beraber">=</span><span class="sag-teref">v_s + v_e</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_yer</span><span class="beraber">=</span><span class="sag-teref">|v_s - v_e|</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_yer = v_s + v_e | v_yer = |v_s - v_e|" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Eskalator məsələləri: sərnişinin yerə nəzərən sürəti (eyni istiqamətdə +, əks istiqamətdə fərq; v_s &gt; v_e olarsa öz istiqamətində, v_s &lt; v_e olarsa eskalator istiqamətində hərəkət edir)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">t</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">d</span><span class="mexrec">v_y</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Sₓ</span><span class="beraber">=</span><span class="sag-teref">(vₓ + v_ç) · t</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="t = d / v_y | Sₓ = (vₓ + v_ç) · t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Çayın keçmə müddəti (d — çayın eni, v_y — y oxu üzrə sürət toplananı) və üzgüçünün üfüqi yerdəyişməsi</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_axın ilə</span><span class="beraber">=</span><span class="sag-teref">v₁ + v₂</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_axın əksinə</span><span class="beraber">=</span><span class="sag-teref">|v₁ - v₂|</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_axın ilə = v₁ + v₂ | v_axın əksinə = |v₁ - v₂|" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Çay axını istiqamətində və axının əksinə hərəkət edən qayığın sahilə nəzərən sürəti (v₁ — çaya nəzərən sürət, v₂ — axın sürəti)</div>
+        </div>
+
+        <div class="axtaris-tapilmadi-qutu">
+          <span class="tapilmadi-ikon">🔍</span>
+          <strong>Axtarışa uyğun düstur tapılmadı</strong>
+          <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
+        </div>
+      </section>
+<section id="beraberttecilli" class="movzu-mezmun">
+        <h1>2. Düzxətli bərabərtəcilli hərəkət</h1>
+        <p class="qisa-izah">Cisim bərabər zaman fasilələrində sürətini eyni qədər dəyişir; təcil sabit qalır (a = const).</p>
+
+        <div class="dustur-axtaris-panel">
+          <span class="dustur-axtaris-ikon">🔎</span>
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: təcil, yol, dayanma, orta)..." oninput="dusturlariAxtar()">
+          <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Δv</span><span class="mexrec">Δt</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v - v₀</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref">tgα</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="a = Δv / Δt = (v - v₀) / t = tgα" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">a — təcil (m/s²), v₀ — başlanğıc sürət, v — son sürət, t — zaman, tgα — v(t) qrafikinin meyl bucağı (α₁ &gt; α₂ &gt; α₃ ⇒ a₁ &gt; a₂ &gt; a₃)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">v₀ ± a·t</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">√(v₀² ± 2aS)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v = v₀ ± a·t | v = √(v₀² ± 2aS)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Sürətin modulu: bərabəryeyinləşəndə (+), bərabəryavaşlayanda (-) götürülür</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">l = S</span><span class="beraber">=</span><span class="sag-teref">v₀·t ±</span><span class="sag-teref kesr"><span class="suret">a·t²</span><span class="mexrec">2</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="l = S = v₀·t ± (a·t²) / 2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Yol və yerdəyişmə modulunun zamandan asılılığı (+ yeyinləşən, - yavaşlayan)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">S</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v² - v₀²</span><span class="mexrec">2a</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">S</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v + v₀</span><span class="mexrec">2</span></span><span class="sag-teref">· t</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="S = (v² - v₀²) / (2a) | S = ((v + v₀) / 2) · t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Zamansız və orta sürətli yol/yerdəyişmə düsturları (yavaşlayanda sürətlər fərqi v₀² - v² olur)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">x</span><span class="beraber">=</span><span class="sag-teref">x₀ ± v₀·t ±</span><span class="sag-teref kesr"><span class="suret">a·t²</span><span class="mexrec">2</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="x = x₀ ± v₀·t ± (a·t²) / 2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Bərabərtəcilli hərəkətdə koordinatın zamandan asılılıq tənliyi</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">a·t</span></span>
+              <span class="dustur-setir"><span class="sol-teref">S</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">a·t²</span><span class="mexrec">2</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v = a·t | S = (a·t²) / 2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Sükunət vəziyyətindən başlayan (v₀ = 0) hərəkətdə sürət və yol düsturları</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">Sₙ</span><span class="beraber">=</span><span class="sag-teref">v₀ ±</span><span class="sag-teref kesr"><span class="suret">a·(2n - 1)</span><span class="mexrec">2</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="Sₙ = v₀ ± a·(2n - 1) / 2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">n-ci saniyədə gedilən yol (+ yeyinləşən, - yavaşlayan; v₀ = 0 olduqda Sₙ = a·(2n - 1) / 2)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">t_dayanma</span><span class="beraber">=</span><span class="sag-teref">|</span><span class="sag-teref kesr"><span class="suret">v₀</span><span class="mexrec">a</span></span><span class="sag-teref">|</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="t_dayanma = |v₀ / a|" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Bərabəryavaşlayan hərəkətdə cismin tam dayanmasına (v = 0) sərf etdiyi zaman</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S_ümumi</span><span class="mexrec">t_ümumi</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_or = S_ümumi / t_ümumi" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Ümumi orta sürət: (S₁ + S₂ + ...) / (t₁ + t₂ + ...)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₁t₁ + v₂t₂</span><span class="mexrec">t₁ + t₂</span></span></span>
+              <span class="dustur-setir">
+                <span class="sol-teref">v_or</span><span class="beraber">=</span>
+                <span class="sag-teref kesr">
+                  <span class="suret">S₁ + S₂</span>
+                  <span class="mexrec">
+                    <span class="kesr kicik"><span class="suret">S₁</span><span class="mexrec">v₁</span></span> +
+                    <span class="kesr kicik"><span class="suret">S₂</span><span class="mexrec">v₂</span></span>
+                  </span>
+                </span>
+              </span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_or = (v₁t₁ + v₂t₂) / (t₁ + t₂) | v_or = (S₁ + S₂) / (S₁/v₁ + S₂/v₂)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Orta sürət (v_or): zaman və sürətə görə, həmçinin yol və sürətə görə düsturlar</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₁ + v₂</span><span class="mexrec">2</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_or = (v₁ + v₂) / 2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisim zamanın ilk yarısını v₁, ikinci yarısını v₂ sürətlə gedirsə orta sürət</div>
+        </div>
+
+        <div class="axtaris-tapilmadi-qutu">
+          <span class="tapilmadi-ikon">🔍</span>
+          <strong>Axtarışa uyğun düstur tapılmadı</strong>
+          <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
+        </div>
+      </section>
+<section id="cevre-uzre" class="movzu-mezmun">
+        <h1>3. Çevrə üzrə bərabərsürətli hərəkət</h1>
+        <p class="qisa-izah">Cisim çevrə boyunca bərabər zaman fasilələrində bərabər qövslər cızır; bucaq sürəti, tezlik, period və sürət/təcil modulları sabit qalır.</p>
+
+        <div class="dustur-axtaris-panel">
+          <span class="dustur-axtaris-ikon">🔎</span>
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: period, tezlik, bucaq, təcil)..." oninput="dusturlariAxtar()">
+          <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">φ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">l</span><span class="mexrec">R</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">l</span><span class="beraber">=</span><span class="sag-teref">φ · R</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="φ = l / R | l = φ · R" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Dönmə bucağı (φ, vahidi 1 rad) və qövs uzunluğu (l): [φ] = 1 rad — qövsün uzunluğu (l) çevrənin radiusuna (R) bərabər olduqda dönmə bucağı</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">rad</span><span class="beraber">=</span><span class="sag-teref">dərəcə ·</span><span class="sag-teref kesr"><span class="suret">π</span><span class="mexrec">180°</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">dərəcə</span><span class="beraber">=</span><span class="sag-teref">rad ·</span><span class="sag-teref kesr"><span class="suret">180°</span><span class="mexrec">π</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="rad = dərəcə · (π / 180°) | dərəcə = rad · (180° / π)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Dərəcə ilə radian arasında keçid; xüsusi hallar: 2π rad = 360°, 3π/2 rad = 270°, π rad = 180°, π/2 rad = 90°</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">t</span><span class="mexrec">N</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">n</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">N</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">t</span><span class="mexrec">T</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="T = t / N = 1 / n | N = t / T" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Dövrətmə periodu (T, vahidi 1 san): 1 tam dövrə sərf olunan zaman; t — zaman, N — dövrlərin sayı (adsız kəmiyyət), n — tezlik</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">T</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">t</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="n = 1 / T = N / t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Dövrətmə tezliyi (n): vahid zamandakı dövrlərin sayı; [n] = 1/san = san⁻¹ = Hs (Hers)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Δφ</span><span class="mexrec">Δt</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2π</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">2πn</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2πN</span><span class="mexrec">t</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="ω = Δφ / Δt = 2π / T = 2πn = 2πN / t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Bucaq sürəti (ω — omeqa): vahid zamanda radius vektorunun dönmə bucağı; [ω] = 1 rad/san, Δφ = ω · Δt</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref">φ'(t)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Δφ</span><span class="beraber">=</span><span class="sag-teref">S_fiqur</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="ω = φ'(t) | Δφ = S_fiqur" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Bucaq sürəti dönmə bucağının zamana görə törəməsidir; ω(t) qrafikinin zamanla əmələ gətirdiyi fiqurun sahəsi dönmə bucağına bərabərdir</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">l</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2πR</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">2πRn = ωR</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2πRN</span><span class="mexrec">t</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v = l / t = 2πR / T = 2πRn = ωR = 2πRN / t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Xətti sürət (v): çevrəyə toxunan istiqamətdə yönəlir və radiusa perpendikulyardır; |v| = const</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">l</span><span class="beraber">=</span><span class="sag-teref">v · t = ωRt = 2πnRt</span></span>
+              <span class="dustur-setir"><span class="sol-teref">l</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2πR</span><span class="mexrec">T</span></span><span class="sag-teref">· t = 2πRN</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="l = v · t = ωRt = 2πnRt = (2πR / T) · t = 2πRN" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Bütün periodlarda qövs uzunluğu: t = T olduqda l = 2πR; t = T/2 olduqda l = πR; t = T/3 olduqda l = πR/1,5; t = T/4 olduqda l = πR/2; t = T/6 olduqda l = πR/3</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_yol</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2πR</span><span class="mexrec">T</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_yerdəyişmə</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S_yer</span><span class="mexrec">t</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_yol = 2πR / T | v_yerdəyişmə = S_yer / t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">İstənilən periodda yola görə orta sürət (2πR / T) və yerdəyişməyə görə orta sürət (S_yer / t, burada t = l / v)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v²</span><span class="mexrec">R</span></span><span class="beraber">=</span><span class="sag-teref">ω²R = 4π²n²R</span></span>
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">4π²R</span><span class="mexrec">T²</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">4π²N²R</span><span class="mexrec">t²</span></span><span class="beraber">=</span><span class="sag-teref">ωv</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="a = v² / R = ω²R = 4π²n²R = 4π²R / T² = 4π²N²R / t² = ωv" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Mərkəzəqaçma təcil (a): çevrənin mərkəzinə doğru yönəlir, xətti sürətə perpendikulyardır; |a| = const (həmçinin a = 2πnv = 2πv/T = 2πnω = 2πω/T)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">√(tgα)</span><span class="mexrec">2π</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2π</span><span class="mexrec">√(tgα)</span></span><span class="beraber">=</span><span class="sag-teref">2π√(ctgα)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref">√(tgα)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="n = √(tgα) / (2π) | T = 2π / √(tgα) = 2π√(ctgα) | ω = √(tgα)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">a(R) qrafikinin meyl bucağına (tgα = a / R) görə tezlik (n), period (T) və bucaq sürətinin (ω) tapılması</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">Mərkəzdən/oxdan:</span><span class="sag-teref">T, n, ω, N, φ = const</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Radiusla artır:</span><span class="sag-teref">v, a, l</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="T, n, ω, N, φ = const | v, a, l radiusla artır" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Mərkəzindən və ya diametrindən keçən ox ətrafında fırlanan disk/kürənin nöqtələrində: T₁=T₂=T₃, ω₁=ω₂=ω₃, n₁=n₂=n₃, N₁=N₂=N₃; mərkəzdən/oxdan uzaqlaşdıqca v, a, l artır</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">Qayışlı ötürmə:</span><span class="sag-teref">v, l = const</span></span>
+              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">T₁</span><span class="mexrec">T₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">R₁</span><span class="mexrec">R₂</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v, l = const | T₁ / T₂ = R₁ / R₂" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Qayışlı ötürmədə (həmçinin bir-birinə toxunan disklər və dişli çarxlarda): v₁=v₂, l₁=l₂; yalnız T radiusla düz, (a, ω, n, N) radiusla tərs asılıdır: a₁/a₂ = ω₁/ω₂ = n₁/n₂ = N₁/N₂ = R₂/R₁</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁ = v₂ &gt; v₃</span><span class="beraber">|</span><span class="sag-teref">l₁ = l₂ &gt; l₃</span></span>
+              <span class="dustur-setir"><span class="sol-teref">n₃ = n₂ &gt; n₁</span><span class="beraber">|</span><span class="sag-teref">ω₃ = ω₂ &gt; ω₁</span></span>
+              <span class="dustur-setir"><span class="sol-teref">T₃ = T₂ &lt; T₁</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁ = v₂ > v₃, l₁ = l₂ > l₃ | n₃ = n₂ > n₁, ω₃ = ω₂ > ω₁, T₃ = T₂ < T₁" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Qayışla birləşmiş 1-ci və 2-ci çarxla eyni oxlu kiçik 3-cü çarxın qarışıq hərəkətində xətti, bucaq, period, tezlik və təcil əlaqələri</div>
+        </div>
+
+        <div class="axtaris-tapilmadi-qutu">
+          <span class="tapilmadi-ikon">🔍</span>
+          <strong>Axtarışa uyğun düstur tapılmadı</strong>
+          <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
+        </div>
+      </section>
+<section id="nyuton" class="movzu-mezmun">
+        <h1>4. Nyutonun qanunları</h1>
+        <p class="qisa-izah">Qüvvə, kütlə, sıxlıq, əvəzləyici qüvvə və cisimlərin qarşılıqlı təsiri arasındakı əsas qanunauyğunluqlar.</p>
+
+        <div class="dustur-axtaris-panel">
+          <span class="dustur-axtaris-ikon">🔎</span>
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: kütlə, sıxlıq, qüvvə, blok)..." oninput="dusturlariAxtar()">
+          <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">m</span><span class="beraber">=</span><span class="sag-teref">ρ · V</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ρ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">V</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="m = ρ · V | ρ = m / V" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Kütlə (m, vahidi 1 kq), həcm (V) və sıxlıq (ρ, vahidi 1 kq/m³); verilmiş mayenin və bərk cismin sıxlığı onun kütləsi və həcmindən asılı deyil (ρ = const)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">m</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">4</span><span class="mexrec">3</span></span><span class="sag-teref">πR³ρ</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ρ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">3m</span><span class="mexrec">4πR³</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">R</span><span class="beraber">=</span><span class="sag-teref">³√(3m / 4πρ)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="m = (4/3)πR³ρ | ρ = 3m / (4πR³) | R = ³√(3m / 4πρ)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Kürə formalı cisimlərin kütləsi, sıxlığı və radiusu</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">m</span><span class="beraber">=</span><span class="sag-teref">ρ · a³</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ρ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">a³</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref">³√(m / ρ)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="m = ρ · a³ | ρ = m / a³ | a = ³√(m / ρ)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Kub formalı cisimlərin kütləsi, sıxlığı və tili (a)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F</span><span class="mexrec">m</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F</span><span class="beraber">=</span><span class="sag-teref">m · a</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="a = F / m | F = m · a" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Nyutonun II qanunu: [F] = 1 N = kq·m/san², [a] = 1 N/kq = 1 m/san²; kürə formalı cisimdə a = const olarsa F = (4/3)πR³ρa ⇒ F ~ R³</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F₁</span><span class="beraber">=</span><span class="sag-teref">-F₂</span></span>
+              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">a₁</span><span class="mexrec">a₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₁</span><span class="mexrec">v₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S₁</span><span class="mexrec">S₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m₂</span><span class="mexrec">m₁</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F₁ = -F₂ | a₁/a₂ = v₁/v₂ = S₁/S₂ = m₂/m₁" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Nyutonun III qanunu: təsir və əks-təsir qüvvələri eyni təbiətlidir, müxtəlif cisimlərə tətbiq olunduğundan bir-birini tarazlaşdıra bilməz</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F_əv</span><span class="beraber">=</span><span class="sag-teref">F₁ + F₂ + ...</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F_əv</span><span class="beraber">=</span><span class="sag-teref">|F₁ - F₂|</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F_əv = F₁ + F₂ + ... | F_əv = |F₁ - F₂|" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Əvəzləyici qüvvə: eyni istiqamətli olduqda toplanır (F_əv,max), əks istiqamətli olduqda çıxılır (F_əv,min, böyük qüvvə istiqamətində yönəlir)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F_əv</span><span class="beraber">=</span><span class="sag-teref">√(F₁² + F₂²)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F_əv</span><span class="beraber">=</span><span class="sag-teref">√(F₁² + F₂² + 2F₁F₂cosα)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F_əv = √(F₁² + F₂²) | F_əv = √(F₁² + F₂² + 2F₁F₂cosα)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Perpendikulyar (90°) və aralarında α bucağı əmələ gətirən qüvvələrin əvəzləyicisi; əvəzləyici qüvvə və təcil həmişə eyni istiqamətdə yönəlir</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">α = 120°</span><span class="beraber">⇒</span><span class="sag-teref">F_əv = F</span></span>
+              <span class="dustur-setir"><span class="sol-teref">α = 60°</span><span class="beraber">⇒</span><span class="sag-teref">F_əv = F√3</span></span>
+              <span class="dustur-setir"><span class="sol-teref">α = 90°</span><span class="beraber">⇒</span><span class="sag-teref">F_əv = F√2</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="α = 120° ⇒ F_əv = F | α = 60° ⇒ F_əv = F√3 | α = 90° ⇒ F_əv = F√2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">İki bərabər (F) qüvvənin əvəzləyicisinin tapılmasında xüsusi hallar — hər üç halda istiqaməti tənbölən boyunca yönəlir</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Fₓ</span><span class="mexrec">m</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F · cosα</span><span class="mexrec">m</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="a = Fₓ / m = F · cosα / m" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Üfüqi səthdə sürət vektoru ilə α bucağı əmələ gətirən F qüvvəsinin təsiri ilə hərəkət edən cismin təcili</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">|F₁ - F₂| ≤ F_əv ≤ F₁ + F₂</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F_əv,min = 0</span><span class="beraber">|</span><span class="sag-teref">F_əv,max = F₁ + F₂ + F₃</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="|F₁ - F₂| ≤ F_əv ≤ F₁ + F₂ | F_əv,min = 0, F_əv,max = F₁ + F₂ + F₃" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">2 qüvvənin əvəzləyici aralığı; 3 qüvvədə |F₁ - F₂| ≤ F₃ ≤ F₁ + F₂ ödənərsə F_əv,min = 0, ödənməzsə F_əv,min = böyük qüvvə - digər 2 qüvvənin cəmi</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F</span><span class="beraber">=</span><span class="sag-teref">(m₁ + m₂) · a</span></span>
+              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m₁</span><span class="mexrec">m₁ + m₂</span></span><span class="sag-teref">· F</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F = (m₁ + m₂) · a | T = (m₁ / (m₁ + m₂)) · F" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">İplə bağlanmış cisimlərin üfüqi sürtünməsiz səthdə hərəkəti (məs: m və 4m üçün F = 5ma, T = F/5; m, 2m, 3m üçün T₁ = F/6, T₂ = F/2)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2m₁m₂</span><span class="mexrec">m₁ + m₂</span></span><span class="sag-teref">· g</span></span>
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m₁ - m₂</span><span class="mexrec">m₁ + m₂</span></span><span class="sag-teref">· g</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="T = (2m₁m₂ / (m₁ + m₂)) · g | a = ((m₁ - m₂) / (m₁ + m₂)) · g" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Tərpənməz blokdan keçirilmiş cisimlər (m₁ &gt; m₂, v₀ = 0, F_sürt = 0, P_blok = 0): ipdəki gərilmə qüvvəsi (T) və sistemin təcili (a); təcillər verilərsə a = a₁a₂ / (a₁ + a₂)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">S</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">at²</span><span class="mexrec">2</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">l = 2S</span><span class="beraber">=</span><span class="sag-teref">at²</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂ = v₂,₁</span><span class="beraber">=</span><span class="sag-teref">2v = 2at</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="S = at² / 2 | l = 2S = at² | v₁,₂ = v₂,₁ = 2v = 2at" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Tərpənməz blokda yüklərin yerdəyişməsi (S), cisimlər arasındakı şaquli məsafə (l) və bir-birinə nəzərən nisbi sürəti</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">T₁</span><span class="beraber">=</span><span class="sag-teref">(m₁ + m₂ + m₃)(g + a)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">T₄</span><span class="beraber">=</span><span class="sag-teref">(m₄ + m₅)(g - a)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="T₁ = (m₁ + m₂ + m₃)(g + a) | T₄ = (m₄ + m₅)(g - a)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Tərpənməz blokda ardıcıl asılmış yüklərdə ip gərilməsi: yuxarı qalxan tərəfdə T₂ = (m₂ + m₃)(g + a), T₃ = m₃(g + a); aşağı enən tərəfdə T₅ = m₅(g - a) və T₁ = T₄</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F</span><span class="beraber">=</span><span class="sag-teref">m ·</span><span class="sag-teref kesr"><span class="suret">v - v₀</span><span class="mexrec">t</span></span><span class="beraber">=</span><span class="sag-teref">m ·</span><span class="sag-teref kesr"><span class="suret">v² - v₀²</span><span class="mexrec">2S</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">(v₀ = 0): F</span><span class="beraber">=</span><span class="sag-teref">m ·</span><span class="sag-teref kesr"><span class="suret">v</span><span class="mexrec">t</span></span><span class="beraber">=</span><span class="sag-teref">m ·</span><span class="sag-teref kesr"><span class="suret">2S</span><span class="mexrec">t²</span></span><span class="beraber">=</span><span class="sag-teref">m ·</span><span class="sag-teref kesr"><span class="suret">v²</span><span class="mexrec">2S</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F = m(v - v₀)/t = m(v² - v₀²)/(2S) | (v₀ = 0): F = mv/t = 2mS/t² = mv²/(2S)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Bərabərtəcilli hərəkətdə Nyutonun II qanununun ifadələri</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F</span><span class="beraber">=</span><span class="sag-teref">ma = m</span><span class="sag-teref kesr"><span class="suret">v²</span><span class="mexrec">R</span></span><span class="beraber">=</span><span class="sag-teref">mω²R = m·4π²n²R</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F</span><span class="beraber">=</span><span class="sag-teref">m ·</span><span class="sag-teref kesr"><span class="suret">4π²R</span><span class="mexrec">T²</span></span><span class="beraber">=</span><span class="sag-teref">mωv</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F = ma = mv²/R = mω²R = m·4π²n²R = m·4π²R/T² = mωv" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Çevrə üzrə bərabərsürətli hərəkətdə mərkəzəqaçma qüvvəsi (əvəzləyici qüvvə çevrənin mərkəzinə yönəlir)</div>
+        </div>
+
+        <div class="axtaris-tapilmadi-qutu">
+          <span class="tapilmadi-ikon">🔍</span>
+          <strong>Axtarışa uyğun düstur tapılmadı</strong>
+          <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
+        </div>
+      </section>
+<section id="cazibe" class="movzu-mezmun">
+        <h1>5. Ümumdünya cazibə qanunu</h1>
+        <p class="qisa-izah">Cisimlərin qravitasiya qarşılıqlı təsiri, ağırlıq qüvvəsi və sərbəstdüşmə təcilinin hündürlükdən asılılığı, şaquli hərəkətlər, Kepler qanunu və kosmik sürətlər.</p>
+
+        <div class="dustur-axtaris-panel">
+          <span class="dustur-axtaris-ikon">🔎</span>
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: ağırlıq, hündürlük, kosmik, düşmə)..." oninput="dusturlariAxtar()">
+          <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F</span><span class="beraber">=</span><span class="sag-teref">G ·</span><span class="sag-teref kesr"><span class="suret">m₁ · m₂</span><span class="mexrec">r²</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">G</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F · r²</span><span class="mexrec">m₁ · m₂</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F = G · (m₁ · m₂) / r² | G = (F · r²) / (m₁ · m₂)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">İki cismin cazibə qüvvəsi: m₁, m₂ — kütlələr, r — mərkəzlər arası məsafə, G — qravitasiya sabiti ([G] = 6,67·10⁻¹¹ N·m²/kq² = m³/(kq·san²)); iki toxunan kürə üçün F ~ R⁴</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F_ağ</span><span class="beraber">=</span><span class="sag-teref">m · g = ρ · V · g</span></span>
+              <span class="dustur-setir"><span class="sol-teref">g</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F_ağ</span><span class="mexrec">m</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F_ağ = m · g = ρ · V · g | g = F_ağ / m" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Ağırlıq qüvvəsi (F_ağ) və sərbəstdüşmə təcili / qravitasiya sahəsinin intensivliyi (g, [g] = 1 N/kq = 1 m/san²); g cismin kütləsindən (m) asılı deyil</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F₀</span><span class="beraber">=</span><span class="sag-teref">G ·</span><span class="sag-teref kesr"><span class="suret">M · m</span><span class="mexrec">R²</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">g₀</span><span class="beraber">=</span><span class="sag-teref">G ·</span><span class="sag-teref kesr"><span class="suret">M</span><span class="mexrec">R²</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">4</span><span class="mexrec">3</span></span><span class="sag-teref">GρπR</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F₀ = G·Mm / R² | g₀ = GM / R² = (4/3)GρπR" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisim planetin (Yerin) səthində olduqda ağırlıq qüvvəsi (F₀) və sərbəstdüşmə təcili (g₀); M — planetin kütləsi, R — radiusu</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">F</span><span class="beraber">=</span><span class="sag-teref">G ·</span><span class="sag-teref kesr"><span class="suret">M · m</span><span class="mexrec">(R + h)²</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">g</span><span class="beraber">=</span><span class="sag-teref">G ·</span><span class="sag-teref kesr"><span class="suret">M</span><span class="mexrec">(R + h)²</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="F = G·Mm / (R + h)² | g = GM / (R + h)²" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Planet səthindən h hündürlükdə ağırlıq qüvvəsi və sərbəstdüşmə təcili (h artdıqca F və g azalır)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">g</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">g₀</span><span class="mexrec">(h/R + 1)²</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F₀</span><span class="mexrec">(h/R + 1)²</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">mg</span><span class="mexrec">(h/R + 1)²</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="g = g₀ / (h/R + 1)² | F = F₀ / (h/R + 1)² = mg / (h/R + 1)²" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Səth ilə h hündürlüyü arasında əlaqə: h = R olduqda g₀/4, F₀/4; h = 2R olduqda g₀/9, F₀/9; h = 3R olduqda g₀/16, F₀/16</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">v₀ - gt</span><span class="beraber">=</span><span class="sag-teref">√(v₀² - 2gh)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">h</span><span class="beraber">=</span><span class="sag-teref">v₀t -</span><span class="sag-teref kesr"><span class="suret">gt²</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀² - v²</span><span class="mexrec">2g</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">h</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v + v₀</span><span class="mexrec">2</span></span><span class="sag-teref">· t</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v = v₀ - gt = √(v₀² - 2gh) | h = v₀t - gt²/2 = (v₀² - v²)/(2g) = ((v + v₀)/2)·t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Şaquli yuxarı atılmış cismin müəyyən andakı sürəti və yerdən hündürlüyü (a = g = const)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">t_q</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀</span><span class="mexrec">g</span></span><span class="beraber">=</span><span class="sag-teref">√</span><span class="sag-teref kesr"><span class="suret">2h_max</span><span class="mexrec">g</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2h_max</span><span class="mexrec">v₀</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">t_uç = 2t_q</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2v₀</span><span class="mexrec">g</span></span><span class="beraber">=</span><span class="sag-teref">√</span><span class="sag-teref kesr"><span class="suret">8h_max</span><span class="mexrec">g</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">4h_max</span><span class="mexrec">v₀</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="t_q = v₀/g = √(2h_max/g) = 2h_max/v₀ | t_uç = 2t_q = 2v₀/g = √(8h_max/g) = 4h_max/v₀" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Şaquli yuxarı atılmış cismin qalxma müddəti (t_q) və uçuş müddəti (t_uç)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">h_max</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀²</span><span class="mexrec">2g</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">gt_q²</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">gt_uç²</span><span class="mexrec">8</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀t_q</span><span class="mexrec">2</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">hₙ</span><span class="beraber">=</span><span class="sag-teref">v₀ -</span><span class="sag-teref kesr"><span class="suret">g(2n - 1)</span><span class="mexrec">2</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="h_max = v₀²/(2g) = gt_q²/2 = gt_uç²/8 = v₀t_q/2 | hₙ = v₀ - g(2n - 1)/2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Maksimal qalxma hündürlüyü (h_max) və n-ci saniyədə gedilən yol (hₙ)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">l_uç = 2h_max</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀²</span><span class="mexrec">g</span></span><span class="beraber">=</span><span class="sag-teref">gt_q²</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">gt_uç²</span><span class="mexrec">4</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">(t &gt; t_q): l</span><span class="beraber">=</span><span class="sag-teref">h_max +</span><span class="sag-teref kesr"><span class="suret">g(t - t_q)²</span><span class="mexrec">2</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="l_uç = 2h_max = v₀²/g = gt_q² = gt_uç²/4 | (t > t_q): l = h_max + g(t - t_q)²/2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Şaquli yuxarı atılmış cismin uçuş müddətində və t &gt; t_q müddətində qət etdiyi ümumi yol</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">v₀ + gt = √(v₀² + 2gh)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">h</span><span class="beraber">=</span><span class="sag-teref">v₀t +</span><span class="sag-teref kesr"><span class="suret">gt²</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v² - v₀²</span><span class="mexrec">2g</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">h</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v + v₀</span><span class="mexrec">2</span></span><span class="sag-teref">· t</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v = v₀ + gt = √(v₀² + 2gh) | h = v₀t + gt²/2 = (v² - v₀²)/(2g) = ((v + v₀)/2)·t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Müəyyən hündürlükdən şaquli aşağı atılmış cismin sürəti və düşmə hündürlüyü (hₙ = v₀ + g(2n - 1)/2, h₀ = H - h)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">gt = √(2gh)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">h</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">gt²</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v²</span><span class="mexrec">2g</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">vt</span><span class="mexrec">2</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">t_uç</span><span class="beraber">=</span><span class="sag-teref">√</span><span class="sag-teref kesr"><span class="suret">2H</span><span class="mexrec">g</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v</span><span class="mexrec">g</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2H</span><span class="mexrec">v</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v = gt = √(2gh) | h = gt²/2 = v²/(2g) = vt/2 | t_uç = √(2H/g) = v/g = 2H/v" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Sərbəst düşən cisim (v₀ = 0): sürət, düşmə hündürlüyü və düşmə müddəti (hₙ = g(2n - 1)/2, h₀ = H - gt²/2)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">T₁</span><span class="mexrec">T₂</span></span><span class="sol-teref">²</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">R₁</span><span class="mexrec">R₂</span></span><span class="sag-teref">³</span></span>
+              <span class="dustur-setir"><span class="sol-teref">T ~ R√R</span><span class="beraber">|</span><span class="sag-teref">T² ~ R³</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="(T₁/T₂)² = (R₁/R₂)³ | T ~ R√R | T² ~ R³" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Kepler qanunu: planetlərin Günəş ətrafında fırlanma periodlarının kvadratları nisbəti orbit radiuslarının kubları nisbətinə bərabərdir</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_I</span><span class="beraber">=</span><span class="sag-teref">√</span><span class="sag-teref kesr"><span class="suret">GM</span><span class="mexrec">R</span></span><span class="beraber">=</span><span class="sag-teref">R√</span><span class="sag-teref kesr"><span class="suret">4</span><span class="mexrec">3</span></span><span class="sag-teref">πρG ≈ 8</span><span class="sag-teref kesr"><span class="suret">km</span><span class="mexrec">san</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_I,h</span><span class="beraber">=</span><span class="sag-teref">√</span><span class="sag-teref kesr"><span class="suret">GM</span><span class="mexrec">R + h</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v_I</span><span class="mexrec">√(1 + h/R)</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_I = √(GM/R) = R√((4/3)πρG) ≈ 8 km/san | v_I,h = √(GM/(R+h)) = v_I / √(1 + h/R)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">I kosmik sürət (Yer səthində və h hündürlükdə): cismin Yerin süni peykinə çevrilməsi üçün minimal sürət</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_II</span><span class="beraber">=</span><span class="sag-teref">√2 · v_I ≈ 11,2</span><span class="sag-teref kesr"><span class="suret">km</span><span class="mexrec">san</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_III</span><span class="beraber">≈</span><span class="sag-teref">16,7</span><span class="sag-teref kesr"><span class="suret">km</span><span class="mexrec">san</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_II = √2 · v_I ≈ 11,2 km/san | v_III ≈ 16,7 km/san" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">II kosmik sürət — Yerin cazibə sahəsindən çıxmaq üçün minimal sürət; III kosmik sürət — Günəşin cazibə sahəsindən çıxmaq üçün minimal sürət</div>
+        </div>
+
+        <div class="axtaris-tapilmadi-qutu">
+          <span class="tapilmadi-ikon">🔍</span>
+          <strong>Axtarışa uyğun düstur tapılmadı</strong>
+          <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
+        </div>
+      </section>
+
+      <!-- ===================== 6. ELASTİKLİK QÜVVƏSİ ===================== -->
+      <section id="elastiklik" class="movzu-mezmun">
+        <h1>6. Elastiklik qüvvəsi</h1>
+      </section><!-- ===================== KƏMİYYƏTLƏRİN VAHİDLƏRİ SƏHİFƏSİ ===================== -->
+      <section id="vahidler" class="movzu-mezmun">
+        <h1>Kəmiyyətlərin vahidləri</h1>
+        <p class="qisa-izah">Beynəlxalq Vahidlər Sistemində (BS) əsas və törəmə fiziki kəmiyyətlər, onların simvolları, sabitlər, vahidsiz/vektor kəmiyyətlər və vahid açılışları:</p>
+
+        <div class="dustur-axtaris-panel">
+          <span class="dustur-axtaris-ikon">🔎</span>
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, sabit və ya vahid axtar (məs: qüvvə, sabit, coul, vat, vektor)..." oninput="dusturlariAxtar()">
+          <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
+        </div>
+
+        <!-- 1-ci kart: Əsas vahidlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Beynəlxalq Sistemdəki Əsas Vahidlər</strong>
+            <ul class="vahid-siyahi">
+              <li><span class="vahid-no">1</span><span>Uzunluq : <span class="vahid-simvol">S, l</span> — <span class="vahid-qiymet">metr (m)</span></span></li>
+              <li><span class="vahid-no">2</span><span>Zaman : <span class="vahid-simvol">t</span> — <span class="vahid-qiymet">saniyə (san)</span></span></li>
+              <li><span class="vahid-no">3</span><span>Kütlə : <span class="vahid-simvol">m</span> — <span class="vahid-qiymet">kiloqram (kq)</span></span></li>
+              <li><span class="vahid-no">4</span><span>Temperatur : <span class="vahid-simvol">T</span> — <span class="vahid-qiymet">Kelvin (K)</span></span></li>
+              <li><span class="vahid-no">5</span><span>Maddə miqdarı : <span class="vahid-simvol">ν</span> — <span class="vahid-qiymet">mol (mol)</span></span></li>
+              <li><span class="vahid-no">6</span><span>Cərəyan şiddəti : <span class="vahid-simvol">I</span> — <span class="vahid-qiymet">Amper (A)</span></span></li>
+              <li><span class="vahid-no">7</span><span>İşıq şiddəti : <span class="vahid-simvol">Iᵥ</span> — <span class="vahid-qiymet">kandela (kd)</span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2-ci kart: Vahidi metr (m) olan kəmiyyətlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vahidi metr (m) olan kəmiyyətlər</strong>
+            <div class="ortaq-vahid-qutu">
+              <ul class="vahid-siyahi ortaq-vahid-siyahi">
+                <li><span class="vahid-no">1</span><span>Yol, yerdəyişmə : <span class="vahid-simvol">S</span> — <span class="vahid-qiymet">m</span></span></li>
+                <li><span class="vahid-no">2</span><span>Qüvvənin qolu : <span class="vahid-simvol">d, l</span> — <span class="vahid-qiymet">m</span></span></li>
+                <li><span class="vahid-no">3</span><span>Rəqsin amplitudu : <span class="vahid-simvol">A, xₘ</span> — <span class="vahid-qiymet">m</span></span></li>
+                <li><span class="vahid-no">4</span><span>Dalğa uzunluğu : <span class="vahid-simvol">λ</span> — <span class="vahid-qiymet">m</span></span></li>
+                <li><span class="vahid-no">5</span><span>Mütləq uzanma : <span class="vahid-simvol">Δl, x</span> — <span class="vahid-qiymet">m</span></span></li>
+                <li><span class="vahid-no">6</span><span>Fokus məsafəsi : <span class="vahid-simvol">F</span> — <span class="vahid-qiymet">m</span></span></li>
+                <li><span class="vahid-no">7</span><span>Difraksiya qəfəsinin periodu : <span class="vahid-simvol">d</span> — <span class="vahid-qiymet">m</span></span></li>
+                <li><span class="vahid-no">8</span><span>Cisim məsafəsi : <span class="vahid-simvol">d</span> — <span class="vahid-qiymet">m</span></span></li>
+                <li><span class="vahid-no">9</span><span>Xəyal məsafəsi : <span class="vahid-simvol">f</span> — <span class="vahid-qiymet">m</span></span></li>
+              </ul>
+
+              <div class="ortaq-moterize-panel" aria-label="Hamısının vahidi metr (m)">
+                <svg class="fiqurlu-moterize-svg" viewBox="0 0 24 200" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 3 3 C 12 3, 12 10, 12 22 L 12 86 C 12 95, 16 99, 22 100 C 16 101, 12 105, 12 114 L 12 178 C 12 190, 12 197, 3 197"
+                        fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="ortaq-vahid-etiket">
+                  <span>metr (m)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-cü kart: Vahidi Nyuton (N) olan kəmiyyətlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vahidi Nyuton (N) olan kəmiyyətlər</strong>
+            <div class="ortaq-vahid-qutu">
+              <ul class="vahid-siyahi ortaq-vahid-siyahi">
+                <li><span class="vahid-no">1</span><span>Qüvvə : <span class="vahid-simvol">F</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">2</span><span>Dayağın reaksiya qüvvəsi : <span class="vahid-simvol">N</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">3</span><span>Ağırlıq qüvvəsi : <span class="vahid-simvol">F_ağ</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">4</span><span>Cismin çəkisi : <span class="vahid-simvol">P</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">5</span><span>Elastiklik qüvvəsi : <span class="vahid-simvol">F_el</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">6</span><span>Arximed qüvvəsi : <span class="vahid-simvol">F_A</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">7</span><span>Sürtünmə qüvvəsi : <span class="vahid-simvol">F_s</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">8</span><span>Səthi gərilmə qüvvəsi : <span class="vahid-simvol">F_g</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">9</span><span>Lorens qüvvəsi : <span class="vahid-simvol">F_L</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">10</span><span>Amper qüvvəsi : <span class="vahid-simvol">F_A</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+              </ul>
+
+              <div class="ortaq-moterize-panel" aria-label="Hamısının vahidi Nyuton">
+                <svg class="fiqurlu-moterize-svg" viewBox="0 0 24 200" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 3 3 C 12 3, 12 10, 12 22 L 12 86 C 12 95, 16 99, 22 100 C 16 101, 12 105, 12 114 L 12 178 C 12 190, 12 197, 3 197"
+                        fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="ortaq-vahid-etiket">
+                  <span>1 Nyuton (N)</span>
+                  <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san<sup>2</sup></span></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-cü kart: Vahidi Coul (C) olan kəmiyyətlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vahidi Coul (C) olan kəmiyyətlər</strong>
+            <div class="ortaq-vahid-qutu">
+              <ul class="vahid-siyahi ortaq-vahid-siyahi">
+                <li><span class="vahid-no">1</span><span>Enerji : <span class="vahid-simvol">E</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">2</span><span>Daxili enerji : <span class="vahid-simvol">U</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">3</span><span>Potensial enerji : <span class="vahid-simvol">E_p, W_p</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">4</span><span>Kinetik enerji : <span class="vahid-simvol">E_k, W_k</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">5</span><span>İş : <span class="vahid-simvol">A</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">6</span><span>İstilik miqdarı : <span class="vahid-simvol">Q</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">7</span><span>Ərimə istiliyi : <span class="vahid-simvol">Q</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">8</span><span>Yanma istiliyi : <span class="vahid-simvol">Q</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">9</span><span>Buxarlanma istiliyi : <span class="vahid-simvol">Q</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+              </ul>
+
+              <div class="ortaq-moterize-panel" aria-label="Hamısının vahidi Coul">
+                <svg class="fiqurlu-moterize-svg" viewBox="0 0 24 200" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 3 3 C 12 3, 12 10, 12 22 L 12 86 C 12 95, 16 99, 22 100 C 16 101, 12 105, 12 114 L 12 178 C 12 190, 12 197, 3 197"
+                        fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="ortaq-vahid-etiket">
+                  <span>1 Coul (C)</span>
+                  <span class="ortaq-vahid-acilisi">= N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5-ci kart: Vahidi N·san olan kəmiyyətlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vahidi N · san olan kəmiyyətlər</strong>
+            <div class="ortaq-vahid-qutu">
+              <ul class="vahid-siyahi ortaq-vahid-siyahi">
+                <li><span class="vahid-no">1</span><span>İmpuls : <span class="vahid-simvol">p</span> — <span class="vahid-qiymet">N · san = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san</span></span></span></span></li>
+                <li><span class="vahid-no">2</span><span>Qüvvə impulsu : <span class="vahid-simvol">F · Δt</span> — <span class="vahid-qiymet">N · san = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san</span></span></span></span></li>
+                <li><span class="vahid-no">3</span><span>İmpuls dəyişməsi : <span class="vahid-simvol">Δp</span> — <span class="vahid-qiymet">N · san = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san</span></span></span></span></li>
+              </ul>
+
+              <div class="ortaq-moterize-panel" aria-label="Hamısının vahidi N·san">
+                <svg class="fiqurlu-moterize-svg" viewBox="0 0 24 200" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 3 3 C 12 3, 12 10, 12 22 L 12 86 C 12 95, 16 99, 22 100 C 16 101, 12 105, 12 114 L 12 178 C 12 190, 12 197, 3 197"
+                        fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="ortaq-vahid-etiket">
+                  <span>N · san</span>
+                  <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san</span></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6-cı kart: Vahidi Paskal (Pa) olan kəmiyyətlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vahidi Paskal (Pa) olan kəmiyyətlər</strong>
+            <div class="ortaq-vahid-qutu">
+              <ul class="vahid-siyahi ortaq-vahid-siyahi">
+                <li><span class="vahid-no">1</span><span>Təzyiq : <span class="vahid-simvol">p</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">2</span><span>Yunq modulu : <span class="vahid-simvol">E</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">3</span><span>Mexaniki gərginlik : <span class="vahid-simvol">σ</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">4</span><span>Elastiklik həddi : <span class="vahid-simvol">σ_el</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">5</span><span>Axıcılıq həddi : <span class="vahid-simvol">σ_ax</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">6</span><span>Mütənasiblik həddi : <span class="vahid-simvol">σ_m</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">7</span><span>Möhkəmlik həddi : <span class="vahid-simvol">σ_möh</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san<sup>2</sup></span></span></span></span></li>
+              </ul>
+
+              <div class="ortaq-moterize-panel" aria-label="Hamısının vahidi Paskal">
+                <svg class="fiqurlu-moterize-svg" viewBox="0 0 24 200" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 3 3 C 12 3, 12 10, 12 22 L 12 86 C 12 95, 16 99, 22 100 C 16 101, 12 105, 12 114 L 12 178 C 12 190, 12 197, 3 197"
+                        fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="ortaq-vahid-etiket">
+                  <span>1 Paskal (Pa)</span>
+                  <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san<sup>2</sup></span></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7-ci kart: Vahidi Om olan kəmiyyətlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vahidi Om olan kəmiyyətlər</strong>
+            <div class="ortaq-vahid-qutu">
+              <ul class="vahid-siyahi ortaq-vahid-siyahi">
+                <li><span class="vahid-no">1</span><span>Müqavimət : <span class="vahid-simvol">R</span> — <span class="vahid-qiymet">Om = <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A<sup>2</sup> · san<sup>3</sup></span></span></span></span></li>
+                <li><span class="vahid-no">2</span><span>Tutum müqaviməti : <span class="vahid-simvol">X_C</span> — <span class="vahid-qiymet">Om = <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A<sup>2</sup> · san<sup>3</sup></span></span></span></span></li>
+                <li><span class="vahid-no">3</span><span>İnduktiv müqavimət : <span class="vahid-simvol">X_L</span> — <span class="vahid-qiymet">Om = <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A<sup>2</sup> · san<sup>3</sup></span></span></span></span></li>
+                <li><span class="vahid-no">4</span><span>Tam müqavimət : <span class="vahid-simvol">Z</span> — <span class="vahid-qiymet">Om = <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A<sup>2</sup> · san<sup>3</sup></span></span></span></span></li>
+              </ul>
+
+              <div class="ortaq-moterize-panel" aria-label="Hamısının vahidi Om">
+                <svg class="fiqurlu-moterize-svg" viewBox="0 0 24 200" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 3 3 C 12 3, 12 10, 12 22 L 12 86 C 12 95, 16 99, 22 100 C 16 101, 12 105, 12 114 L 12 178 C 12 190, 12 197, 3 197"
+                        fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="ortaq-vahid-etiket">
+                  <span>1 Om</span>
+                  <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A<sup>2</sup> · san<sup>3</sup></span></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8-ci kart: Vahidi C / kq olan kəmiyyətlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vahidi C / kq olan kəmiyyətlər</strong>
+            <div class="ortaq-vahid-qutu">
+              <ul class="vahid-siyahi ortaq-vahid-siyahi">
+                <li><span class="vahid-no">1</span><span>Xüsusi ərimə istiliyi : <span class="vahid-simvol">λ</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">2</span><span>Xüsusi buxarlanma istiliyi : <span class="vahid-simvol">L</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">3</span><span>Xüsusi yanma istiliyi : <span class="vahid-simvol">q</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+                <li><span class="vahid-no">4</span><span>Şüalanma dozası : <span class="vahid-simvol">D</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+              </ul>
+
+              <div class="ortaq-moterize-panel" aria-label="Hamısının vahidi C/kq">
+                <svg class="fiqurlu-moterize-svg" viewBox="0 0 24 200" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 3 3 C 12 3, 12 10, 12 22 L 12 86 C 12 95, 16 99, 22 100 C 16 101, 12 105, 12 114 L 12 178 C 12 190, 12 197, 3 197"
+                        fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="ortaq-vahid-etiket">
+                  <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span>
+                  <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9-cu kart: Vahidi Volt (V) olan kəmiyyətlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vahidi Volt (V) olan kəmiyyətlər</strong>
+            <div class="ortaq-vahid-qutu">
+              <ul class="vahid-siyahi ortaq-vahid-siyahi">
+                <li><span class="vahid-no">1</span><span>Potensial : <span class="vahid-simvol">φ</span> — <span class="vahid-qiymet">V = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A · san<sup>3</sup></span></span></span></span></li>
+                <li><span class="vahid-no">2</span><span>Gərginlik : <span class="vahid-simvol">U</span> — <span class="vahid-qiymet">V = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A · san<sup>3</sup></span></span></span></span></li>
+                <li><span class="vahid-no">3</span><span>Potensiallar fərqi : <span class="vahid-simvol">U = φ₁ - φ₂</span> — <span class="vahid-qiymet">V = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A · san<sup>3</sup></span></span></span></span></li>
+                <li><span class="vahid-no">4</span><span>E.H.Q : <span class="vahid-simvol">ε</span> — <span class="vahid-qiymet">V = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A · san<sup>3</sup></span></span></span></span></li>
+              </ul>
+
+              <div class="ortaq-moterize-panel" aria-label="Hamısının vahidi Volt">
+                <svg class="fiqurlu-moterize-svg" viewBox="0 0 24 200" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 3 3 C 12 3, 12 10, 12 22 L 12 86 C 12 95, 16 99, 22 100 C 16 101, 12 105, 12 114 L 12 178 C 12 190, 12 197, 3 197"
+                        fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="ortaq-vahid-etiket">
+                  <span>1 Volt (V)</span>
+                  <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A · san<sup>3</sup></span></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10-cu kart: Sərtlik əmsalı və səthi gərilmə əmsalı -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Sərtlik əmsalı və səthi gərilmə əmsalı</strong>
+            <div class="ortaq-vahid-qutu">
+              <ul class="vahid-siyahi ortaq-vahid-siyahi">
+                <li><span class="vahid-no">1</span><span>Sərtlik əmsalı : <span class="vahid-simvol">k</span></span></li>
+                <li><span class="vahid-no">2</span><span>Səthi gərilmə əmsalı : <span class="vahid-simvol">σ</span></span></li>
+              </ul>
+
+              <div class="ortaq-moterize-panel" aria-label="Sərtlik və səthi gərilmə əmsalının vahidi">
+                <svg class="fiqurlu-moterize-svg" viewBox="0 0 24 200" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 3 3 C 12 3, 12 10, 12 22 L 12 86 C 12 95, 16 99, 22 100 C 16 101, 12 105, 12 114 L 12 178 C 12 190, 12 197, 3 197"
+                        fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <div class="ortaq-vahid-etiket">
+                  <span class="ortaq-vahid-acilisi"><span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">san<sup>2</sup></span></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11-ci kart: Digər törəmə fiziki kəmiyyətlər -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Digər törəmə fiziki kəmiyyətlər və vahid açılışları</strong>
+            <ul class="vahid-siyahi">
+              <li><span class="vahid-no">1</span><span>Sürət : <span class="vahid-simvol">v</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">m</span><span class="mexrec">san</span></span></span></span></li>
+              <li><span class="vahid-no">2</span><span>Təcil : <span class="vahid-simvol">a</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">m</span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">3</span><span>Tezlik : <span class="vahid-simvol">n, ν</span> — <span class="vahid-qiymet">1 Hs = san<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">san</span></span></span></span></li>
+              <li><span class="vahid-no">4</span><span>Period : <span class="vahid-simvol">T</span> — <span class="vahid-qiymet">san</span></span></li>
+              <li><span class="vahid-no">5</span><span>Həcm : <span class="vahid-simvol">V</span> — <span class="vahid-qiymet">m<sup>3</sup></span></span></li>
+              <li><span class="vahid-no">6</span><span>Sahə : <span class="vahid-simvol">S</span> — <span class="vahid-qiymet">m<sup>2</sup></span></span></li>
+              <li><span class="vahid-no">7</span><span>Kütlə defekti : <span class="vahid-simvol">ΔM</span> — <span class="vahid-qiymet">kq</span></span></li>
+              <li><span class="vahid-no">8</span><span>Sıxlıq, mütləq rütubət : <span class="vahid-simvol">ρ</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m<sup>3</sup></span></span> , <span class="kesr kicik"><span class="suret">q</span><span class="mexrec">m<sup>3</sup></span></span></span></span></li>
+              <li><span class="vahid-no">9</span><span>Rabitə enerjisi : <span class="vahid-simvol">E_rab</span> — <span class="vahid-qiymet">MeV</span></span></li>
+              <li><span class="vahid-no">10</span><span>Xüsusi rabitə enerjisi : <span class="vahid-simvol">E_x.rab</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">MeV</span><span class="mexrec">nuklon</span></span></span></span></li>
+              <li><span class="vahid-no">11</span><span>Qüvvə momenti : <span class="vahid-simvol">M</span> — <span class="vahid-qiymet">N · m = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">12</span><span>Optik qüvvə : <span class="vahid-simvol">D</span> — <span class="vahid-qiymet">1 dptr = m<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">m</span></span></span></span></li>
+              <li><span class="vahid-no">13</span><span>Güc : <span class="vahid-simvol">N, P</span> — <span class="vahid-qiymet">Vt = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">san</span></span> = <span class="kesr kicik"><span class="suret">N · m</span><span class="mexrec">san</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>3</sup></span></span></span></span></li>
+              <li><span class="vahid-no">14</span><span>Gurluq : <span class="vahid-simvol">L</span> — <span class="vahid-qiymet">dB</span></span></li>
+              <li><span class="vahid-no">15</span><span>Bucaq sürəti : <span class="vahid-simvol">ω</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">rad</span><span class="mexrec">san</span></span></span></span></li>
+              <li><span class="vahid-no">16</span><span>Dönmə bucağı : <span class="vahid-simvol">φ</span> — <span class="vahid-qiymet">rad</span></span></li>
+              <li><span class="vahid-no">17</span><span>Dairəvi tezlik : <span class="vahid-simvol">ω₀</span> — <span class="vahid-qiymet">Hs = san<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">san</span></span></span></span></li>
+              <li><span class="vahid-no">18</span><span>Rəqsin fazası : <span class="vahid-simvol">φ = ωt</span> — <span class="vahid-qiymet">rad</span></span></li>
+              <li><span class="vahid-no">19</span><span>Molyar kütlə : <span class="vahid-simvol">M</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">mol</span></span></span></span></li>
+              <li><span class="vahid-no">20</span><span>İstilik tutumu : <span class="vahid-simvol">C</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">K</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup> · K</span></span></span></span></li>
+              <li><span class="vahid-no">21</span><span>Xüsusi istilik tutumu : <span class="vahid-simvol">c</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq · K</span></span> = <span class="kesr kicik"><span class="suret">m<sup>2</sup></span><span class="mexrec">san<sup>2</sup> · K</span></span></span></span></li>
+              <li><span class="vahid-no">22</span><span>Konsentrasiya : <span class="vahid-simvol">n</span> — <span class="vahid-qiymet">m<sup>-3</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">m<sup>3</sup></span></span></span></span></li>
+              <li><span class="vahid-no">23</span><span>Cərəyan şiddətinin dəyişmə sürəti : <span class="vahid-simvol"><span class="kesr kicik"><span class="suret">ΔI</span><span class="mexrec">Δt</span></span></span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">A</span><span class="mexrec">san</span></span></span></span></li>
+              <li><span class="vahid-no">24</span><span>Maqnit selinin dəyişmə sürəti : <span class="vahid-simvol"><span class="kesr kicik"><span class="suret">ΔΦ</span><span class="mexrec">Δt</span></span></span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">Vb</span><span class="mexrec">san</span></span></span></span></li>
+              <li><span class="vahid-no">25</span><span>Elektrik yükü : <span class="vahid-simvol">q</span> — <span class="vahid-qiymet">1 Kl = A · san</span></span></li>
+              <li><span class="vahid-no">26</span><span>Xüsusi yük : <span class="vahid-simvol">q'</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">q</span><span class="mexrec">m</span></span> — <span class="kesr kicik"><span class="suret">Kl</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">A · san</span><span class="mexrec">kq</span></span></span></span></li>
+              <li><span class="vahid-no">27</span><span>Xüsusi müqavimət : <span class="vahid-simvol">ρ</span> — <span class="vahid-qiymet">Om · m = <span class="kesr kicik"><span class="suret">kq · m<sup>3</sup></span><span class="mexrec">A<sup>2</sup> · san<sup>3</sup></span></span></span></span></li>
+              <li><span class="vahid-no">28</span><span>Enerji sıxlığı : <span class="vahid-simvol">ω</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">m<sup>3</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">29</span><span>Yükün səthi sıxlığı : <span class="vahid-simvol">σ</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">Kl</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">A · san</span><span class="mexrec">m<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">30</span><span>Cərəyanın sıxlığı : <span class="vahid-simvol">j</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">A</span><span class="mexrec">m<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">31</span><span>Şüalanma selinin sıxlığı : <span class="vahid-simvol">I</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">Vt</span><span class="mexrec">m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">san<sup>3</sup></span></span></span></span></li>
+              <li><span class="vahid-no">32</span><span>İnduksiya vektoru : <span class="vahid-simvol">B</span> — <span class="vahid-qiymet">1 Tl = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">A · m</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">A · san<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">33</span><span>Maqnit seli : <span class="vahid-simvol">Φ</span> — <span class="vahid-qiymet">Vb = Tl · m<sup>2</sup> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A · san<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">34</span><span>İnduktivlik : <span class="vahid-simvol">L</span> — <span class="vahid-qiymet">Hn = <span class="kesr kicik"><span class="suret">Vb</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">A<sup>2</sup> · san<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">35</span><span>Elektrokimyəvi ekvivalent : <span class="vahid-simvol">k</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">A · san</span></span></span></span></li>
+              <li><span class="vahid-no">36</span><span>Müqavimətin temperatur əmsalı : <span class="vahid-simvol">α</span> — <span class="vahid-qiymet">K<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">K</span></span></span></span></li>
+              <li><span class="vahid-no">37</span><span>Aktivlik : <span class="vahid-simvol">A</span> — <span class="vahid-qiymet">bekkerel = san<sup>-1</sup></span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 12-ci kart: Əsas fiziki sabitlər (1-ci şəkildən) -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Əsas fiziki sabitlər</strong>
+            <ul class="vahid-siyahi">
+              <li><span class="vahid-no">1</span><span>Qravitasiya sabiti : <span class="vahid-simvol">G</span> — <span class="vahid-qiymet">6,67 · 10<sup>-11</sup> <span class="kesr kicik"><span class="suret">N · m<sup>2</sup></span><span class="mexrec">kq<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">m<sup>3</sup></span><span class="mexrec">kq · san<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">2</span><span>Avoqadro sabiti : <span class="vahid-simvol">N<sub>A</sub></span> — <span class="vahid-qiymet">6,02 · 10<sup>23</sup> mol<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">mol</span></span></span></span></li>
+              <li><span class="vahid-no">3</span><span>Plank sabiti : <span class="vahid-simvol">h</span> — <span class="vahid-qiymet">6,63 · 10<sup>-34</sup> C · san = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san</span></span></span></span></li>
+              <li><span class="vahid-no">4</span><span>Elektrik sabiti : <span class="vahid-simvol">ε₀</span> — <span class="vahid-qiymet">8,85 · 10<sup>-12</sup> <span class="kesr kicik"><span class="suret">Kl<sup>2</sup></span><span class="mexrec">N · m<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">A<sup>2</sup> · san<sup>4</sup></span><span class="mexrec">kq · m<sup>3</sup></span></span></span></span></li>
+              <li><span class="vahid-no">5</span><span>Kulon sabiti : <span class="vahid-simvol">k</span> — <span class="vahid-qiymet">9 · 10<sup>9</sup> <span class="kesr kicik"><span class="suret">N · m<sup>2</sup></span><span class="mexrec">Kl<sup>2</sup></span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>3</sup></span><span class="mexrec">A<sup>2</sup> · san<sup>4</sup></span></span></span></span></li>
+              <li><span class="vahid-no">6</span><span>Bolsman sabiti : <span class="vahid-simvol">k</span> — <span class="vahid-qiymet">1,38 · 10<sup>-23</sup> <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">K</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup> · K</span></span></span></span></li>
+              <li><span class="vahid-no">7</span><span>Universal qaz sabiti : <span class="vahid-simvol">R</span> — <span class="vahid-qiymet">8,31 <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">mol · K</span></span> = <span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup> · K · mol</span></span></span></span></li>
+              <li><span class="vahid-no">8</span><span>İşıq sürəti : <span class="vahid-simvol">c</span> — <span class="vahid-qiymet">3 · 10<sup>8</sup> <span class="kesr kicik"><span class="suret">m</span><span class="mexrec">san</span></span></span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 13-cü kart: Ölçü vahidi olmayan kəmiyyətlər (1-ci şəkildən) -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Ölçü vahidi olmayan kəmiyyətlər</strong>
+            <ul class="vahid-siyahi">
+              <li><span class="vahid-no">1</span><span>Sürtünmə əmsalı : <span class="vahid-simvol">μ</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">2</span><span>FİƏ (faydalı iş əmsalı) : <span class="vahid-simvol">η</span> — <span class="vahid-qiymet">vahidsiz (%)</span></span></li>
+              <li><span class="vahid-no">3</span><span>Nisbi uzanma : <span class="vahid-simvol">ε</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">4</span><span>Dielektrik nüfuzluğu : <span class="vahid-simvol">ε</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">5</span><span>Maqnit nüfuzluğu : <span class="vahid-simvol">μ</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">6</span><span>Transformasiya əmsalı : <span class="vahid-simvol">k</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">7</span><span>Neytronların artma əmsalı : <span class="vahid-simvol">k</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">8</span><span>Spektrin tərtibi : <span class="vahid-simvol">k</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">9</span><span>Linzanın böyütməsi : <span class="vahid-simvol">Γ (Q)</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">10</span><span>Sındırma əmsalı (optik sıxlıq) : <span class="vahid-simvol">n</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">11</span><span>Valentlik : <span class="vahid-simvol">n</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">12</span><span>Hava yüklənmə : <span class="vahid-simvol">n</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">13</span><span>Dissosasiya dərəcəsi : <span class="vahid-simvol">α</span> — <span class="vahid-qiymet">vahidsiz</span></span></li>
+              <li><span class="vahid-no">14</span><span>Nisbi rütubət : <span class="vahid-simvol">φ</span> — <span class="vahid-qiymet">vahidsiz (%)</span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 14-cü kart: Vektorial kəmiyyətlər (2-ci şəkildən) -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vektorial kəmiyyətlər</strong>
+            <ul class="vahid-siyahi">
+              <li><span class="vahid-no">1</span><span>Yerdəyişmə : <span class="vahid-simvol">S(→)</span> — <span class="vahid-qiymet">vektor</span></span></li>
+              <li><span class="vahid-no">2</span><span>Yerdəyişməyə görə orta sürət : <span class="vahid-simvol">v_or(→)</span> — <span class="vahid-qiymet">vektor</span></span></li>
+              <li><span class="vahid-no">3</span><span>Təcil : <span class="vahid-simvol">a(→)</span> — <span class="vahid-qiymet">vektor</span></span></li>
+              <li><span class="vahid-no">4</span><span>Qüvvə : <span class="vahid-simvol">F(→)</span> — <span class="vahid-qiymet">vektor</span></span></li>
+              <li><span class="vahid-no">5</span><span>İmpuls : <span class="vahid-simvol">p(→)</span> — <span class="vahid-qiymet">vektor</span></span></li>
+              <li><span class="vahid-no">6</span><span>Qüvvə impulsu : <span class="vahid-simvol">F·Δt(→)</span> — <span class="vahid-qiymet">vektor</span></span></li>
+              <li><span class="vahid-no">7</span><span>Çəki : <span class="vahid-simvol">P(→)</span> — <span class="vahid-qiymet">vektor</span></span></li>
+              <li><span class="vahid-no">8</span><span>Elektrik sahəsinin intensivliyi : <span class="vahid-simvol">E(→)</span> — <span class="vahid-qiymet">vektor</span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 15-ci kart: Coulun müxtəlif açılışları (2-ci şəkildən) -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Coulun (C) müxtəlif açılışları</strong>
+            <ul class="vahid-siyahi">
+              <li><span class="vahid-no">1</span><span>1 C = <span class="vahid-qiymet">N · m</span></span></li>
+              <li><span class="vahid-no">2</span><span>1 C = <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span></span></span></li>
+              <li><span class="vahid-no">3</span><span>1 C = <span class="vahid-qiymet">Vt · san</span></span></li>
+              <li><span class="vahid-no">4</span><span>1 C = <span class="vahid-qiymet">A<sup>2</sup> · Om · san</span></span></li>
+              <li><span class="vahid-no">5</span><span>1 C = <span class="vahid-qiymet">A · V · san</span></span></li>
+              <li><span class="vahid-no">6</span><span>1 C = <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">V<sup>2</sup></span><span class="mexrec">Om</span></span> · san</span></span></li>
+              <li><span class="vahid-no">7</span><span>1 C = <span class="vahid-qiymet">Kl · V</span></span></li>
+              <li><span class="vahid-no">8</span><span>1 C = <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">Kl<sup>2</sup></span><span class="mexrec">F</span></span></span></span></li>
+              <li><span class="vahid-no">9</span><span>1 C = <span class="vahid-qiymet">F · V<sup>2</sup></span></span></li>
+              <li><span class="vahid-no">10</span><span>1 C = <span class="vahid-qiymet">Vb · A</span></span></li>
+              <li><span class="vahid-no">11</span><span>1 C = <span class="vahid-qiymet">Hn · A<sup>2</sup></span></span></li>
+              <li><span class="vahid-no">12</span><span>1 C = <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">Vb<sup>2</sup></span><span class="mexrec">Hn</span></span></span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 16-cı kart: Vatın müxtəlif açılışları (2-ci şəkildən) -->
+        <div class="dustur-kart" style="opacity: 1;">
+          <div class="dustur-menasi">
+            <strong style="color: var(--text-main); font-size: 16px;">Vatın (Vt) müxtəlif açılışları</strong>
+            <ul class="vahid-siyahi">
+              <li><span class="vahid-no">1</span><span>1 Vt = <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">san</span></span></span></span></li>
+              <li><span class="vahid-no">2</span><span>1 Vt = <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">kq · m<sup>2</sup></span><span class="mexrec">san<sup>3</sup></span></span></span></span></li>
+              <li><span class="vahid-no">3</span><span>1 Vt = <span class="vahid-qiymet">A<sup>2</sup> · Om</span></span></li>
+              <li><span class="vahid-no">4</span><span>1 Vt = <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">V<sup>2</sup></span><span class="mexrec">Om</span></span></span></span></li>
+              <li><span class="vahid-no">5</span><span>1 Vt = <span class="vahid-qiymet">A · V</span></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="axtaris-tapilmadi-qutu">
+          <span class="tapilmadi-ikon">🔍</span>
+          <strong>Axtarışa uyğun kəmiyyət, sabit və ya vahid tapılmadı</strong>
+          <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
+        </div>
+      </section>
+    </main>
+  </div>
+<!-- ===================== AŞAĞI İDARƏETMƏ PANELİ ===================== -->
+  <div id="kecid-panel" class="kecid-panel" style="display: none;">
+    <button type="button" id="evvelki-btn" class="kecid-btn" onclick="movzuKec(-1)">← Əvvəlki</button>
+    <button type="button" id="novbeti-btn" class="kecid-btn" onclick="movzuKec(1)">Növbəti →</button>
+    <span class="olcu-ayirici"></span>
+    <button type="button" class="kecid-btn" title="Şrifti kiçilt" onclick="sriftOlcusuDeyis(-1)">A-</button>
+    <button type="button" class="kecid-btn" title="Şrifti böyüt" onclick="sriftOlcusuDeyis(1)">A+</button>
+  </div>
+
+  <script>
+    const movzuSirasi = ['duzxetli', 'beraberttecilli', 'cevre-uzre', 'nyuton', 'cazibe', 'elastiklik', 'vahidler'];
+    let hazirkiIndeks = 0;
+    let dusturOlcu = 20;
+    let izahOlcu = 14;
+
+    /* 6 Rəng kombinasiyası dəyişdiricisi */
+    function temaDeyis(temaAdi) {
+      document.body.setAttribute('data-tema', temaAdi);
+      document.querySelectorAll('.tema-btn').forEach(btn => {
+        btn.classList.toggle('aktiv-tema', btn.getAttribute('data-tema') === temaAdi);
+      });
+      try { localStorage.setItem('fizika_tema', temaAdi); } catch (e) {}
+    }
+
+    /* Çoxdilli giriş məlumatları */
+    const girisTercumeleri = {
+      az: {
+        rozet: "Fizika Düstur Bələdçisi",
+        basliq: "Düsturlar əlinin altında olsun — vaxt itirmədən tap, bax, kopyala.",
+        meqsed: "Bu sayt <strong>dərs, ev tapşırığı, hazırlıq və imtahan vaxtı</strong> əsas fizika düsturlarını qarışıq səhifələrdə axtarmadan, səliqəli və sürətli şəkildə görmək məqsədilə yaradılıb. Hər düsturda dəyişənlərin mənasını, vahidlərini və əsas düstur ifadələrini bir yerdə tapa bilərsən.",
+        k1b: "Hazır Mövzu Bölmələri",
+        k1m: "Düzxətli bərabərsürətli hərəkət, düzxətli bərabərtəcilli hərəkət, çevrə üzrə bərabərsürətli hərəkət, Nyutonun qanunları, Ümumdünya cazibə qanunu və Elastiklik qüvvəsi bölmələri.",
+        k2b: "Kəmiyyətlər və Onların Vahidləri",
+        k2m: "Beynəlxalq Sistemdəki (BS) əsas və törəmə fiziki kəmiyyətlər, onların simvolları və əsas vahidlərlə tam açılışları (məsələn: <strong>1 N = 1 kq·m/san²</strong>, <strong>1 C = 1 kq·m²/san²</strong>) bir bölmədə toplanıb.",
+        k3b: "Albert Eynşteyn",
+        k3m: "Bilik müəyyən sərhədlərlə məhdudlaşır, lakin insan təxəyyülü bütün kainatı əhatə edə bildiyi üçün elmdə daha böyük gücə malikdir.",
+        k4b: "İsaak Nyuton",
+        k4m: "Elmdə uzağı görə bilməyimizin əsas səbəbi bizdən əvvəlki böyük alimlərin yaratdığı bilik təməlinin üzərində yüksəlməyimizdir.",
+        not: "Hazırsansa, mövzular və düsturlar bölməsinə keçək.",
+        btn: "Düsturlara keç"
+      },
+      en: {
+        rozet: "Physics Formula Guide",
+        basliq: "Keep formulas at your fingertips — find, view, and copy without wasting time.",
+        meqsed: "This site is designed to help you quickly view core physics formulas during <strong>lessons, homework, and exam prep</strong> without searching messy pages. Each card shows variable meanings, units, and key expressions.",
+        k1b: "Ready Topic Sections",
+        k1m: "Uniform linear motion, uniformly accelerated motion, uniform circular motion, Newton's laws, universal gravitation, and elastic force.",
+        k2b: "Quantities & SI Units",
+        k2m: "Base and derived physical quantities in the SI system, their symbols, and full unit breakdowns (e.g. <strong>1 N = 1 kg·m/s²</strong>, <strong>1 J = 1 kg·m²/s²</strong>).",
+        k3b: "Albert Einstein",
+        k3m: "While accumulated knowledge has boundaries, creative imagination spans the entire universe and drives scientific discovery.",
+        k4b: "Isaac Newton",
+        k4m: "Seeing further in science is possible only because we build upon the discoveries of great thinkers who came before us.",
+        not: "When you are ready, let's jump into the formulas.",
+        btn: "Go to Formulas"
+      },
+      ru: {
+        rozet: "Справочник формул по физике",
+        basliq: "Формулы всегда под рукой — находите, смотрите и копируйте без потери времени.",
+        meqsed: "Сайт создан для быстрого поиска основных формул физики во время <strong>уроков, домашних заданий и подготовки к экзаменам</strong>. В каждой карточке указаны обозначения величин и единицы измерения.",
+        k1b: "Готовые разделы тем",
+        k1m: "Равномерное и равноускоренное прямолинейное движение, движение по окружности, законы Ньютона, всемирное тяготение и сила упругости.",
+        k2b: "Величины и единицы СИ",
+        k2m: "Основные и производные физические величины в системе СИ, их символы и разложение единиц (например: <strong>1 Н = 1 кг·м/с²</strong>, <strong>1 Дж = 1 кг·м²/с²</strong>).",
+        k3b: "Альберт Эйнштейн",
+        k3m: "Накопленные знания всегда имеют границы, тогда как воображение охватывает весь мир и открывает путь новым идеям.",
+        k4b: "Исаак Ньютон",
+        k4m: "Видеть дальше в науке удаётся благодаря тому, что мы опираемся на фундаментальные открытия великих предшественников.",
+        not: "Если готовы, перейдём к темам и формулам.",
+        btn: "Перейти к формулам"
+      },
+      tr: {
+        rozet: "Fizik Formül Rehberi",
+        basliq: "Formüller elinin altında olsun — vakit kaybetmeden bul, incele, kopyala.",
+        meqsed: "Bu site <strong>ders, ödev, hazırlık ve sınav zamanı</strong> temel fizik formüllerini karmaşık sayfalarda aramadan hızlıca görmeniz için hazırlandı. Her kartta değişkenlerin anlamını ve birimlerini bulabilirsiniz.",
+        k1b: "Hazır Konu Bölümleri",
+        k1m: "Düzgün doğrusal hareket, düzgün hızlanan hareket, çembersel hareket, Newton yasaları, kütle çekim yasası ve esneklik kuvveti.",
+        k2b: "Büyüklükler ve SI Birimleri",
+        k2m: "Uluslararası Birim Sistemindeki (SI) temel ve türetilmiş büyüklükler, sembolleri ve tam açılımları (örneğin: <strong>1 N = 1 kg·m/s²</strong>, <strong>1 J = 1 kg·m²/s²</strong>).",
+        k3b: "Albert Einstein",
+        k3m: "Bilgi belirli sınırlar içindedir; ancak hayal gücü tüm evreni kapsadığı için bilimde ilerlemenin anahtarıdır.",
+        k4b: "Isaac Newton",
+        k4m: "Bilimde daha uzağı görebilmemiz, bizden önceki büyük bilim insanlarının kurduğu temellerin üzerinde yükselmemiz sayesindedir.",
+        not: "Hazırsan konular ve formüller bölümüne geçelim.",
+        btn: "Formüllere geç"
+      },
+      fr: {
+        rozet: "Guide des Formules de Physique",
+        basliq: "Gardez les formules à portée de main — trouvez, consultez et copiez sans perdre de temps.",
+        meqsed: "Ce site est conçu pour consulter rapidement les formules essentielles de physique pendant les <strong>cours, devoirs et révisions d'examens</strong> avec leurs unités et définitions.",
+        k1b: "Sections Prêtes à l'Emploi",
+        k1m: "Mouvement rectiligne uniforme, mouvement uniformément accéléré, mouvement circulaire, lois de Newton, gravitation et force élastique.",
+        k2b: "Grandeurs et Unités SI",
+        k2m: "Grandeurs fondamentales et dérivées du système SI, leurs symboles et décompositions complètes (ex. : <strong>1 N = 1 kg·m/s²</strong>, <strong>1 J = 1 kg·m²/s²</strong>).",
+        k3b: "Albert Einstein",
+        k3m: "Le savoir acquis reste limité, mais l'imagination embrasse l'univers entier et guide les grandes découvertes.",
+        k4b: "Isaac Newton",
+        k4m: "Voir plus loin en science est possible parce que nous nous appuyons sur les travaux des grands savants qui nous ont précédés.",
+        not: "Si vous êtes prêt, passons aux formules.",
+        btn: "Accéder aux formules"
+      }
+    };
+
+    function basligiHerflerleAnimasiyaEt(metn) {
+      const el = document.getElementById('giris-basliq');
+      if (!el) return;
+      el.innerHTML = '';
+      let gecikme = 0.05;
+      metn.split(' ').forEach((soz, i) => {
+        const sozSpan = document.createElement('span');
+        sozSpan.className = 'anim-soz';
+        for (const simvol of soz) {
+          const herfSpan = document.createElement('span');
+          herfSpan.className = 'anim-herf';
+          herfSpan.textContent = simvol;
+          herfSpan.style.animationDelay = gecikme.toFixed(3) + 's';
+          gecikme += 0.015;
+          sozSpan.appendChild(herfSpan);
+        }
+        el.appendChild(sozSpan);
+        if (i < metn.split(' ').length - 1) el.appendChild(document.createTextNode(' '));
+      });
+    }
+
+    function girisDiliDeyis(dil) {
+      const t = girisTercumeleri[dil] || girisTercumeleri.az;
+      document.getElementById('giris-rozet').textContent = t.rozet;
+      basligiHerflerleAnimasiyaEt(t.basliq);
+      document.getElementById('giris-meqsed').innerHTML = t.meqsed;
+      document.getElementById('giris-k1-basliq').textContent = t.k1b;
+      document.getElementById('giris-k1-metn').textContent = t.k1m;
+      document.getElementById('giris-k2-basliq').textContent = t.k2b;
+      document.getElementById('giris-k2-metn').innerHTML = t.k2m;
+      document.getElementById('giris-k3-basliq').textContent = t.k3b;
+      document.getElementById('giris-k3-metn').textContent = t.k3m;
+      document.getElementById('giris-k4-basliq').textContent = t.k4b;
+      document.getElementById('giris-k4-metn').textContent = t.k4m;
+      document.getElementById('giris-qisa-not').textContent = t.not;
+      document.getElementById('giris-btn-metn').textContent = t.btn;
+
+      document.querySelectorAll('.dil-btn').forEach(btn => {
+        btn.classList.toggle('aktiv-dil', btn.getAttribute('data-dil') === dil);
+      });
+    }
+
+    function girisdenKeç() {
+      document.getElementById('giris-sehifesi').classList.add('gizli');
+      document.getElementById('esas-tetbiq').classList.add('aktiv-tetbiq');
+      document.getElementById('kecid-panel').style.display = 'flex';
+      kecidDuymeleriniYenile();
+    }
+
+    function giriseQayit() {
+      document.getElementById('giris-sehifesi').classList.remove('gizli');
+      document.getElementById('esas-tetbiq').classList.remove('aktiv-tetbiq');
+      document.getElementById('kecid-panel').style.display = 'none';
+    }
+
+    function mobilMenyuAcBagla() {
+      document.getElementById('sol-panel').classList.toggle('menyu-aciq');
+    }
+
+    function movzuAc(id, btn) {
+      document.querySelectorAll('.movzu-mezmun').forEach(sec => sec.classList.remove('gorunen'));
+      document.querySelectorAll('.movzu-btn, .vahidler-btn').forEach(b => b.classList.remove('aktiv'));
+
+      const hedef = document.getElementById(id);
+      if (hedef) {
+        hedef.classList.add('gorunen');
+        hedef.querySelectorAll('.dustur-kart').forEach((kart, idx) => {
+          kart.style.animationDelay = Math.min(idx * 0.03, 0.35) + 's';
+        });
+      }
+      if (btn) btn.classList.add('aktiv');
+      hazirkiIndeks = movzuSirasi.indexOf(id);
+      kecidDuymeleriniYenile();
+      document.getElementById('sol-panel').classList.remove('menyu-aciq');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function movzuKec(addim) {
+      const yeni = hazirkiIndeks + addim;
+      if (yeni < 0 || yeni >= movzuSirasi.length) return;
+      const id = movzuSirasi[yeni];
+      const btn = id === 'vahidler'
+        ? document.getElementById('vahidler-btn')
+        : document.querySelectorAll('.movzu-btn')[yeni];
+      movzuAc(id, btn);
+    }
+
+    function kecidDuymeleriniYenile() {
+      document.getElementById('evvelki-btn').disabled = hazirkiIndeks <= 0;
+      document.getElementById('novbeti-btn').disabled = hazirkiIndeks >= movzuSirasi.length - 1;
+    }
+
+    function sriftOlcusuDeyis(ferq) {
+      dusturOlcu = Math.min(28, Math.max(15, dusturOlcu + ferq));
+      izahOlcu = Math.min(20, Math.max(12, izahOlcu + ferq));
+      document.documentElement.style.setProperty('--dustur-olcu', dusturOlcu + 'px');
+      document.documentElement.style.setProperty('--izah-olcu', izahOlcu + 'px');
+    }
+
+    function movzuAxtar() {
+      const sorgu = document.getElementById('movzu-axtaris').value.toLowerCase().trim();
+      const duymeler = document.querySelectorAll('.movzu-btn');
+      let tapildi = 0;
+      duymeler.forEach(btn => {
+        const uygun = btn.textContent.toLowerCase().includes(sorgu);
+        btn.style.display = uygun ? 'flex' : 'none';
+        if (uygun) tapildi++;
+      });
+      document.getElementById('axtaris-bos').style.display = tapildi === 0 ? 'block' : 'none';
+    }
+
+    function dusturlariAxtar() {
+      const aktivBolme = document.querySelector('.movzu-mezmun.gorunen');
+      if (!aktivBolme) return;
+      const input = aktivBolme.querySelector('.dustur-axtaris-input');
+      const temizleBtn = aktivBolme.querySelector('.dustur-axtaris-temizle');
+      const tapilmadiQutu = aktivBolme.querySelector('.axtaris-tapilmadi-qutu');
+      const sorgu = input.value.toLowerCase().trim();
+
+      temizleBtn.classList.toggle('gorunen', sorgu.length > 0);
+      const kartlar = aktivBolme.querySelectorAll('.dustur-kart');
+      let gorunenSay = 0;
+
+      kartlar.forEach(kart => {
+        const uygun = kart.textContent.toLowerCase().includes(sorgu);
+        kart.style.display = uygun ? 'block' : 'none';
+        if (uygun) gorunenSay++;
+      });
+
+      if (tapilmadiQutu) {
+        tapilmadiQutu.style.display = gorunenSay === 0 ? 'block' : 'none';
+      }
+    }
+
+    function dusturAxtarisTemizle(btn) {
+      const panel = btn.closest('.dustur-axtaris-panel');
+      const input = panel.querySelector('.dustur-axtaris-input');
+      input.value = '';
+      dusturlariAxtar();
+      input.focus();
+    }
+
+    function dusturKopyala(btn) {
+      const metn = btn.getAttribute('data-dustur');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(metn);
+      }
+      const evvelki = btn.textContent;
+      btn.textContent = 'Kopyalandı ✓';
+      btn.classList.add('kopyalandi');
+      setTimeout(() => {
+        btn.textContent = evvelki;
+        btn.classList.remove('kopyalandi');
+      }, 1400);
+    }
+
+    /* Sol paneldəki harmonik dalğa animasiyası */
+    (function dalgaAnimasiyasi() {
+      const xett1 = document.getElementById('dalga-xett-1');
+      const xett2 = document.getElementById('dalga-xett-2');
+      const noqte1 = document.getElementById('dalga-noqte-1');
+      const noqte2 = document.getElementById('dalga-noqte-2');
+      if (!xett1) return;
+
+      let faza = 0;
+      function ciz() {
+        faza += 0.035;
+        let d1 = '';
+        let d2 = '';
+        for (let y = 44; y <= 260; y += 4) {
+          const nisbi = (y - 44) / 72;
+          const x1 = 124 + 62 * Math.sin(nisbi * Math.PI - faza);
+          const x2 = 124 + 54 * Math.cos(nisbi * Math.PI - faza * 0.8);
+          d1 += (y === 44 ? 'M ' : ' L ') + x1.toFixed(1) + ' ' + y;
+          d2 += (y === 44 ? 'M ' : ' L ') + x2.toFixed(1) + ' ' + y;
+        }
+        xett1.setAttribute('d', d1);
+        xett2.setAttribute('d', d2);
+
+        const ny1 = 116;
+        const nx1 = 124 + 62 * Math.sin(((ny1 - 44) / 72) * Math.PI - faza);
+        noqte1.setAttribute('cx', nx1.toFixed(1));
+        noqte1.setAttribute('cy', ny1);
+
+        const ny2 = 188;
+        const nx2 = 124 + 62 * Math.sin(((ny2 - 44) / 72) * Math.PI - faza);
+        noqte2.setAttribute('cx', nx2.toFixed(1));
+        noqte2.setAttribute('cy', ny2);
+
+        requestAnimationFrame(ciz);
+      }
+      ciz();
+    })();
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        const yaddasTema = localStorage.getItem('fizika_tema');
+        if (yaddasTema) temaDeyis(yaddasTema);
+      } catch (e) {}
+      basligiHerflerleAnimasiyaEt(document.getElementById('giris-basliq').textContent);
+    });
+  </script>
+</body>
+</html>
