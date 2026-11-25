@@ -3265,101 +3265,117 @@
 
       <section id="mkn-ideal-qaz" class="movzu-mezmun">
         <h1>11. MKN. İdeal qaz qanunları</h1>
-        <p class="qisa-izah">MKN-in əsas anlayışları, əsas tənliyi, orta kinetik enerji, orta kvadratik sürət, temperatur şkalaları, Mendeleyev-Klaperon tənliyi və izoproseslər (Boyl-Mariott, Gey-Lüssak, Şarl qanunları).</p>
+        <p class="qisa-izah">MKN-in əsas anlayışları, əsas tənliyi, orta kinetik enerji, orta kvadratik sürət, temperatur şkalaları, Mendeleyev-Klaperon tənliyi və izoproseslər.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: mol, konsentrasiya, mendeleyev, boyl-mariott, gey-lüssak, şarl)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: mol, mendeleyev, boyl-mariott, gey-lüssak, şarl)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
-              <span class="dustur-setir"><span class="sol-teref">M<sub>r</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m<sub>0</sub></span><span class="mexrec"><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">12</span></span>m<sub>c</sub></span></span><span class="beraber">(Nisbi molekul / atom kütləsi)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">N<sub>A</sub></span><span class="beraber">=</span><span class="sag-teref">6,02 · 10<sup>23</sup> mol<sup>-1</sup></span><span class="beraber">(Avoqadro sabiti)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">M</span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · N<sub>A</sub></span><span class="beraber">(Molyar kütlə)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">m</span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · N</span><span class="beraber">(Kütlə)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">ν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">N<sub>A</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">M</span></span><span class="beraber">(Maddə miqdarı)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m · N<sub>A</sub></span><span class="mexrec">V · M</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ · N<sub>A</sub></span><span class="mexrec">M</span></span><span class="beraber">(Konsentrasiya)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">ρ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m<sub>0</sub> · N</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · n</span><span class="beraber">(Sıxlıq)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">N<sub>A</sub></span><span class="beraber">=</span><span class="sag-teref">6,02 · 10<sup>23</sup> mol<sup>-1</sup></span></span>
+              <span class="dustur-setir"><span class="sol-teref">M</span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · N<sub>A</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">m</span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · N</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="M = m0·NA | ν = N/NA = m/M | n = N/V = ρ·NA/M | ρ = m/V = m0·n" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="NA = 6,02 · 10²³ mol⁻¹ | M = m0 · NA | m = m0 · N" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">MKN-in əsas anlayışları: nisbi kütlənin vahidi yoxdur; [M] = 1 kq/mol; [ν] = 1 mol; [n] = 1 m⁻³; [ρ] = 1 kq/m³</div>
+          <div class="dustur-menasi"><strong>Avoqadro sabiti və molyar kütlə:</strong> M — molyar kütlə ([M] = 1 kq/mol), m<sub>0</sub> — bir molekulun kütləsi, N — molekulların sayı</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
-              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">3</span></span><span class="sag-teref">ρv̄<sup>2</sup></span><span class="beraber">(MKN-in əsas tənliyi)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">3</span></span><span class="sag-teref">m<sub>0</sub> · n · v̄<sup>2</sup></span><span class="beraber">(MKN-in əsas tənliyi)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2</span><span class="mexrec">3</span></span><span class="sag-teref">n · Ē<sub>k</sub></span><span class="beraber">(MKN-in əsas tənliyi)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">Ē<sub>k</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m<sub>0</sub>v̄<sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">3</span><span class="mexrec">2</span></span><span class="sag-teref">k · T</span><span class="beraber">(Orta kinetik enerji)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref">n · k · T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">V</span></span><span class="sag-teref">· k · T</span><span class="beraber">(MKN-in əsas tənliyi — temperatur ilə)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P · V</span><span class="beraber">=</span><span class="sag-teref">N · k · T</span><span class="beraber">(Hal tənliyi — molekullar sayı ilə)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">v̄</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3kT</span><span class="mexrec">m<sub>0</sub></span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3RT</span><span class="mexrec">M</span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3PV</span><span class="mexrec">m</span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3P</span><span class="mexrec">ρ</span></span><span class="sag-teref">)</span><span class="beraber">(Orta kvadratik sürət)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">R</span><span class="beraber">=</span><span class="sag-teref">k · N<sub>A</sub> ≈ 8,31</span><span class="sag-teref kesr"><span class="suret">C</span><span class="mexrec">mol · K</span></span><span class="beraber">(Universal qaz sabiti)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">N<sub>A</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">M</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ · N<sub>A</sub></span><span class="mexrec">M</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">ρ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · n</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="P = (2/3)nĒk = nkT | Ēk = (3/2)kT | v̄ = √(3kT/m0) = √(3RT/M) = √(3P/ρ) | R = k·NA ≈ 8,31 C/(mol·K)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="ν = N/NA = m/M | n = N/V = ρ·NA/M | ρ = m/V = m0·n" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">MKN-in əsas tənliyi, qaz molekullarının orta kinetik enerjisi, orta kvadratik sürəti və sabitlər: k ≈ 1,38·10⁻²³ C/K (Boltsman sabiti), R ≈ 8,31 C/(mol·K)</div>
+          <div class="dustur-menasi"><strong>Maddə miqdarı, konsentrasiya və sıxlıq:</strong> [ν] = 1 mol, [n] = 1 m⁻³, [ρ] = 1 kq/m³</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
-              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref">t<sub>c</sub> + 273</span><span class="beraber">(Selsidən Kelvinə keçid)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">t<sub>c</sub></span><span class="beraber">=</span><span class="sag-teref">T - 273</span><span class="beraber">(Kelvindən Selsiyə keçid)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">t<sub>F</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">9</span><span class="mexrec">5</span></span><span class="sag-teref">· t<sub>c</sub> + 32</span><span class="beraber">(Selsidən Farenheytə keçid)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">t<sub>c</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">5</span><span class="mexrec">9</span></span><span class="sag-teref">(t<sub>F</sub> - 32)</span><span class="beraber">(Farenheytdən Selsiyə keçid)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">Δt<sub>c</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">5</span><span class="mexrec">9</span></span><span class="sag-teref">Δt<sub>F</sub></span><span class="beraber">,</span><span class="sol-teref">ΔT</span><span class="beraber">=</span><span class="sag-teref">Δt</span><span class="beraber">(Temperatur dəyişmələri)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">3</span></span><span class="sag-teref">ρv̄<sup>2</sup></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">3</span></span><span class="sag-teref">m<sub>0</sub>n v̄<sup>2</sup></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2</span><span class="mexrec">3</span></span><span class="sag-teref">n Ē<sub>k</sub></span><span class="beraber">=</span><span class="sag-teref">n k T</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="T = tc + 273 | tc = T - 273 | tF = (9/5)tc + 32 | tc = (5/9)(tF - 32) | Δtc = (5/9)ΔtF" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="P = (1/3)ρv̄² = (1/3)m0nv̄² = (2/3)nĒk = nkT" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Temperatur şkalaları (Selsi, Kelvin, Farenheyt): 0 K ən aşağı temperaturdur (mütləq sıfır); 0°C = 273 K = 32°F</div>
+          <div class="dustur-menasi"><strong>MKN-in əsas tənliyi:</strong> ideal qazın təzyiqinin konsentrasiya, orta kinetik enerji və mütləq temperaturdan asılılığı (k ≈ 1,38 · 10⁻²³ C/K — Boltsman sabiti)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
-              <span class="dustur-setir"><span class="sol-teref">P · V</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">M</span></span><span class="sag-teref">R · T</span><span class="beraber">(Mendeleyev-Klaperon tənliyi)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P · V</span><span class="beraber">=</span><span class="sag-teref">ν · R · T</span><span class="beraber">(Mendeleyev-Klaperon tənliyi)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ · R · T</span><span class="mexrec">M</span></span><span class="beraber">(Mendeleyev-Klaperon tənliyi)</span></span>
-              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P · V</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">const</span><span class="beraber">(Klaperon tənliyi, m = const)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Ē<sub>k</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m<sub>0</sub>v̄<sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">3</span><span class="mexrec">2</span></span><span class="sag-teref">k T</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v̄</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3kT</span><span class="mexrec">m<sub>0</sub></span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3RT</span><span class="mexrec">M</span></span><span class="sag-teref">)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v̄</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3PV</span><span class="mexrec">m</span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3P</span><span class="mexrec">ρ</span></span><span class="sag-teref">)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="PV = (m/M)RT = νRT | P = ρRT/M | PV/T = const (Klaperon tənliyi)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Ēk = m0v̄²/2 = (3/2)kT | v̄ = √(3kT/m0) = √(3RT/M) = √(3P/ρ)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">İdeal qazın hal tənliyi — Mendeleyev-Klaperon tənliyi və verilmiş kütləli qaz üçün Klaperon tənliyi</div>
+          <div class="dustur-menasi"><strong>Orta kinetik enerji və orta kvadratik sürət:</strong> R = k · N<sub>A</sub> ≈ 8,31 C/(mol·K) — universal qaz sabiti</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
-              <span class="dustur-setir"><span class="sol-teref">P · V</span><span class="beraber">=</span><span class="sag-teref">const</span><span class="beraber">(Boyl-Mariott qanunu — izotermik proses, T = const)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P<sub>1</sub> · V<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>2</sub> · V<sub>2</sub></span><span class="beraber">(Boyl-Mariott qanunu)</span></span>
-              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P<sub>1</sub></span><span class="mexrec">P<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">V<sub>2</sub></span><span class="mexrec">V<sub>1</sub></span></span><span class="beraber">(Boyl-Mariott qanunu)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">ρ<sub>izotermik</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">M · P</span><span class="mexrec">R · T</span></span><span class="beraber">,</span><span class="sol-teref">n<sub>izotermik</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">P</span><span class="mexrec">k · T</span></span><span class="beraber">(İzotermik prosesdə sıxlıq və konsentrasiya)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref">t<sub>c</sub> + 273</span></span>
+              <span class="dustur-setir"><span class="sol-teref">t<sub>F</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">9</span><span class="mexrec">5</span></span><span class="sag-teref">t<sub>c</sub> + 32</span></span>
+              <span class="dustur-setir"><span class="sol-teref">t<sub>c</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">5</span><span class="mexrec">9</span></span><span class="sag-teref">(t<sub>F</sub> - 32)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="PV = const | P1V1 = P2V2 | P1/P2 = V2/V1 (Boyl-Mariott qanunu)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="T = tc + 273 | tF = (9/5)tc + 32 | tc = (5/9)(tF - 32)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">İzotermik proses (T = const, m = const): Boyl-Mariott qanunu; Ē<sub>k</sub> və v̄ sabit qalır</div>
+          <div class="dustur-menasi"><strong>Temperatur şkalaları (Kelvin, Selsi, Farenheyt):</strong> 0 K = -273°C mütləq sıfırdır; ΔT = Δt<sub>c</sub>; Δt<sub>c</sub> = (5/9)Δt<sub>F</sub></div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
-              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">V</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">const</span><span class="beraber">(Gey-Lüssak qanunu — izobar proses, P = const)</span></span>
-              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">V<sub>1</sub></span><span class="mexrec">V<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">T<sub>1</sub></span><span class="mexrec">T<sub>2</sub></span></span><span class="beraber">(Gey-Lüssak qanunu)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">V<sub>1</sub> · T<sub>2</sub></span><span class="beraber">=</span><span class="sag-teref">V<sub>2</sub> · T<sub>1</sub></span><span class="beraber">(Gey-Lüssak qanunu)</span></span>
-              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">const</span><span class="beraber">(Şarl qanunu — izoxor proses, V = const)</span></span>
-              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P<sub>1</sub></span><span class="mexrec">P<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">T<sub>1</sub></span><span class="mexrec">T<sub>2</sub></span></span><span class="beraber">(Şarl qanunu)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P<sub>2</sub> · T<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>1</sub> · T<sub>2</sub></span><span class="beraber">(Şarl qanunu)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P<sub>son(birləşmiş qablar)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">P<sub>1</sub>V<sub>1</sub> + P<sub>2</sub>V<sub>2</sub></span><span class="mexrec">V<sub>1</sub> + V<sub>2</sub></span></span><span class="beraber">(İzotermik birləşmədə son təzyiq)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">PV</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">M</span></span><span class="sag-teref">RT</span><span class="beraber">=</span><span class="sag-teref">νRT</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρRT</span><span class="mexrec">M</span></span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">PV</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">const</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="V/T = const (Gey-Lüssak) | P/T = const (Şarl) | Pson = (P1V1 + P2V2)/(V1 + V2)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="PV = (m/M)RT = νRT | P = ρRT/M | PV/T = const" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">İzobar proses (P = const — Gey-Lüssak qanunu) və izoxor proses (V = const — Şarl qanunu; ρ və n sabit qalır)</div>
+          <div class="dustur-menasi"><strong>Mendeleyev-Klaperon tənliyi və Klaperon tənliyi:</strong> PV = νRT ideal qazın hal tənliyidir; m = const olduqda PV/T = const (Klaperon tənliyi)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">PV</span><span class="beraber">=</span><span class="sag-teref">const</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>1</sub>V<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>2</sub>V<sub>2</sub></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="PV = const | P1V1 = P2V2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Boyl-Mariott qanunu (İzotermik proses: T = const, m = const):</strong> Ē<sub>k</sub> və v̄ sabit qalır; qablar birləşdikdə P<sub>son</sub> = (P<sub>1</sub>V<sub>1</sub> + P<sub>2</sub>V<sub>2</sub>) / (V<sub>1</sub> + V<sub>2</sub>)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">V</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">const</span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">V<sub>1</sub></span><span class="mexrec">V<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">T<sub>1</sub></span><span class="mexrec">T<sub>2</sub></span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="V/T = const | V1/V2 = T1/T2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Gey-Lüssak qanunu (İzobar proses: P = const, m = const):</strong> sabit təzyiqdə qazın həcmi mütləq temperaturdan düz asılıdır</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">const</span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P<sub>1</sub></span><span class="mexrec">P<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">T<sub>1</sub></span><span class="mexrec">T<sub>2</sub></span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="P/T = const | P1/P2 = T1/T2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Şarl qanunu (İzoxor proses: V = const, m = const):</strong> sabit həcmdə qazın təzyiqi mütləq temperaturdan düz asılıdır, sıxlıq (ρ) və konsentrasiya (n) dəyişmir</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
