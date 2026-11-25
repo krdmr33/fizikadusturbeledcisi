@@ -3676,11 +3676,436 @@
         </div>
       </section>
 	  <section id="vahidler" class="movzu-mezmun">
-  <div class="bolme-basliq">
-    <h2>Fiziki kəmiyyətlər və onların BS-də vahidləri</h2>
-    <p>Bu bölmə hələlik boşdur</p>
+  <h1>Kəmiyyətlərin vahidləri</h1>
+  <p class="qisa-izah">Beynəlxalq Vahidlər Sistemində (BS) əsas və törəmə fiziki kəmiyyətlər, onların simvolları və əsas vahidlərlə tam açılışları:</p>
+
+  <div class="dustur-axtaris-panel">
+    <span class="dustur-axtaris-ikon">🔎</span>
+    <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, sabit, vektor və ya vahid axtar (məs: kulon, vat, sabit, sürtünmə, vektor)..." oninput="dusturlariAxtar()">
+    <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
   </div>
 
+  <!-- 01 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Beynəlxalq Sistemdəki Əsas Vahidlər</span></span>
+      </div>
+    </div>
+    <ul class="vahid-siyahi">
+      <li><span class="vahid-no">1</span> Uzunluq : <span class="vahid-simvol">S, l</span> — <span class="vahid-qiymet">metr (m)</span></li>
+      <li><span class="vahid-no">2</span> Zaman : <span class="vahid-simvol">t</span> — <span class="vahid-qiymet">saniyə (san)</span></li>
+      <li><span class="vahid-no">3</span> Kütlə : <span class="vahid-simvol">m</span> — <span class="vahid-qiymet">kiloqram (kq)</span></li>
+      <li><span class="vahid-no">4</span> Temperatur : <span class="vahid-simvol">T</span> — <span class="vahid-qiymet">Kelvin (K)</span></li>
+      <li><span class="vahid-no">5</span> Maddə miqdarı : <span class="vahid-simvol">ν</span> — <span class="vahid-qiymet">mol (mol)</span></li>
+      <li><span class="vahid-no">6</span> Cərəyan şiddəti : <span class="vahid-simvol">I</span> — <span class="vahid-qiymet">Amper (A)</span></li>
+      <li><span class="vahid-no">7</span> İşıq şiddəti : <span class="vahid-simvol">Iᵥ</span> — <span class="vahid-qiymet">kandela (kd)</span></li>
+    </ul>
+  </div>
+
+  <!-- 02 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vahidi metr (m) olan kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <div class="ortaq-vahid-qutu">
+      <ul class="vahid-siyahi ortaq-vahid-siyahi">
+        <li><span class="vahid-no">1</span> Yol, yerdəyişmə : <span class="vahid-simvol">S</span> — <span class="vahid-qiymet">m</span></li>
+        <li><span class="vahid-no">2</span> Qüvvənin qolu : <span class="vahid-simvol">d, l</span> — <span class="vahid-qiymet">m</span></li>
+        <li><span class="vahid-no">3</span> Rəqsin amplitudu : <span class="vahid-simvol">A, xₘ</span> — <span class="vahid-qiymet">m</span></li>
+        <li><span class="vahid-no">4</span> Dalğa uzunluğu : <span class="vahid-simvol">λ</span> — <span class="vahid-qiymet">m</span></li>
+        <li><span class="vahid-no">5</span> Mütləq uzanma : <span class="vahid-simvol">Δl, x</span> — <span class="vahid-qiymet">m</span></li>
+        <li><span class="vahid-no">6</span> Fokus məsafəsi : <span class="vahid-simvol">F</span> — <span class="vahid-qiymet">m</span></li>
+        <li><span class="vahid-no">7</span> Difraksiya qəfəsinin periodu : <span class="vahid-simvol">d</span> — <span class="vahid-qiymet">m</span></li>
+        <li><span class="vahid-no">8</span> Cisim məsafəsi : <span class="vahid-simvol">d</span> — <span class="vahid-qiymet">m</span></li>
+        <li><span class="vahid-no">9</span> Xəyal məsafəsi : <span class="vahid-simvol">f</span> — <span class="vahid-qiymet">m</span></li>
+      </ul>
+      <div class="ortaq-moterize-panel">
+        <svg class="fiqurlu-moterize-svg" viewBox="0 0 22 240" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 3,4 Q 13,4 13,18 L 13,106 Q 13,120 20,120 Q 13,120 13,134 L 13,222 Q 13,236 3,236" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="ortaq-vahid-etiket">
+          <span>metr (m)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vahidi Nyuton (N) olan kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <div class="ortaq-vahid-qutu">
+      <ul class="vahid-siyahi ortaq-vahid-siyahi">
+        <li><span class="vahid-no">1</span> Qüvvə : <span class="vahid-simvol">F</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">2</span> Dayağın reaksiya qüvvəsi : <span class="vahid-simvol">N</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">3</span> Ağırlıq qüvvəsi : <span class="vahid-simvol">F_ağ</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">4</span> Cismin çəkisi : <span class="vahid-simvol">P</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">5</span> Elastiklik qüvvəsi : <span class="vahid-simvol">F_el</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">6</span> Arximed qüvvəsi : <span class="vahid-simvol">F_A</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">7</span> Sürtünmə qüvvəsi : <span class="vahid-simvol">F_s</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">8</span> Səthi gərilmə qüvvəsi : <span class="vahid-simvol">F_g</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">9</span> Lorens qüvvəsi : <span class="vahid-simvol">F_L</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">10</span> Amper qüvvəsi : <span class="vahid-simvol">F_A</span> — <span class="vahid-qiymet">N = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span></li>
+      </ul>
+      <div class="ortaq-moterize-panel">
+        <svg class="fiqurlu-moterize-svg" viewBox="0 0 22 240" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 3,4 Q 13,4 13,18 L 13,106 Q 13,120 20,120 Q 13,120 13,134 L 13,222 Q 13,236 3,236" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="ortaq-vahid-etiket">
+          <span>1 Nyuton (N)</span>
+          <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san²</span></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vahidi Coul (C) olan kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <div class="ortaq-vahid-qutu">
+      <ul class="vahid-siyahi ortaq-vahid-siyahi">
+        <li><span class="vahid-no">1</span> Enerji : <span class="vahid-simvol">E</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">2</span> Daxili enerji : <span class="vahid-simvol">U</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">3</span> Potensial enerji : <span class="vahid-simvol">E_p, W_p</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">4</span> Kinetik enerji : <span class="vahid-simvol">E_k, W_k</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">5</span> İş : <span class="vahid-simvol">A</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">6</span> İstilik miqdarı : <span class="vahid-simvol">Q</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">7</span> Ərimə istiliyi : <span class="vahid-simvol">Q</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">8</span> Yanma istiliyi : <span class="vahid-simvol">Q</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">9</span> Buxarlanma istiliyi : <span class="vahid-simvol">Q</span> — <span class="vahid-qiymet">C = N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+      </ul>
+      <div class="ortaq-moterize-panel">
+        <svg class="fiqurlu-moterize-svg" viewBox="0 0 22 240" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 3,4 Q 13,4 13,18 L 13,106 Q 13,120 20,120 Q 13,120 13,134 L 13,222 Q 13,236 3,236" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="ortaq-vahid-etiket">
+          <span>1 Coul (C)</span>
+          <span class="ortaq-vahid-acilisi">= N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vahidi N · san olan kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <div class="ortaq-vahid-qutu">
+      <ul class="vahid-siyahi ortaq-vahid-siyahi">
+        <li><span class="vahid-no">1</span> İmpuls : <span class="vahid-simvol">p</span> — <span class="vahid-qiymet">N · san = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san</span></span></span></li>
+        <li><span class="vahid-no">2</span> Qüvvə impulsu : <span class="vahid-simvol">F · Δt</span> — <span class="vahid-qiymet">N · san = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san</span></span></span></li>
+        <li><span class="vahid-no">3</span> İmpuls dəyişməsi : <span class="vahid-simvol">Δp</span> — <span class="vahid-qiymet">N · san = <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san</span></span></span></li>
+      </ul>
+      <div class="ortaq-moterize-panel">
+        <svg class="fiqurlu-moterize-svg" viewBox="0 0 22 240" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 3,4 Q 13,4 13,18 L 13,106 Q 13,120 20,120 Q 13,120 13,134 L 13,222 Q 13,236 3,236" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="ortaq-vahid-etiket">
+          <span>N · san</span>
+          <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">kq · m</span><span class="mexrec">san</span></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vahidi Paskal (Pa) olan kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <div class="ortaq-vahid-qutu">
+      <ul class="vahid-siyahi ortaq-vahid-siyahi">
+        <li><span class="vahid-no">1</span> Təzyiq : <span class="vahid-simvol">p</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san²</span></span></span></li>
+        <li><span class="vahid-no">2</span> Yunq modulu : <span class="vahid-simvol">E</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san²</span></span></span></li>
+        <li><span class="vahid-no">3</span> Mexaniki gərginlik : <span class="vahid-simvol">σ</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san²</span></span></span></li>
+        <li><span class="vahid-no">4</span> Elastiklik həddi : <span class="vahid-simvol">σ_el</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san²</span></span></span></li>
+        <li><span class="vahid-no">5</span> Axıcılıq həddi : <span class="vahid-simvol">σ_ax</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san²</span></span></span></li>
+        <li><span class="vahid-no">6</span> Mütənasiblik həddi : <span class="vahid-simvol">σ_m</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san²</span></span></span></li>
+        <li><span class="vahid-no">7</span> Möhkəmlik həddi : <span class="vahid-simvol">σ_möh</span> — <span class="vahid-qiymet">Pa = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san²</span></span></span></li>
+      </ul>
+      <div class="ortaq-moterize-panel">
+        <svg class="fiqurlu-moterize-svg" viewBox="0 0 22 240" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 3,4 Q 13,4 13,18 L 13,106 Q 13,120 20,120 Q 13,120 13,134 L 13,222 Q 13,236 3,236" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="ortaq-vahid-etiket">
+          <span>1 Paskal (Pa)</span>
+          <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san²</span></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vahidi Om olan kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <div class="ortaq-vahid-qutu">
+      <ul class="vahid-siyahi ortaq-vahid-siyahi">
+        <li><span class="vahid-no">1</span> Müqavimət : <span class="vahid-simvol">R</span> — <span class="vahid-qiymet">Om = <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A² · san³</span></span></span></li>
+        <li><span class="vahid-no">2</span> Tutum müqaviməti : <span class="vahid-simvol">X_C</span> — <span class="vahid-qiymet">Om = <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A² · san³</span></span></span></li>
+        <li><span class="vahid-no">3</span> İnduktiv müqavimət : <span class="vahid-simvol">X_L</span> — <span class="vahid-qiymet">Om = <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A² · san³</span></span></span></li>
+        <li><span class="vahid-no">4</span> Tam müqavimət : <span class="vahid-simvol">Z</span> — <span class="vahid-qiymet">Om = <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A² · san³</span></span></span></li>
+      </ul>
+      <div class="ortaq-moterize-panel">
+        <svg class="fiqurlu-moterize-svg" viewBox="0 0 22 240" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 3,4 Q 13,4 13,18 L 13,106 Q 13,120 20,120 Q 13,120 13,134 L 13,222 Q 13,236 3,236" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="ortaq-vahid-etiket">
+          <span>1 Om</span>
+          <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">V</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A² · san³</span></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 08 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vahidi C / kq olan kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <div class="ortaq-vahid-qutu">
+      <ul class="vahid-siyahi ortaq-vahid-siyahi">
+        <li><span class="vahid-no">1</span> Xüsusi ərimə istiliyi : <span class="vahid-simvol">λ</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">2</span> Xüsusi buxarlanma istiliyi : <span class="vahid-simvol">L</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">3</span> Xüsusi yanma istiliyi : <span class="vahid-simvol">q</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">m²</span><span class="mexrec">san²</span></span></span></li>
+        <li><span class="vahid-no">4</span> Şüalanma dozası : <span class="vahid-simvol">D</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">m²</span><span class="mexrec">san²</span></span></span></li>
+      </ul>
+      <div class="ortaq-moterize-panel">
+        <svg class="fiqurlu-moterize-svg" viewBox="0 0 22 240" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 3,4 Q 13,4 13,18 L 13,106 Q 13,120 20,120 Q 13,120 13,134 L 13,222 Q 13,236 3,236" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="ortaq-vahid-etiket">
+          <span><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq</span></span></span>
+          <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">m²</span><span class="mexrec">san²</span></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 09 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vahidi Volt (V) olan kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <div class="ortaq-vahid-qutu">
+      <ul class="vahid-siyahi ortaq-vahid-siyahi">
+        <li><span class="vahid-no">1</span> Potensial : <span class="vahid-simvol">φ</span> — <span class="vahid-qiymet">V = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A · san³</span></span></span></li>
+        <li><span class="vahid-no">2</span> Gərginlik : <span class="vahid-simvol">U</span> — <span class="vahid-qiymet">V = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A · san³</span></span></span></li>
+        <li><span class="vahid-no">3</span> Potensiallar fərqi : <span class="vahid-simvol">U = φ₁ - φ₂</span> — <span class="vahid-qiymet">V = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A · san³</span></span></span></li>
+        <li><span class="vahid-no">4</span> E.H.Q : <span class="vahid-simvol">ε</span> — <span class="vahid-qiymet">V = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A · san³</span></span></span></li>
+      </ul>
+      <div class="ortaq-moterize-panel">
+        <svg class="fiqurlu-moterize-svg" viewBox="0 0 22 240" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 3,4 Q 13,4 13,18 L 13,106 Q 13,120 20,120 Q 13,120 13,134 L 13,222 Q 13,236 3,236" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="ortaq-vahid-etiket">
+          <span>1 Volt (V)</span>
+          <span class="ortaq-vahid-acilisi">= <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A · san³</span></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Sərtlik əmsalı və səthi gərilmə əmsalı</span></span>
+      </div>
+    </div>
+    <div class="ortaq-vahid-qutu">
+      <ul class="vahid-siyahi ortaq-vahid-siyahi">
+        <li><span class="vahid-no">1</span> Sərtlik əmsalı : <span class="vahid-simvol">k</span></li>
+        <li><span class="vahid-no">2</span> Səthi gərilmə əmsalı : <span class="vahid-simvol">σ</span></li>
+      </ul>
+      <div class="ortaq-moterize-panel">
+        <svg class="fiqurlu-moterize-svg" viewBox="0 0 22 96" preserveAspectRatio="none" style="min-height: 82px;" aria-hidden="true">
+          <path d="M 3,3 Q 13,3 13,12 L 13,41 Q 13,48 20,48 Q 13,48 13,55 L 13,84 Q 13,93 3,93" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="ortaq-vahid-etiket">
+          <span><span class="kesr kicik"><span class="suret">N</span><span class="mexrec">m</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">san²</span></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Digər törəmə fiziki kəmiyyətlər və vahid açılışları</span></span>
+      </div>
+    </div>
+    <ul class="vahid-siyahi">
+      <li><span class="vahid-no">1</span> Sürət : <span class="vahid-simvol">v</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">m</span><span class="mexrec">san</span></span></span></li>
+      <li><span class="vahid-no">2</span> Təcil : <span class="vahid-simvol">a</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">m</span><span class="mexrec">san²</span></span></span></li>
+      <li><span class="vahid-no">3</span> Tezlik : <span class="vahid-simvol">n, ν</span> — <span class="vahid-qiymet">1 Hs = san<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">san</span></span></span></li>
+      <li><span class="vahid-no">4</span> Period : <span class="vahid-simvol">T</span> — <span class="vahid-qiymet">san</span></li>
+      <li><span class="vahid-no">5</span> Həcm : <span class="vahid-simvol">V</span> — <span class="vahid-qiymet">m<sup>3</sup></span></li>
+      <li><span class="vahid-no">6</span> Sahə : <span class="vahid-simvol">S</span> — <span class="vahid-qiymet">m<sup>2</sup></span></li>
+      <li><span class="vahid-no">7</span> Kütlə defekti : <span class="vahid-simvol">ΔM</span> — <span class="vahid-qiymet">kq</span></li>
+      <li><span class="vahid-no">8</span> Sıxlıq, mütləq rütubət : <span class="vahid-simvol">ρ</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m³</span></span> , <span class="kesr kicik"><span class="suret">q</span><span class="mexrec">m³</span></span></span></li>
+      <li><span class="vahid-no">9</span> Rabitə enerjisi : <span class="vahid-simvol">E_rab</span> — <span class="vahid-qiymet">MeV</span></li>
+      <li><span class="vahid-no">10</span> Xüsusi rabitə enerjisi : <span class="vahid-simvol">E_x.rab</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">MeV</span><span class="mexrec">nuklon</span></span></span></li>
+      <li><span class="vahid-no">11</span> Qüvvə momenti : <span class="vahid-simvol">M</span> — <span class="vahid-qiymet">N · m = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+      <li><span class="vahid-no">12</span> Optik qüvvə : <span class="vahid-simvol">D</span> — <span class="vahid-qiymet">1 dptr = m<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">m</span></span></span></li>
+      <li><span class="vahid-no">13</span> Güc : <span class="vahid-simvol">N, P</span> — <span class="vahid-qiymet">Vt = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">san</span></span> = <span class="kesr kicik"><span class="suret">N · m</span><span class="mexrec">san</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san³</span></span></span></li>
+      <li><span class="vahid-no">14</span> Gurluq : <span class="vahid-simvol">L</span> — <span class="vahid-qiymet">dB</span></li>
+      <li><span class="vahid-no">15</span> Bucaq sürəti : <span class="vahid-simvol">ω</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">rad</span><span class="mexrec">san</span></span></span></li>
+      <li><span class="vahid-no">16</span> Dönmə bucağı : <span class="vahid-simvol">φ</span> — <span class="vahid-qiymet">rad</span></li>
+      <li><span class="vahid-no">17</span> Dairəvi tezlik : <span class="vahid-simvol">ω₀</span> — <span class="vahid-qiymet">Hs = san<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">san</span></span></span></li>
+      <li><span class="vahid-no">18</span> Rəqsin fazası : <span class="vahid-simvol">φ = ωt</span> — <span class="vahid-qiymet">rad</span></li>
+      <li><span class="vahid-no">19</span> Molyar kütlə : <span class="vahid-simvol">M</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">mol</span></span></span></li>
+      <li><span class="vahid-no">20</span> İstilik tutumu : <span class="vahid-simvol">C</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">K</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san² · K</span></span></span></li>
+      <li><span class="vahid-no">21</span> Xüsusi istilik tutumu : <span class="vahid-simvol">c</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">kq · K</span></span> = <span class="kesr kicik"><span class="suret">m²</span><span class="mexrec">san² · K</span></span></span></li>
+      <li><span class="vahid-no">22</span> Konsentrasiya : <span class="vahid-simvol">n</span> — <span class="vahid-qiymet">m<sup>-3</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">m³</span></span></span></li>
+      <li><span class="vahid-no">23</span> Cərəyan şiddətinin dəyişmə sürəti : <span class="vahid-simvol"><span class="kesr kicik"><span class="suret">ΔI</span><span class="mexrec">Δt</span></span></span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">A</span><span class="mexrec">san</span></span></span></li>
+      <li><span class="vahid-no">24</span> Maqnit selinin dəyişmə sürəti : <span class="vahid-simvol"><span class="kesr kicik"><span class="suret">ΔΦ</span><span class="mexrec">Δt</span></span></span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">Vb</span><span class="mexrec">san</span></span></span></li>
+      <li><span class="vahid-no">25</span> Elektrik yükü : <span class="vahid-simvol">q</span> — <span class="vahid-qiymet">1 Kl = A · san</span></li>
+      <li><span class="vahid-no">26</span> Xüsusi yük : <span class="vahid-simvol">q'</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">q</span><span class="mexrec">m</span></span> — <span class="kesr kicik"><span class="suret">Kl</span><span class="mexrec">kq</span></span> = <span class="kesr kicik"><span class="suret">A · san</span><span class="mexrec">kq</span></span></span></li>
+      <li><span class="vahid-no">27</span> Xüsusi müqavimət : <span class="vahid-simvol">ρ</span> — <span class="vahid-qiymet">Om · m = <span class="kesr kicik"><span class="suret">kq · m³</span><span class="mexrec">A² · san³</span></span></span></li>
+      <li><span class="vahid-no">28</span> Enerji sıxlığı : <span class="vahid-simvol">w</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">C</span><span class="mexrec">m³</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">m · san²</span></span></span></li>
+      <li><span class="vahid-no">29</span> Yükün səthi sıxlığı : <span class="vahid-simvol">σ</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">Kl</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">A · san</span><span class="mexrec">m²</span></span></span></li>
+      <li><span class="vahid-no">30</span> Cərəyanın sıxlığı : <span class="vahid-simvol">j</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">A</span><span class="mexrec">m²</span></span></span></li>
+      <li><span class="vahid-no">31</span> Şüalanma selinin sıxlığı : <span class="vahid-simvol">I</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">Vt</span><span class="mexrec">m²</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">san³</span></span></span></li>
+      <li><span class="vahid-no">32</span> İnduksiya vektoru : <span class="vahid-simvol">B</span> — <span class="vahid-qiymet">1 Tl = <span class="kesr kicik"><span class="suret">N</span><span class="mexrec">A · m</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">A · san²</span></span></span></li>
+      <li><span class="vahid-no">33</span> Maqnit seli : <span class="vahid-simvol">Φ</span> — <span class="vahid-qiymet">Vb = Tl · m<sup>2</sup> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A · san²</span></span></span></li>
+      <li><span class="vahid-no">34</span> İnduktivlik : <span class="vahid-simvol">L</span> — <span class="vahid-qiymet">Hn = <span class="kesr kicik"><span class="suret">Vb</span><span class="mexrec">A</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">A² · san²</span></span></span></li>
+      <li><span class="vahid-no">35</span> Elektrokimyəvi ekvivalent : <span class="vahid-simvol">k</span> — <span class="vahid-qiymet"><span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">Kl</span></span> = <span class="kesr kicik"><span class="suret">kq</span><span class="mexrec">A · san</span></span></span></li>
+      <li><span class="vahid-no">36</span> Müqavimətin temperatur əmsalı : <span class="vahid-simvol">α</span> — <span class="vahid-qiymet">K<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">K</span></span></span></li>
+      <li><span class="vahid-no">37</span> Aktivlik : <span class="vahid-simvol">A</span> — <span class="vahid-qiymet">bekkerel = san<sup>-1</sup></span></li>
+    </ul>
+  </div>
+
+  <!-- 12 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Fiziki sabitlər və vahid açılışları</span></span>
+      </div>
+    </div>
+    <ul class="vahid-siyahi">
+      <li><span class="vahid-no">1</span> Qravitasiya sabiti : <span class="vahid-simvol">G</span> — <span class="vahid-qiymet">6,67 · 10<sup>-11</sup> <span class="kesr kicik"><span class="suret">N · m²</span><span class="mexrec">kq²</span></span> = <span class="kesr kicik"><span class="suret">m³</span><span class="mexrec">kq · san²</span></span></span></li>
+      <li><span class="vahid-no">2</span> Avoqadro sabiti : <span class="vahid-simvol">Nₐ</span> — <span class="vahid-qiymet">6,02 · 10<sup>23</sup> mol<sup>-1</sup> = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">mol</span></span></span></li>
+      <li><span class="vahid-no">3</span> Plank sabiti : <span class="vahid-simvol">h</span> — <span class="vahid-qiymet">6,63 · 10<sup>-34</sup> C · san = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san</span></span></span></li>
+      <li><span class="vahid-no">4</span> Elektrik sabiti : <span class="vahid-simvol">ε₀</span> — <span class="vahid-qiymet">8,85 · 10<sup>-12</sup> <span class="kesr kicik"><span class="suret">Kl²</span><span class="mexrec">N · m²</span></span> = <span class="kesr kicik"><span class="suret">A² · san⁴</span><span class="mexrec">kq · m³</span></span></span></li>
+      <li><span class="vahid-no">5</span> Kulon sabiti : <span class="vahid-simvol">k</span> — <span class="vahid-qiymet">9 · 10<sup>9</sup> <span class="kesr kicik"><span class="suret">N · m²</span><span class="mexrec">Kl²</span></span> = <span class="kesr kicik"><span class="suret">kq · m³</span><span class="mexrec">A² · san⁴</span></span></span></li>
+      <li><span class="vahid-no">6</span> Bolsman sabiti : <span class="vahid-simvol">k</span> — <span class="vahid-qiymet">1,38 · 10<sup>-23</sup> <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">K</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san² · K</span></span></span></li>
+      <li><span class="vahid-no">7</span> Universal qaz sabiti : <span class="vahid-simvol">R</span> — <span class="vahid-qiymet">8,31 <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">mol · K</span></span> = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san² · K · mol</span></span></span></li>
+      <li><span class="vahid-no">8</span> İşıq sürəti : <span class="vahid-simvol">c</span> — <span class="vahid-qiymet">3 · 10<sup>8</sup> <span class="kesr kicik"><span class="suret">m</span><span class="mexrec">san</span></span></span></li>
+    </ul>
+  </div>
+
+  <!-- 13 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Ölçü vahidi olmayan kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <ul class="vahid-siyahi">
+      <li><span class="vahid-no">1</span> Sürtünmə əmsalı : <span class="vahid-simvol">μ</span></li>
+      <li><span class="vahid-no">2</span> FİƏ (faydalı iş əmsalı) : <span class="vahid-simvol">η</span></li>
+      <li><span class="vahid-no">3</span> Nisbi uzanma : <span class="vahid-simvol">ε</span></li>
+      <li><span class="vahid-no">4</span> Dielektrik nüfuzluğu : <span class="vahid-simvol">ε</span></li>
+      <li><span class="vahid-no">5</span> Maqnit nüfuzluğu : <span class="vahid-simvol">μ</span></li>
+      <li><span class="vahid-no">6</span> Transformasiya əmsalı : <span class="vahid-simvol">k</span></li>
+      <li><span class="vahid-no">7</span> Neytronların artma əmsalı : <span class="vahid-simvol">k</span></li>
+      <li><span class="vahid-no">8</span> Spektrin tərtibi : <span class="vahid-simvol">k</span></li>
+      <li><span class="vahid-no">9</span> Linzanın böyütməsi : <span class="vahid-simvol">Γ (Q)</span></li>
+      <li><span class="vahid-no">10</span> Sındırma əmsalı (optik sıxlıq) : <span class="vahid-simvol">n</span></li>
+      <li><span class="vahid-no">11</span> Valentlik : <span class="vahid-simvol">n</span></li>
+      <li><span class="vahid-no">12</span> Hava yüklənmə : <span class="vahid-simvol">n</span></li>
+      <li><span class="vahid-no">13</span> Dissosiasiya dərəcəsi : <span class="vahid-simvol">α</span></li>
+      <li><span class="vahid-no">14</span> Nisbi rütubət : <span class="vahid-simvol">φ</span></li>
+    </ul>
+  </div>
+
+  <!-- 14 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vektorial kəmiyyətlər</span></span>
+      </div>
+    </div>
+    <ul class="vahid-siyahi">
+      <li><span class="vahid-no">1</span> Yerdəyişmə : <span class="vahid-simvol">S</span></li>
+      <li><span class="vahid-no">2</span> Yerdəyişməyə görə orta sürət : <span class="vahid-simvol">v_or</span></li>
+      <li><span class="vahid-no">3</span> Təcil : <span class="vahid-simvol">a</span></li>
+      <li><span class="vahid-no">4</span> Qüvvə : <span class="vahid-simvol">F</span></li>
+      <li><span class="vahid-no">5</span> İmpuls : <span class="vahid-simvol">p</span></li>
+      <li><span class="vahid-no">6</span> Qüvvə impulsu : <span class="vahid-simvol">F · Δt</span></li>
+      <li><span class="vahid-no">7</span> Çəki : <span class="vahid-simvol">P</span></li>
+      <li><span class="vahid-no">8</span> Elektrik sahəsinin intensivliyi : <span class="vahid-simvol">E</span></li>
+    </ul>
+  </div>
+
+  <!-- 15 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Coulun (C) müxtəlif açılışları</span></span>
+      </div>
+    </div>
+    <ul class="vahid-siyahi">
+      <li><span class="vahid-no">1</span> <span class="vahid-qiymet">1 C = N · m</span></li>
+      <li><span class="vahid-no">2</span> <span class="vahid-qiymet">1 C = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san²</span></span></span></li>
+      <li><span class="vahid-no">3</span> <span class="vahid-qiymet">1 C = Vt · san</span></li>
+      <li><span class="vahid-no">4</span> <span class="vahid-qiymet">1 C = A² · Om · san</span></li>
+      <li><span class="vahid-no">5</span> <span class="vahid-qiymet">1 C = A · V · san</span></li>
+      <li><span class="vahid-no">6</span> <span class="vahid-qiymet">1 C = <span class="kesr kicik"><span class="suret">V²</span><span class="mexrec">Om</span></span> · san</span></li>
+      <li><span class="vahid-no">7</span> <span class="vahid-qiymet">1 C = Kl · V</span></li>
+      <li><span class="vahid-no">8</span> <span class="vahid-qiymet">1 C = <span class="kesr kicik"><span class="suret">Kl²</span><span class="mexrec">F</span></span></span></li>
+      <li><span class="vahid-no">9</span> <span class="vahid-qiymet">1 C = F · V²</span></li>
+      <li><span class="vahid-no">10</span> <span class="vahid-qiymet">1 C = Vb · A</span></li>
+      <li><span class="vahid-no">11</span> <span class="vahid-qiymet">1 C = Hn · A²</span></li>
+      <li><span class="vahid-no">12</span> <span class="vahid-qiymet">1 C = <span class="kesr kicik"><span class="suret">Vb²</span><span class="mexrec">Hn</span></span></span></li>
+    </ul>
+  </div>
+
+  <!-- 16 -->
+  <div class="dustur-kart">
+    <div class="dustur-ust">
+      <div class="dustur-dustur">
+        <span class="dustur-setir"><span class="sol-teref">Vatın (Vt) müxtəlif açılışları</span></span>
+      </div>
+    </div>
+    <ul class="vahid-siyahi">
+      <li><span class="vahid-no">1</span> <span class="vahid-qiymet">1 Vt = <span class="kesr kicik"><span class="suret">C</span><span class="mexrec">san</span></span></span></li>
+      <li><span class="vahid-no">2</span> <span class="vahid-qiymet">1 Vt = <span class="kesr kicik"><span class="suret">kq · m²</span><span class="mexrec">san³</span></span></span></li>
+      <li><span class="vahid-no">3</span> <span class="vahid-qiymet">1 Vt = A² · Om</span></li>
+      <li><span class="vahid-no">4</span> <span class="vahid-qiymet">1 Vt = <span class="kesr kicik"><span class="suret">V²</span><span class="mexrec">Om</span></span></span></li>
+      <li><span class="vahid-no">5</span> <span class="vahid-qiymet">1 Vt = A · V</span></li>
+    </ul>
+  </div>
+
+  <div class="axtaris-tapilmadi-qutu">
+    <span class="tapilmadi-ikon">🔍</span>
+    <strong>Axtarışa uyğun kəmiyyət və ya vahid tapılmadı</strong>
+    <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
+  </div>
 </section>
     </main>
   </div>
