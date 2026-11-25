@@ -1934,56 +1934,38 @@
         </div>
       </section>
 <section id="beraberttecilli" class="movzu-mezmun">
-        <h1>2. Düzxətli bərabərtəcilli hərəkət</h1>
-        <p class="qisa-izah">Cisim istənilən bərabər zaman fasilələrində sürətini eyni qədər dəyişir; təcilin modulu və istiqaməti sabit qalır (a = const).</p>
-
-        <div class="dustur-axtaris-panel">
-          <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: təcil, tormoz, sərbəstdüşmə)..." oninput="dusturlariAxtar()">
-          <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
-        </div>
-
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v - v₀</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">a(→)</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v(→) - v₀(→)</span><span class="mexrec">t</span></span></span>
               <span class="dustur-setir"><span class="sol-teref">aₓ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">vₓ - v₀ₓ</span><span class="mexrec">t</span></span><span class="beraber">=</span><span class="sag-teref">tgα</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="a = (v - v₀)/t | aₓ = (vₓ - v₀ₓ)/t = tgα" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="a(→) = (v(→) - v₀(→)) / t | aₓ = (vₓ - v₀ₓ) / t = tgα" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">a — təcil (m/s²), v₀ — başlanğıc sürət (m/s), v — son sürət (m/s), t — zaman (s), tgα — v(t) qrafikinin meyl bucağının tangensi</div>
+          <div class="dustur-menasi">Təcil: a — təcil (m/s²), v₀ — başlanğıc sürət (m/s), v — son sürət (m/s), t — zaman (s), tgα — vₓ(t) qrafikinin meyl bucağının tangensi</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">v₀ ± a · t</span></span>
               <span class="dustur-setir"><span class="sol-teref">vₓ</span><span class="beraber">=</span><span class="sag-teref">v₀ₓ + aₓ · t</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">a · t</span><span class="beraber">(v₀ = 0)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="v = v₀ ± a·t | vₓ = v₀ₓ + aₓ·t" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="vₓ = v₀ₓ + aₓ · t | v = a · t (v₀ = 0)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Ani sürət tənliyi: yeyinləşən hərəkətdə (+), yavaşıyan hərəkətdə (-) işarəsi götürülür; sükunətdən (v₀ = 0) olduqda v = a·t</div>
+          <div class="dustur-menasi">Ani sürət tənliyi: yeyinləşən hərəkətdə aₓ və v₀ₓ eyni işarəli, yavaşıyan hərəkətdə əks işarəli olur; sükunətdən (v₀ = 0) başladıqda v = a·t</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">S</span><span class="beraber">=</span><span class="sag-teref">v₀t ±</span><span class="sag-teref kesr"><span class="suret">at²</span><span class="mexrec">2</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">S</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v + v₀</span><span class="mexrec">2</span></span><span class="sag-teref">· t</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v² - v₀²</span><span class="mexrec">2a</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Sₓ</span><span class="beraber">=</span><span class="sag-teref">v₀ₓt +</span><span class="sag-teref kesr"><span class="suret">aₓt²</span><span class="mexrec">2</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Sₓ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">vₓ + v₀ₓ</span><span class="mexrec">2</span></span><span class="sag-teref">· t</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">vₓ² - v₀ₓ²</span><span class="mexrec">2aₓ</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">S</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">at²</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">vt</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v²</span><span class="mexrec">2a</span></span><span class="beraber">(v₀ = 0)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="S = v₀t ± at²/2 = ((v + v₀)/2)·t = (v² - v₀²)/(2a)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Sₓ = v₀ₓt + aₓt²/2 = ((vₓ + v₀ₓ)/2)·t = (vₓ² - v₀ₓ²)/(2aₓ) | v₀=0: S = at²/2 = vt/2 = v²/(2a)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Bərabərtəcilli hərəkətdə yerdəyişmə və yol düsturları (sükunətdən başladıqda: S = at²/2 = vt/2 = v²/(2a))</div>
-        </div>
-
-        <div class="dustur-kart">
-          <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀ + v</span><span class="mexrec">2</span></span></span>
-            </div>
-            <button type="button" class="kopyala-btn" data-dustur="v_or = (v₀ + v) / 2" onclick="dusturKopyala(this)">Kopyala</button>
-          </div>
-          <div class="dustur-menasi">Bərabərtəcilli hərəkətdə orta sürət (sükunətdən başladıqda v_or = v/2 = at/2)</div>
+          <div class="dustur-menasi">Yerdəyişmə və yol düsturları: Sₓ — yerdəyişmənin proyeksiyası (m); başlanğıc sürət sıfır olduqda (v₀ = 0) yol v² ilə düz, a ilə tərs mütənasibdir</div>
         </div>
 
         <div class="dustur-kart">
@@ -1993,129 +1975,254 @@
             </div>
             <button type="button" class="kopyala-btn" data-dustur="x = x₀ + v₀ₓt + aₓt²/2" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Bərabərtəcilli hərəkətdə koordinat tənliyi: x₀ — başlanğıc koordinat (m), v₀ₓ — başlanğıc sürətin proyeksiyası, aₓ — təcilin proyeksiyası</div>
+          <div class="dustur-menasi">Bərabərtəcilli hərəkətdə koordinat (hərəkət) tənliyi: x₀ — başlanğıc koordinat (m), v₀ₓ — başlanğıc sürətin proyeksiyası, aₓ — təcilin proyeksiyası</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">Sₙ</span><span class="beraber">=</span><span class="sag-teref">v₀ ±</span><span class="sag-teref kesr"><span class="suret">a</span><span class="mexrec">2</span></span><span class="sag-teref">(2n - 1)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">S₁ : S₂ : S₃</span><span class="beraber">=</span><span class="sag-teref">1 : 3 : 5 : ... : (2n - 1)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Sₙ</span><span class="beraber">=</span><span class="sag-teref">v₀ +</span><span class="sag-teref kesr"><span class="suret">a</span><span class="mexrec">2</span></span><span class="sag-teref">(2n - 1)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Sₙ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">a</span><span class="mexrec">2</span></span><span class="sag-teref">(2n - 1)</span><span class="beraber">(v₀ = 0)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Sₙ = v₀ ± (a/2)(2n - 1) | S₁:S₂:S₃ = 1:3:5" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Sₙ = v₀ + (a/2)(2n - 1) | v₀=0: Sₙ = (a/2)(2n - 1)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">n-ci saniyədə gedilən yol və başlanğıc sürəti sıfır olduqda (v₀ = 0) ardıcıl bərabər zaman fasilələrində gedilən yolların nisbəti</div>
+          <div class="dustur-menasi">n-ci saniyədə gedilən yol (yeyinləşən düzxətli hərəkətdə +a, yavaşıyan hərəkətdə -a götürülür; v₀ = 0 olduqda S₁ : S₂ : S₃ = 1 : 3 : 5)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">S_tormoz</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀²</span><span class="mexrec">2a</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">t_tormoz</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀</span><span class="mexrec">a</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">t_tor</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀</span><span class="mexrec">a</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">S_tor</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀²</span><span class="mexrec">2a</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀ · t_tor</span><span class="mexrec">2</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="S_tormoz = v₀²/(2a) | t_tormoz = v₀/a" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="t_tor = v₀ / a | S_tor = v₀² / (2a) = (v₀ · t_tor) / 2" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Dayanana qədər (v = 0) tormoz yolu və tormoz müddəti</div>
+          <div class="dustur-menasi">Tam dayanana qədər (v = 0) tormoz müddəti (t_tor) və tormoz yolu (S_tor)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
               <span class="dustur-setir"><span class="sol-teref">h</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">gt²</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v²</span><span class="mexrec">2g</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">gt = √(2gh)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">t_qalx</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀</span><span class="mexrec">g</span></span><span class="beraber">,</span><span class="sol-teref">h_max</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀²</span><span class="mexrec">2g</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">gt = √(2gh)</span><span class="beraber">,</span><span class="sol-teref">t</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">2h</span><span class="mexrec">g</span></span><span class="sag-teref">)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="h = gt²/2 = v²/(2g) | v = gt = √(2gh) | t_qalx = v₀/g | h_max = v₀²/(2g)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="h = gt²/2 = v²/(2g) | v = gt = √(2gh) | t = √(2h/g)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Sərbəstdüşmə və şaquli yuxarı atılmış cismin hərəkəti: g ≈ 9,8 m/s² (≈ 10 m/s²), t_uçuş = 2·t_qalx = 2v₀/g</div>
+          <div class="dustur-menasi">Sərbəstdüşmə (v₀ = 0, a = g): h — düşmə hündürlüyü (m), g — sərbəstdüşmə təcili (≈ 9,8 m/s² və ya 10 m/s²)</div>
         </div>
 
-        <div class="axtaris-tapilmadi-qutu">
-          <span class="tapilmadi-ikon">🔍</span>
-          <strong>Axtarışa uyğun düstur tapılmadı</strong>
-          <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">h_max</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀²</span><span class="mexrec">2g</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">t_qalx</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₀</span><span class="mexrec">g</span></span><span class="beraber">,</span><span class="sol-teref">t_uçuş</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2v₀</span><span class="mexrec">g</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="h_max = v₀² / (2g) | t_qalx = v₀ / g | t_uçuş = 2v₀ / g" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Şaquli yuxarı atılmış cismin maksimal qalxma hündürlüyü (h_max), qalxma müddəti (t_qalx) və tam uçuş müddəti (t_uçuş = 2·t_qalx)</div>
         </div>
       </section>
 
       <section id="cevre-uzre" class="movzu-mezmun">
-        <h1>3. Çevrə üzrə bərabərsürətli hərəkət</h1>
-        <p class="qisa-izah">Cisim çevrə üzrə modulu sabit, istiqaməti isə toxunan boyunca dəyişən sürətlə hərəkət edir; təcil çevrənin mərkəzinə yönəlir.</p>
+        <h1>1. Düzxətli bərabərsürətli hərəkət</h1>
+        <p class="qisa-izah">Cisim bərabər zaman fasilələrində bərabər yerdəyişmələr icra edir; sürətin modulu və istiqaməti dəyişmir (a = 0).</p>
 
         <div class="dustur-axtaris-panel">
-          <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: period, tezlik, bucaq, mərkəzəqaçma)..." oninput="dusturlariAxtar()">
+          <span class="dustur-axtaris-ikon">🔍</span>
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: sürət, yol, zaman, nisbi)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
+        <div class="axtaris-tapilmadi-mesaj">Uyğun nəticə tapılmadı</div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">t</span><span class="mexrec">N</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">n</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">t</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">T</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">x - x₀</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref">tgα</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="T = t/N = 1/n | n = N/t = 1/T" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="v = S/t = (x - x₀)/t = tgα" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">T — dövretmə periodu (s), n — dövretmə tezliyi (s⁻¹ = Hs), N — dövrlərin sayı, t — zaman (s)</div>
+          <div class="dustur-menasi">v — sürət (m/s), S — gedilən yol / yerdəyişmə (m), x - x₀ — koordinat dəyişməsi, t — zaman (s), tgα — S(t) qrafikinin meyl bucağı (α₁ > α₂ > α₃ ⇒ v₁ > v₂ > v₃)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Δφ</span><span class="mexrec">t</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2π</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">2πn</span></span>
+              <span class="dustur-setir"><span class="sol-teref">|S|</span><span class="beraber">=</span><span class="sag-teref">v · t</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="ω = Δφ/t = 2π/T = 2πn" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="|S| = v · t" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">ω — bucaq sürəti və ya dövri tezlik (rad/s), Δφ — dönmə bucağı (rad), π ≈ 3,14</div>
+          <div class="dustur-menasi">Bərabərsürətli hərəkətdə yerdəyişmənin ədədi qiyməti (modulu)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2πR</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">2πRn = ωR</span></span>
+              <span class="dustur-setir"><span class="sol-teref">l</span><span class="beraber">=</span><span class="sag-teref">v · t</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="v = 2πR/T = 2πRn = ωR" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="l = v · t" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">v — xətti sürət (m/s), R — çevrənin radiusu (m); sürət vektoru çevrəyə toxunan istiqamətdə yönəlir</div>
+          <div class="dustur-menasi">Sabit sürətlə hərəkət edən cismin qət etdiyi yolun düsturu</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v²</span><span class="mexrec">R</span></span><span class="beraber">=</span><span class="sag-teref">ω²R = ωv</span></span>
-              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">4π²R</span><span class="mexrec">T²</span></span><span class="beraber">=</span><span class="sag-teref">4π²n²R</span></span>
+              <span class="dustur-setir"><span class="sol-teref">x</span><span class="beraber">=</span><span class="sag-teref">x₀ + Sₓ</span></span>
+              <span class="dustur-setir"><span class="sol-teref">x</span><span class="beraber">=</span><span class="sag-teref">x₀ + vₓ · t</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="a = v²/R = ω²R = ωv = 4π²R/T² = 4π²n²R" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="x = x₀ + Sₓ = x₀ + vₓ · t" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">a — mərkəzəqaçma (normal) təcili (m/s²); həmişə çevrənin mərkəzinə doğru yönəlir və sürət vektoruna perpendikulyardır</div>
+          <div class="dustur-menasi">Hərəkət tənliyi: x — son koordinat, x₀ — başlanğıc koordinat, Sₓ — yerdəyişmənin proyeksiyası</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">t = T/2 :</span><span class="sag-teref">l = πR, |S| = 2R, Δv = 2v</span></span>
-              <span class="dustur-setir"><span class="sol-teref">t = T/4 :</span><span class="sag-teref">l = πR/2, |S| = R√2, Δv = v√2</span></span>
-              <span class="dustur-setir"><span class="sol-teref">t = T :</span><span class="sag-teref">l = 2πR, |S| = 0, Δv = 0</span></span>
+              <span class="dustur-setir"><span class="sol-teref">l</span><span class="beraber">=</span><span class="sag-teref">|S|</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="t=T/2: l=πR, |S|=2R, Δv=2v | t=T/4: l=πR/2, |S|=R√2, Δv=v√2 | t=T: l=2πR, |S|=0" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="l = |S|" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Periodun hissələrində gedilən yol (l), yerdəyişmənin modulu (|S|) və sürət dəyişməsinin modulu (Δv)</div>
+          <div class="dustur-menasi">Düzxətli bərabər sürətli hərəkətdə gedilən yol (l) yerdəyişmənin moduluna (|S|) bərabərdir</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">v₁ = v₂</span><span class="beraber">⇒</span><span class="sag-teref kesr"><span class="suret">ω₁</span><span class="mexrec">ω₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">n₁</span><span class="mexrec">n₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">T₂</span><span class="mexrec">T₁</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">R₂</span><span class="mexrec">R₁</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">a₁</span><span class="mexrec">a₂</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">ω₁ = ω₂</span><span class="beraber">⇒</span><span class="sag-teref kesr"><span class="suret">v₁</span><span class="mexrec">v₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">a₁</span><span class="mexrec">a₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">R₁</span><span class="mexrec">R₂</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">l</span><span class="beraber">></span><span class="sag-teref">|S|</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Qayışlı: v₁=v₂, ω₁/ω₂ = R₂/R₁ | Eyni ox: ω₁=ω₂, v₁/v₂ = a₁/a₂ = R₁/R₂" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="l > |S|" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Qayışlı və dişli çarx ötürməsində xətti sürətlər bərabərdir (v₁ = v₂); eyni ox üzərində bərkidilmiş disklərdə bucaq sürətləri və periodlar bərabərdir (ω₁ = ω₂, T₁ = T₂)</div>
+          <div class="dustur-menasi">Düzxətli dəyişənistiqamətli və əyrixətli hərəkətdə gedilən yol yerdəyişmənin modulundan böyükdür</div>
         </div>
 
-        <div class="axtaris-tapilmadi-qutu">
-          <span class="tapilmadi-ikon">🔍</span>
-          <strong>Axtarışa uyğun düstur tapılmadı</strong>
-          <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">km/s</span><span class="beraber">=</span><span class="sag-teref">m/s : 3,6</span></span>
+              <span class="dustur-setir"><span class="sol-teref">m/s</span><span class="beraber">=</span><span class="sag-teref">km/s · 3,6</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="km/s = m/s : 3,6 | m/s = km/s · 3,6" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Sürət vahidlərinin çevrilməsi: km/saat-dan m/s-ya keçmək üçün 3,6-ya bölünür; m/s-dan km/saat-a keçmək üçün 3,6-ya vurulur</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_yol</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S_yol</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_yerdəyişmə</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S_yerdəyişmə</span><span class="mexrec">t</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_yol = S_yol / t | v_yerdəyişmə = S_yerdəyişmə / t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Yola və yerdəyişməyə görə orta sürətlərin tapılması</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₁ + v₂ + v₃</span><span class="mexrec">3</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_or = (v₁ + v₂ + v₃) / 3" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisim zamanın birinci 1/3, ikinci 1/3 və üçüncü 1/3 hissəsini uyğun olaraq v₁, v₂, v₃ sürətlə gedirsə orta sürət</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2v₁v₂</span><span class="mexrec">v₁ + v₂</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_or</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">3v₁v₂v₃</span><span class="mexrec">v₁v₂ + v₂v₃ + v₁v₃</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_or = 2v₁v₂ / (v₁ + v₂) | v_or = 3v₁v₂v₃ / (v₁v₂ + v₂v₃ + v₁v₃)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Yolun iki bərabər (1/2) və ya üç bərabər (1/3) hissəsini fərqli sürətlərlə gedərkən orta sürət</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂(→)</span><span class="beraber">=</span><span class="sag-teref">v₁(→) - v₂(→)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v₂,₁(→)</span><span class="beraber">=</span><span class="sag-teref">v₂(→) - v₁(→)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂(→) = v₁(→) - v₂(→) | v₂,₁(→) = v₂(→) - v₁(→)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Vektorial nisbi sürət: v₁,₂(→) — 1-ci cismin 2-ciyə nəzərən sürəti; v₂,₁(→) — 2-ci cismin 1-ciyə nəzərən sürəti</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂</span><span class="beraber">=</span><span class="sag-teref">v₁ - v₂</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v₂,₁</span><span class="beraber">=</span><span class="sag-teref">v₂ - v₁</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂ = v₁ - v₂ | v₂,₁ = v₂ - v₁" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">İki cisim bir düz xətt üzrə eyni istiqamətdə hərəkət edərkən nisbi sürətlərin proyeksiyaları</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂ = v₂,₁</span><span class="beraber">=</span><span class="sag-teref">v₁ + v₂</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂ = v₂,₁ = v₁ + v₂" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisimlər əks istiqamətlərdə və ya qarşı-qarşıya hərəkət edərkən nisbi sürətin modulu</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂ = v₂,₁</span><span class="beraber">=</span><span class="sag-teref">√(v₁² + v₂²)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂ = v₂,₁ = √(v₁² + v₂²)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisimlər bir-birinə perpendikulyar (90°) istiqamətdə hərəkət edərkən nisbi sürətin modulu</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v₁,₂ = v₂,₁</span><span class="beraber">=</span><span class="sag-teref">√(v₁² + v₂² - 2v₁v₂cosα)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v₁,₂ = v₂,₁ = √(v₁² + v₂² - 2v₁v₂cosα)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Cisimlər aralarında α bucağı əmələ gətirərkən nisbi sürətin modulu (kosinuslar teoremi)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_yer</span><span class="beraber">=</span><span class="sag-teref">v_s + v_e</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_yer</span><span class="beraber">=</span><span class="sag-teref">|v_s - v_e|</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_yer = v_s + v_e | v_yer = |v_s - v_e|" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Eskalator məsələləri: sərnişinin yerə nəzərən sürəti (eyni istiqamətdə +, əks istiqamətdə fərq; v_s > v_e olarsa öz istiqamətində, v_s < v_e olarsa eskalator istiqamətində hərəkət edir)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">t</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">d</span><span class="mexrec">v_y</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Sₓ</span><span class="beraber">=</span><span class="sag-teref">(vₓ + v_ç) · t</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="t = d / v_y | Sₓ = (vₓ + v_ç) · t" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Çayın keçmə müddəti (d — çayın eni, v_y — y oxu üzrə sürət toplananı) və üzgüçünün üfüqi yerdəyişməsi</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur">
+              <span class="dustur-setir"><span class="sol-teref">v_axın ilə</span><span class="beraber">=</span><span class="sag-teref">v₁ + v₂</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v_axın əksinə</span><span class="beraber">=</span><span class="sag-teref">|v₁ - v₂|</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="v_axın ilə = v₁ + v₂ | v_axın əksinə = |v₁ - v₂|" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Çay axını istiqamətində və axının əksinə hərəkət edən qayığın sahilə nəzərən sürəti (v₁ — çaya nəzərən sürət, v₂ — axın sürəti)</div>
         </div>
       </section>
 
