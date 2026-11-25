@@ -3145,74 +3145,115 @@
       </section>
 
       <section id="aerohidrostatika" class="movzu-mezmun">
-        <h1>12. Aerohidrostatika</h1>
-        <p class="qisa-izah">Maye və qazlarda təzyiq, Paskal qanunu, hidravlik maşın, birləşmiş qablar və Arximed qüvvəsi.</p>
+        <h1>10. Aerohidrostatika</h1>
+        <p class="qisa-izah">Təzyiq və təzyiq qüvvəsi, bərk cisimlərin təzyiqi, Paskal qanunu, mayelərin təzyiqi, birləşmiş qablar, hidravlik pres, axının kəsilməzliyi, atmosfer təzyiqi, Arximed qanunu və mayedə üzən/hərəkət edən cisimlər.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: təzyiq, hidrostatik, Arximed, hidravlik)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: təzyiq, paskal, hidravlik pres, arximed, atmosfer)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">p</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F</span><span class="mexrec">S</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F</span><span class="mexrec">S</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F</span><span class="beraber">=</span><span class="sag-teref">P · S</span></span>
+              <span class="dustur-setir"><span class="sol-teref">[P]</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1 N</span><span class="mexrec">m<sup>2</sup></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1 kq</span><span class="mexrec">m · san<sup>2</sup></span></span><span class="beraber">=</span><span class="sag-teref">1 Pa (Paskal)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>mail</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F<sub>⊥</sub></span><span class="mexrec">S</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">mgcosα</span><span class="mexrec">S</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>bucaqlı F</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">mg + Fcosα</span><span class="mexrec">S</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>çanta</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">mg + F<sub>çanta</sub></span><span class="mexrec">S</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="p = F / S" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="P = F / S | F = P · S | [P] = 1 Pa | Pmail = mgcosα / S | P = (mg + Fcosα) / S" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Təzyiq: p — təzyiq (Pa = N/m²), F — səthə perpendikulyar təsir edən təzyiq qüvvəsi (N), S — səthin sahəsi (m²)</div>
+          <div class="dustur-menasi">Təzyiq və təzyiq qüvvəsi (skalyar kəmiyyət): səthə perpendikulyar təsir edən təzyiq qüvvəsinin sahəyə nisbətidir</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">p</span><span class="beraber">=</span><span class="sag-teref">ρ · g · h</span></span>
-              <span class="dustur-setir"><span class="sol-teref">p_tam</span><span class="beraber">=</span><span class="sag-teref">p₀ + ρ · g · h</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">F<sub>sükunət / bərabərsürətli</sub></span><span class="beraber">=</span><span class="sag-teref">mg</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>sükunət / bərabərsürətli</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">mg</span><span class="mexrec">S</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>yuxarı(a)</sub></span><span class="beraber">=</span><span class="sag-teref">m(g + a)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>yuxarı(a)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m(g + a)</span><span class="mexrec">S</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>aşağı(a)</sub></span><span class="beraber">=</span><span class="sag-teref">m(g - a)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>aşağı(a)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m(g - a)</span><span class="mexrec">S</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>sərbəst düşmə</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>sərbəst düşmə</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>V = Sh</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">mg</span><span class="mexrec">S</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρVg</span><span class="mexrec">S</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρShg</span><span class="mexrec">S</span></span><span class="beraber">=</span><span class="sag-teref">ρgh</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="p = ρ·g·h | p_tam = p₀ + ρ·g·h" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="F = mg | P = mg/S | Fyuxarı = m(g+a) | Faşağı = m(g-a) | Psərbəst = 0 | P(V=Sh) = ρgh" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Hidrostatik təzyiq: ρ — mayenin sıxlığı (kq/m³), h — dərinlik (m), p₀ — atmosfer təzyiqi (normal atmosfer təzyiqi p₀ = 10⁵ Pa = 760 mm c.st.)</div>
+          <div class="dustur-menasi">Bərk cisimlərin təzyiqi: təzyiqi yalnız bir istiqamətdə ötürürlər; kub, düzbucaqlı paralelepiped və silindrdə V = Sh olduqda P = ρgh düsturu da tətbiq edilir</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">F₂</span><span class="mexrec">F₁</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S₂</span><span class="mexrec">S₁</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h₁</span><span class="mexrec">h₂</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">P<sub>hidrostatik</sub></span><span class="beraber">=</span><span class="sag-teref">ρgh</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>dib</sub></span><span class="beraber">=</span><span class="sag-teref">ρgh · S</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>tam(açıq qab)</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>0</sub> + ρgh</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>yuxarı(a)</sub></span><span class="beraber">=</span><span class="sag-teref">ρ(g + a)h</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>yuxarı(a)</sub></span><span class="beraber">=</span><span class="sag-teref">ρ(g + a)h · S</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>aşağı(a)</sub></span><span class="beraber">=</span><span class="sag-teref">ρ(g - a)h</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>aşağı(a)</sub></span><span class="beraber">=</span><span class="sag-teref">ρ(g - a)h · S</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>sərbəst düşən qab</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>sərbəst düşən qab</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>A</sub></span><span class="beraber">=</span><span class="sag-teref">ρ<sub>1</sub>gh<sub>1</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>B</sub></span><span class="beraber">=</span><span class="sag-teref">ρ<sub>1</sub>gh<sub>1</sub> + ρ<sub>2</sub>gh<sub>2</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>divar</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρgh</span><span class="mexrec">2</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>divar</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρgh</span><span class="mexrec">2</span></span><span class="sag-teref">· S<sub>divar</sub></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="F₂ / F₁ = S₂ / S₁ = h₁ / h₂" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="P = ρgh | Fdib = ρgh·S | Ptam = P0 + ρgh | Pdivar = ρgh/2 | Fdivar = (ρgh/2)·Sdivar" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Hidravlik pres (Paskal qanununun tətbiqi): F₁, F₂ — kiçik və böyük porşenlərə təsir edən qüvvələr; S₁, S₂ — porşenlərin sahələri</div>
+          <div class="dustur-menasi">Mayenin qabın dibinə və divarına təzyiqi, üst-üstə mayelər və Paskal qanunu (qazların təzyiqi manometrlə ölçülür)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">ρ₁ · h₁</span><span class="beraber">=</span><span class="sag-teref">ρ₂ · h₂</span><span class="beraber">⇒</span><span class="sag-teref kesr"><span class="suret">h₁</span><span class="mexrec">h₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ₂</span><span class="mexrec">ρ₁</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">h<sub>1</sub></span><span class="mexrec">h<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ<sub>2</sub></span><span class="mexrec">ρ<sub>1</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>2</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">h<sub>son(kran)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S<sub>1</sub>h<sub>1</sub> + S<sub>2</sub>h<sub>2</sub></span><span class="mexrec">S<sub>1</sub> + S<sub>2</sub></span></span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">F<sub>2</sub></span><span class="mexrec">F<sub>1</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S<sub>2</sub></span><span class="mexrec">S<sub>1</sub></span></span><span class="beraber">=</span><span class="sag-teref">(</span><span class="sag-teref kesr"><span class="suret">r<sub>2</sub></span><span class="mexrec">r<sub>1</sub></span></span><span class="sag-teref">)<sup>2</sup></span><span class="beraber">=</span><span class="sag-teref">(</span><span class="sag-teref kesr"><span class="suret">d<sub>2</sub></span><span class="mexrec">d<sub>1</sub></span></span><span class="sag-teref">)<sup>2</sup></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h<sub>1</sub></span><span class="mexrec">h<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">a<sub>1</sub></span><span class="mexrec">a<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v<sub>1</sub></span><span class="mexrec">v<sub>2</sub></span></span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">v<sub>1</sub></span><span class="mexrec">v<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">S<sub>2</sub></span><span class="mexrec">S<sub>1</sub></span></span><span class="beraber">=</span><span class="sag-teref">(</span><span class="sag-teref kesr"><span class="suret">r<sub>2</sub></span><span class="mexrec">r<sub>1</sub></span></span><span class="sag-teref">)<sup>2</sup></span><span class="beraber">=</span><span class="sag-teref">(</span><span class="sag-teref kesr"><span class="suret">d<sub>2</sub></span><span class="mexrec">d<sub>1</sub></span></span><span class="sag-teref">)<sup>2</sup></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>dinamik</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρv<sup>2</sup></span><span class="mexrec">2</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="ρ₁·h₁ = ρ₂·h₂ ⇒ h₁/h₂ = ρ₂/ρ₁" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="h1/h2 = ρ2/ρ1 | hson = (S1h1 + S2h2)/(S1 + S2) | F2/F1 = S2/S1 = v1/v2 | Pdinamik = ρv²/2" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Birləşmiş qablar qanunu: müxtəlif cins qarışmayan mayelərin tarazlıqda olan sütunlarının hündürlükləri sıxlıqları ilə tərs mütənasibdir</div>
+          <div class="dustur-menasi">Birləşmiş qablar qanunu, hidravlik presdə qüvvədə qazanc, axının kəsilməzlik tənliyi və dinamik təzyiq</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">F_A</span><span class="beraber">=</span><span class="sag-teref">ρ_maye · g · V_batan</span><span class="beraber">=</span><span class="sag-teref">P_hava - P_maye</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">P<sub>0(normal)</sub></span><span class="beraber">=</span><span class="sag-teref">10<sup>5</sup> Pa ≈ 760 mm civə sütunu</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>h(mm c.s.)</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>0</sub> -</span><span class="sag-teref kesr"><span class="suret">h</span><span class="mexrec">12</span></span><span class="beraber">=</span><span class="sag-teref">760 -</span><span class="sag-teref kesr"><span class="suret">h</span><span class="mexrec">12</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>A</sub></span><span class="beraber">=</span><span class="sag-teref">ρ<sub>maye</sub> · V<sub>batan</sub> · g = m<sub>maye</sub> · g = P<sub>maye</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>A(tam batan)</sub></span><span class="beraber">=</span><span class="sag-teref">ρ<sub>maye</sub> · g · V = ρ<sub>maye</sub> · g ·</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">ρ<sub>cisim</sub></span></span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">V<sub>batan</sub></span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ<sub>cisim</sub></span><span class="mexrec">ρ<sub>maye</sub></span></span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">V<sub>batmayan</sub></span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref">1 -</span><span class="sag-teref kesr"><span class="suret">ρ<sub>cisim</sub></span><span class="mexrec">ρ<sub>maye</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>A(kürə)</sub></span><span class="beraber">=</span><span class="sag-teref">ρ<sub>maye</sub> ·</span><span class="sag-teref kesr"><span class="suret">4</span><span class="mexrec">3</span></span><span class="sag-teref">πR<sup>3</sup> · g</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="F_A = ρ_maye · g · V_batan = P_hava - P_maye" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="P0 = 10⁵ Pa ≈ 760 mm c.s. | FA = ρmaye·Vbatan·g | Vbatan/V = ρcisim/ρmaye | FA(kürə) = ρmaye·(4/3)πR³·g" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Arximed qanunu: F_A — itələyici Arximed qüvvəsi (N), ρ_maye — mayenin (qazın) sıxlığı (kq/m³), V_batan — cismin batan hissəsinin həcmi (m³)</div>
+          <div class="dustur-menasi">Atmosfer təzyiqi (barometr-aneroid ilə ölçülür; 0°C-də 760 mm civə sütunu, hər 12 m hündürlükdə ~1 mm c.s. azalır) və Arximed qanunu (mayenin sıxlığı areometrlə ölçülür)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">Üzür :</span><span class="sag-teref">F_A = mg,</span><span class="sag-teref kesr"><span class="suret">V_batan</span><span class="mexrec">V_cisim</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ_cisim</span><span class="mexrec">ρ_maye</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">P<sub>mayedə</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>0</sub> - F<sub>A</sub> = mg - F<sub>A</sub> = mg(1 -</span><span class="sag-teref kesr"><span class="suret">ρ<sub>m</sub></span><span class="mexrec">ρ<sub>c</sub></span></span><span class="sag-teref">)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">T<sub>tavana(mg &gt; F<sub>A</sub>)</sub></span><span class="beraber">=</span><span class="sag-teref">mg - F<sub>A</sub> = mg(1 -</span><span class="sag-teref kesr"><span class="suret">ρ<sub>m</sub></span><span class="mexrec">ρ<sub>c</sub></span></span><span class="sag-teref">)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">T<sub>dibə(F<sub>A</sub> &gt; mg)</sub></span><span class="beraber">=</span><span class="sag-teref">F<sub>A</sub> - mg = mg(</span><span class="sag-teref kesr"><span class="suret">ρ<sub>m</sub></span><span class="mexrec">ρ<sub>c</sub></span></span><span class="sag-teref">- 1)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">a<sub>düşən(mg &gt; F<sub>A</sub>)</sub></span><span class="beraber">=</span><span class="sag-teref">g(1 -</span><span class="sag-teref kesr"><span class="suret">ρ<sub>m</sub></span><span class="mexrec">ρ<sub>c</sub></span></span><span class="sag-teref">)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">a<sub>qalxan(F<sub>A</sub> &gt; mg)</sub></span><span class="beraber">=</span><span class="sag-teref">g(</span><span class="sag-teref kesr"><span class="suret">ρ<sub>m</sub></span><span class="mexrec">ρ<sub>c</sub></span></span><span class="sag-teref">- 1)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ma<sub>müqavimət</sub></span><span class="beraber">=</span><span class="sag-teref">mg - F<sub>m</sub> - F<sub>A</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>m(bərabərsürətli)</sub></span><span class="beraber">=</span><span class="sag-teref">mg - F<sub>A</sub> = mg(1 -</span><span class="sag-teref kesr"><span class="suret">ρ<sub>m</sub></span><span class="mexrec">ρ<sub>c</sub></span></span><span class="sag-teref">)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Üzmə şərti: F_A = mg | V_batan / V_cisim = ρ_cisim / ρ_maye" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Pmayedə = mg(1 - ρm/ρc) | Ttavana = mg(1 - ρm/ρc) | Tdibə = mg(ρm/ρc - 1) | adüşən = g(1 - ρm/ρc) | aqalxan = g(ρm/ρc - 1)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Cisimlərin üzmə şərtləri: ρ_c &gt; ρ_m olduqda batar; ρ_c = ρ_m olduqda mayenin daxilində tarazlıqda qalar; ρ_c &lt; ρ_m olduqda səthdə üzər</div>
+          <div class="dustur-menasi">Cismin mayedəki çəkisi, iplə tavana/dibə bağlandıqda gərilmə qüvvəsi, mayedə düşən/qalxan cismin təcili və müqavimət qüvvəsi</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
@@ -3223,77 +3264,102 @@
       </section>
 
       <section id="mkn-ideal-qaz" class="movzu-mezmun">
-        <h1>13. MKN. İdeal qaz qanunları</h1>
-        <p class="qisa-izah">Molekulyar-kinetik nəzəriyyənin əsas tənliyi, temperatur, Mendeleyev-Klapeyron tənliyi və izoproseslər.</p>
+        <h1>11. MKN. İdeal qaz qanunları</h1>
+        <p class="qisa-izah">MKN-in əsas anlayışları, əsas tənliyi, orta kinetik enerji, orta kvadratik sürət, temperatur şkalaları, Mendeleyev-Klaperon tənliyi və izoproseslər (Boyl-Mariott, Gey-Lüssak, Şarl qanunları).</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: mol, Klapeyron, Boyl, izotermik, konsentrasiya)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: mol, konsentrasiya, mendeleyev, boyl-mariott, gey-lüssak, şarl)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">ν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">M</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">N_A</span></span><span class="beraber">,</span><span class="sol-teref">m₀</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">M</span><span class="mexrec">N_A</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">M<sub>r</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m<sub>0</sub></span><span class="mexrec"><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">12</span></span>m<sub>c</sub></span></span><span class="beraber">(Nisbi molekul / atom kütləsi)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">N<sub>A</sub></span><span class="beraber">=</span><span class="sag-teref">6,02 · 10<sup>23</sup> mol<sup>-1</sup></span><span class="beraber">(Avoqadro sabiti)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">M</span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · N<sub>A</sub></span><span class="beraber">(Molyar kütlə)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">m</span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · N</span><span class="beraber">(Kütlə)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">N<sub>A</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">M</span></span><span class="beraber">(Maddə miqdarı)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m · N<sub>A</sub></span><span class="mexrec">V · M</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ · N<sub>A</sub></span><span class="mexrec">M</span></span><span class="beraber">(Konsentrasiya)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ρ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m<sub>0</sub> · N</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · n</span><span class="beraber">(Sıxlıq)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="ν = m/M = N/N_A | m₀ = M/N_A" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="M = m0·NA | ν = N/NA = m/M | n = N/V = ρ·NA/M | ρ = m/V = m0·n" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">ν — maddə miqdarı (mol), m — kütlə (kq), M — molyar kütlə (kq/mol), N — molekulların sayı, N_A = 6,02·10²³ mol⁻¹ (Avoqadro sabiti), m₀ — bir molekulun kütləsi (kq)</div>
+          <div class="dustur-menasi">MKN-in əsas anlayışları: nisbi kütlənin vahidi yoxdur; [M] = 1 kq/mol; [ν] = 1 mol; [n] = 1 m⁻³; [ρ] = 1 kq/m³</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ</span><span class="mexrec">m₀</span></span><span class="beraber">,</span><span class="sol-teref">ρ</span><span class="beraber">=</span><span class="sag-teref">n · m₀</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">3</span></span><span class="sag-teref">ρv̄<sup>2</sup></span><span class="beraber">(MKN-in əsas tənliyi)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">3</span></span><span class="sag-teref">m<sub>0</sub> · n · v̄<sup>2</sup></span><span class="beraber">(MKN-in əsas tənliyi)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2</span><span class="mexrec">3</span></span><span class="sag-teref">n · Ē<sub>k</sub></span><span class="beraber">(MKN-in əsas tənliyi)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Ē<sub>k</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m<sub>0</sub>v̄<sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">3</span><span class="mexrec">2</span></span><span class="sag-teref">k · T</span><span class="beraber">(Orta kinetik enerji)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref">n · k · T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">V</span></span><span class="sag-teref">· k · T</span><span class="beraber">(MKN-in əsas tənliyi — temperatur ilə)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P · V</span><span class="beraber">=</span><span class="sag-teref">N · k · T</span><span class="beraber">(Hal tənliyi — molekullar sayı ilə)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v̄</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3kT</span><span class="mexrec">m<sub>0</sub></span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3RT</span><span class="mexrec">M</span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3PV</span><span class="mexrec">m</span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3P</span><span class="mexrec">ρ</span></span><span class="sag-teref">)</span><span class="beraber">(Orta kvadratik sürət)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">R</span><span class="beraber">=</span><span class="sag-teref">k · N<sub>A</sub> ≈ 8,31</span><span class="sag-teref kesr"><span class="suret">C</span><span class="mexrec">mol · K</span></span><span class="beraber">(Universal qaz sabiti)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="n = N/V = ρ/m₀ | ρ = n · m₀" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="P = (2/3)nĒk = nkT | Ēk = (3/2)kT | v̄ = √(3kT/m0) = √(3RT/M) = √(3P/ρ) | R = k·NA ≈ 8,31 C/(mol·K)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">n — molekulların konsentrasiyası (m⁻³), V — həcm (m³), ρ — qazın sıxlığı (kq/m³)</div>
+          <div class="dustur-menasi">MKN-in əsas tənliyi, qaz molekullarının orta kinetik enerjisi, orta kvadratik sürəti və sabitlər: k ≈ 1,38·10⁻²³ C/K (Boltsman sabiti), R ≈ 8,31 C/(mol·K)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">p</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">3</span></span><span class="sag-teref">m₀ · n · v_kv²</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">3</span></span><span class="sag-teref">ρ · v_kv²</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2</span><span class="mexrec">3</span></span><span class="sag-teref">n · Eₖ</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref">t<sub>c</sub> + 273</span><span class="beraber">(Selsidən Kelvinə keçid)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">t<sub>c</sub></span><span class="beraber">=</span><span class="sag-teref">T - 273</span><span class="beraber">(Kelvindən Selsiyə keçid)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">t<sub>F</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">9</span><span class="mexrec">5</span></span><span class="sag-teref">· t<sub>c</sub> + 32</span><span class="beraber">(Selsidən Farenheytə keçid)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">t<sub>c</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">5</span><span class="mexrec">9</span></span><span class="sag-teref">(t<sub>F</sub> - 32)</span><span class="beraber">(Farenheytdən Selsiyə keçid)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Δt<sub>c</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">5</span><span class="mexrec">9</span></span><span class="sag-teref">Δt<sub>F</sub></span><span class="beraber">,</span><span class="sol-teref">ΔT</span><span class="beraber">=</span><span class="sag-teref">Δt</span><span class="beraber">(Temperatur dəyişmələri)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="p = (1/3)m₀·n·v_kv² = (1/3)ρ·v_kv² = (2/3)n·Eₖ" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="T = tc + 273 | tc = T - 273 | tF = (9/5)tc + 32 | tc = (5/9)(tF - 32) | Δtc = (5/9)ΔtF" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">MKN-nin əsas tənliyi: v_kv — molekulların kvadratik orta sürəti (m/s), Eₖ — bir molekulun irəliləmə hərəkətinin orta kinetik enerjisi (C)</div>
+          <div class="dustur-menasi">Temperatur şkalaları (Selsi, Kelvin, Farenheyt): 0 K ən aşağı temperaturdur (mütləq sıfır); 0°C = 273 K = 32°F</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref">t + 273</span><span class="beraber">,</span><span class="sol-teref">Eₖ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">3</span><span class="mexrec">2</span></span><span class="sag-teref">k · T</span><span class="beraber">,</span><span class="sol-teref">p</span><span class="beraber">=</span><span class="sag-teref">n · k · T</span></span>
-              <span class="dustur-setir"><span class="sol-teref">v_kv</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3kT</span><span class="mexrec">m₀</span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3RT</span><span class="mexrec">M</span></span><span class="sag-teref">)</span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">3p</span><span class="mexrec">ρ</span></span><span class="sag-teref">)</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">P · V</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">M</span></span><span class="sag-teref">R · T</span><span class="beraber">(Mendeleyev-Klaperon tənliyi)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P · V</span><span class="beraber">=</span><span class="sag-teref">ν · R · T</span><span class="beraber">(Mendeleyev-Klaperon tənliyi)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρ · R · T</span><span class="mexrec">M</span></span><span class="beraber">(Mendeleyev-Klaperon tənliyi)</span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P · V</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">const</span><span class="beraber">(Klaperon tənliyi, m = const)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="T = t + 273 | Eₖ = (3/2)kT | p = nkT | v_kv = √(3kT/m₀) = √(3RT/M) = √(3p/ρ)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="PV = (m/M)RT = νRT | P = ρRT/M | PV/T = const (Klaperon tənliyi)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">T — mütləq temperatur (K), k = 1,38·10⁻²³ C/K (Bolsman sabiti), R = 8,31 C/(mol·K) (universal qaz sabiti)</div>
+          <div class="dustur-menasi">İdeal qazın hal tənliyi — Mendeleyev-Klaperon tənliyi və verilmiş kütləli qaz üçün Klaperon tənliyi</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">p · V</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">M</span></span><span class="sag-teref">R · T</span><span class="beraber">=</span><span class="sag-teref">ν · R · T</span></span>
-              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">p₁ · V₁</span><span class="mexrec">T₁</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">p₂ · V₂</span><span class="mexrec">T₂</span></span><span class="beraber">(m = const)</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">P · V</span><span class="beraber">=</span><span class="sag-teref">const</span><span class="beraber">(Boyl-Mariott qanunu — izotermik proses, T = const)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>1</sub> · V<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>2</sub> · V<sub>2</sub></span><span class="beraber">(Boyl-Mariott qanunu)</span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P<sub>1</sub></span><span class="mexrec">P<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">V<sub>2</sub></span><span class="mexrec">V<sub>1</sub></span></span><span class="beraber">(Boyl-Mariott qanunu)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ρ<sub>izotermik</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">M · P</span><span class="mexrec">R · T</span></span><span class="beraber">,</span><span class="sol-teref">n<sub>izotermik</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">P</span><span class="mexrec">k · T</span></span><span class="beraber">(İzotermik prosesdə sıxlıq və konsentrasiya)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="p·V = (m/M)RT = νRT | p₁V₁/T₁ = p₂V₂/T₂" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="PV = const | P1V1 = P2V2 | P1/P2 = V2/V1 (Boyl-Mariott qanunu)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Mendeleyev-Klapeyron (ideal qazın hal) tənliyi və Klapeyron tənliyi; qazın sıxlığı ρ = (p·M) / (R·T)</div>
+          <div class="dustur-menasi">İzotermik proses (T = const, m = const): Boyl-Mariott qanunu; Ē<sub>k</sub> və v̄ sabit qalır</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">İzotermik (T = const) :</span><span class="sag-teref">p₁V₁ = p₂V₂</span></span>
-              <span class="dustur-setir"><span class="sol-teref">İzobarik (p = const) :</span><span class="sag-teref kesr"><span class="suret">V₁</span><span class="mexrec">T₁</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">V₂</span><span class="mexrec">T₂</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">İzoxorik (V = const) :</span><span class="sag-teref kesr"><span class="suret">p₁</span><span class="mexrec">T₁</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">p₂</span><span class="mexrec">T₂</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">V</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">const</span><span class="beraber">(Gey-Lüssak qanunu — izobar proses, P = const)</span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">V<sub>1</sub></span><span class="mexrec">V<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">T<sub>1</sub></span><span class="mexrec">T<sub>2</sub></span></span><span class="beraber">(Gey-Lüssak qanunu)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">V<sub>1</sub> · T<sub>2</sub></span><span class="beraber">=</span><span class="sag-teref">V<sub>2</sub> · T<sub>1</sub></span><span class="beraber">(Gey-Lüssak qanunu)</span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">const</span><span class="beraber">(Şarl qanunu — izoxor proses, V = const)</span></span>
+              <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">P<sub>1</sub></span><span class="mexrec">P<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">T<sub>1</sub></span><span class="mexrec">T<sub>2</sub></span></span><span class="beraber">(Şarl qanunu)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>2</sub> · T<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>1</sub> · T<sub>2</sub></span><span class="beraber">(Şarl qanunu)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>son(birləşmiş qablar)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">P<sub>1</sub>V<sub>1</sub> + P<sub>2</sub>V<sub>2</sub></span><span class="mexrec">V<sub>1</sub> + V<sub>2</sub></span></span><span class="beraber">(İzotermik birləşmədə son təzyiq)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Boyl-Mariott: p₁V₁=p₂V₂ | Gey-Lüssak: V₁/T₁=V₂/T₂ | Şarl: p₁/T₁=p₂/T₂" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="V/T = const (Gey-Lüssak) | P/T = const (Şarl) | Pson = (P1V1 + P2V2)/(V1 + V2)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">İdeal qaz qanunları: Boyl-Mariott (izotermik), Gey-Lüssak (izobarik), Şarl (izoxorik); Dalton qanunu: p_qarışıq = p₁ + p₂ + ...</div>
+          <div class="dustur-menasi">İzobar proses (P = const — Gey-Lüssak qanunu) və izoxor proses (V = const — Şarl qanunu; ρ və n sabit qalır)</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
