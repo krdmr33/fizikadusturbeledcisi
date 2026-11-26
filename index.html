@@ -4461,55 +4461,80 @@
       </section>
 
       <section id="hendesi-optika" class="movzu-mezmun">
-        <h1>25. Həndəsi optika</h1>
-        <p class="qisa-izah">İşığın qayıtma və sınma qanunları, tam daxili qayıtma, nazik linza düsturu və linzanın optik qüvvəsi.</p>
+        <h1>23. Həndəsi optika</h1>
+        <p class="qisa-izah">İşığın qayıtma və sınma qanunları, sındırma əmsalı, tam daxili qayıtma, müstəvi güzgü, nazik linzalar, optik qüvvə, xətti böyütmə, nazik linza düsturları və sferik güzgülər.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: sınma, linza, fokus, optik qüvvə, böyütmə)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: qayıtma, sınma, sındırma əmsalı, tam daxili, güzgü, linza, optik qüvvə, böyütmə)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">α</span><span class="beraber">=</span><span class="sag-teref">γ</span><span class="beraber">,</span><span class="sol-teref">N</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">360°</span><span class="mexrec">α</span></span><span class="sag-teref">- 1</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">α</span><span class="beraber">=</span><span class="sag-teref">γ</span></span>
+              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">sinα</span><span class="mexrec">sinβ</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">n<sub>2</sub></span><span class="mexrec">n<sub>1</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v<sub>1</sub></span><span class="mexrec">v<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">λ<sub>1</sub></span><span class="mexrec">λ<sub>2</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">n<sub>mütləq</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">c</span><span class="mexrec">v</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">λ<sub>0</sub></span><span class="mexrec">λ</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">c</span><span class="mexrec">n</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">λ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">λ<sub>0</sub></span><span class="mexrec">n</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">t<sub>lövhə</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">d</span><span class="mexrec">v</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">d · n</span><span class="mexrec">c</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Qayıtma: α = γ | İki müstəvi güzgüdə xəyalların sayı: N = 360°/α - 1" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="α = γ | sinα/sinβ = n2/n1 = v1/v2 = λ1/λ2 | n = c/v = λ0/λ | t = d·n/c" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">İşığın qayıtma qanunu: düşmə bucağı (α) qayıtma bucağına (γ) bərabərdir; güzgü β bucağı qədər dönərsə, qayıdan şüa 2β bucağı qədər dönər</div>
+          <div class="dustur-menasi"><strong>İşığın qayıtma və sınma qanunları, sındırma əmsalı (n):</strong> işıq bir mühitdən digərinə keçdikdə tezliyi (ν) və enerjisi dəyişmir, sürəti və dalğa uzunluğu dəyişir (c = 3·10⁸ m/san)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">sinα</span><span class="mexrec">sinβ</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">n₂</span><span class="mexrec">n₁</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v₁</span><span class="mexrec">v₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">λ₁</span><span class="mexrec">λ₂</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">c</span><span class="mexrec">v</span></span><span class="beraber">,</span><span class="sol-teref">sinα₀</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">n</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">sinα<sub>0</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">n<sub>2</sub></span><span class="mexrec">n<sub>1</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">sinα<sub>0(hava)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">n</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">α</span><span class="beraber">&gt;</span><span class="sag-teref">α<sub>0</sub></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="sinα/sinβ = n₂/n₁ = v₁/v₂ = λ₁/λ₂ | n = c/v | Tam daxili qayıtma: sinα₀ = 1/n" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="sinα0 = n2/n1 | sinα0 = 1/n | α > α0" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">İşığın sınma qanunu (Snellius): n — mütləq sındırma əmsalı (adsız kəmiyyət), α₀ — tam daxili qayıtmanın limit bucağı</div>
+          <div class="dustur-menasi"><strong>İşığın tam daxili qayıtması və limit bucağı (α<sub>0</sub>):</strong> işıq optik sıxlığı çox olan mühitdən az olan mühitə keçdikdə (n<sub>1</sub> &gt; n<sub>2</sub>) və düşmə bucağı limit bucağından böyük olduqda (α &gt; α<sub>0</sub>) baş verir; işıqötürənlər bu hadisəyə əsaslanır</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">D</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">F</span></span><span class="beraber">=</span><span class="sag-teref">±</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">d</span></span><span class="sag-teref">±</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">f</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">D_sistem</span><span class="beraber">=</span><span class="sag-teref">D₁ + D₂ + ...</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">H</span><span class="beraber">=</span><span class="sag-teref">h</span></span>
+              <span class="dustur-setir"><span class="sol-teref">f</span><span class="beraber">=</span><span class="sag-teref">d</span></span>
+              <span class="dustur-setir"><span class="sol-teref">v<sub>nisbi</sub></span><span class="beraber">=</span><span class="sag-teref">2v</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="D = 1/F = ±1/d ± 1/f | D_sistem = D₁ + D₂ + ..." onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="H = h | f = d | vnisbi = 2v" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Nazik linza düsturu və optik qüvvə D (dptr = m⁻¹): F — fokus məsafəsi (toplayıcıda +, səpicidə -), d — cisimdən linzaya, f — xəyaldan linzaya olan məsafə (həqiqi xəyal +, mövhumi xəyal -)</div>
+          <div class="dustur-menasi"><strong>Müstəvi güzgü:</strong> alınan xəyal mövhumidir, düzünədir, güzgüyə nəzərən simmetrikdir və cisim boydadır (H = h, f = d)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">Γ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">H</span><span class="mexrec">h</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">f</span><span class="mexrec">d</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F</span><span class="mexrec">|d - F|</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">D</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">F</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">D<sub>sferik</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">F</span></span><span class="beraber">=</span><span class="sag-teref">(n - 1)(</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">R<sub>1</sub></span></span><span class="beraber">-</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">R<sub>2</sub></span></span><span class="sag-teref">)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Γ</span><span class="beraber">=</span><span class="sag-teref">Q</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">H</span><span class="mexrec">h</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">f</span><span class="mexrec">d</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">D<sub>sistem</sub></span><span class="beraber">=</span><span class="sag-teref">D<sub>1</sub> + D<sub>2</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">F<sub>1</sub></span></span><span class="beraber">+</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">F<sub>2</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Γ<sub>sistem</sub></span><span class="beraber">=</span><span class="sag-teref">Γ<sub>1</sub> · Γ<sub>2</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">l<sub>paralel şüalar</sub></span><span class="beraber">=</span><span class="sag-teref">F<sub>1</sub> + F<sub>2</sub></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Γ = H / h = f / d = F / |d - F|" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="D = 1/F | D = (n - 1)(1/R1 - 1/R2) | Γ = H/h = f/d | Dsistem = D1 + D2 | Γsistem = Γ1·Γ2" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Linzanın xətti böyütməsi Γ: H — xəyalın ölçüsü (m), h — cismin ölçüsü (m); d = 2F olduqda f = 2F və Γ = 1</div>
+          <div class="dustur-menasi"><strong>Linzanın optik qüvvəsi (D), xətti böyütməsi (Γ) və linzalar sistemi:</strong> [D] = 1 dptr (dioptriya) = 1 m⁻¹; toplayıcı linzada F &gt; 0, D &gt; 0, səpici linzada F &lt; 0, D &lt; 0; Γ adsız kəmiyyətdir</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">Toplayıcı (həqiqi xəyal):</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">F</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">d</span></span><span class="beraber">+</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">f</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Toplayıcı (mövhumi xəyal):</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">F</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">d</span></span><span class="beraber">-</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">|f|</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Səpici linza (həmişə mövhumi):</span><span class="sag-teref">-</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">|F|</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">d</span></span><span class="beraber">-</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">|f|</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>sferik güzgü</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">R</span><span class="mexrec">2</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="Toplayıcı (həqiqi): 1/F = 1/d + 1/f | Toplayıcı (mövhumi): 1/F = 1/d - 1/|f| | Səpici: -1/|F| = 1/d - 1/|f| | Fsferik = R/2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Nazik linza düsturları və sferik güzgülər:</strong> həqiqi xəyal üçün f &gt; 0, mövhumi xəyal üçün f &lt; 0; çökük sferik güzgü toplayıcı linza, qabarıq sferik güzgü isə səpici linza qanunlarına tabedir; uzaqdangörmədə toplayıcı, yaxındangörmədə səpici linzalı eynək işlənir</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
@@ -4520,35 +4545,65 @@
       </section>
 
       <section id="dalga-optikasi" class="movzu-mezmun">
-        <h1>26. Dalğa optikası</h1>
-        <p class="qisa-izah">İşığın dispersiyası, interferensiya maksimum və minimum şərtləri, difraksiya qəfəsi.</p>
+        <h1>24. Dalğa optikası</h1>
+        <p class="qisa-izah">İşığın dispersiyası, rənglərin ardıcıllığı və əsas rənglər, işığın interferensiyası (maksimum və minimum şərtləri), işığın difraksiyası, difraksiya qəfəsi və işığın polyarlaşması (Malyus qanunu).</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: interferensiya, difraksiya, qəfəs, yollar fərqi)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: dispersiya, interferensiya, maksimum, minimum, difraksiya, qəfəs, malyus)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">Maksimum :</span><span class="sag-teref">Δd = k · λ</span><span class="beraber">=</span><span class="sag-teref">2k ·</span><span class="sag-teref kesr"><span class="suret">λ</span><span class="mexrec">2</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">Minimum :</span><span class="sag-teref">Δd = (2k + 1) ·</span><span class="sag-teref kesr"><span class="suret">λ</span><span class="mexrec">2</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sag-teref">n, E, ν (aşağı istiqamətdə artır)</span></span>
+              <span class="dustur-setir"><span class="sag-teref">v, λ (aşağı istiqamətdə azalır)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="İnterferensiya max: Δd = k·λ | min: Δd = (2k + 1)·(λ/2) (k = 0, 1, 2...)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Dispersiya: n, E, ν artır | v, λ azalır (bənövşəyi ən çox, qırmızı ən az meyl edir)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Koherent işıq dalğalarının interferensiya şərtləri: Δd = d₂ - d₁ — dalğaların həndəsi yollar fərqi (m), λ — işığın dalğa uzunluğu (m), k = 0, 1, 2...</div>
+          <div class="dustur-menasi"><strong>İşığın dispersiyası və rənglər:</strong> sındırma əmsalının tezlikdən və ya dalğa uzunluğundan asılılığıdır; spektr ardıcıllığı: qırmızı, narıncı, sarı, yaşıl, mavi, göy, bənövşəyi; əsas rənglər: göy, qırmızı, yaşıl</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">d · sinφ</span><span class="beraber">=</span><span class="sag-teref">k · λ</span></span>
-              <span class="dustur-setir"><span class="sol-teref">d</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">l</span><span class="mexrec">N</span></span><span class="beraber">,</span><span class="sol-teref">k_max</span><span class="beraber">≤</span><span class="sag-teref kesr"><span class="suret">d</span><span class="mexrec">λ</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">Δd<sub>maksimum</sub></span><span class="beraber">=</span><span class="sag-teref">2k ·</span><span class="sag-teref kesr"><span class="suret">λ</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref">k · λ</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Δφ<sub>maksimum</sub></span><span class="beraber">=</span><span class="sag-teref">2π · k</span></span>
+              <span class="dustur-setir"><span class="sol-teref">A<sub>yekun(maksimum)</sub></span><span class="beraber">=</span><span class="sag-teref">A<sub>1</sub> + A<sub>2</sub></span><span class="beraber">,</span><span class="sol-teref">A<sub>(A<sub>1</sub>=A<sub>2</sub>)</sub></span><span class="beraber">=</span><span class="sag-teref">2A</span></span>
+              <span class="dustur-setir"><span class="sol-teref">I<sub>maksimum</sub></span><span class="beraber">=</span><span class="sag-teref">I<sub>1</sub> + I<sub>2</sub> + 2√(I<sub>1</sub> · I<sub>2</sub>)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Δd<sub>minimum</sub></span><span class="beraber">=</span><span class="sag-teref">(2k - 1) ·</span><span class="sag-teref kesr"><span class="suret">λ</span><span class="mexrec">2</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Δφ<sub>minimum</sub></span><span class="beraber">=</span><span class="sag-teref">(2k - 1) · π</span></span>
+              <span class="dustur-setir"><span class="sol-teref">A<sub>yekun(minimum)</sub></span><span class="beraber">=</span><span class="sag-teref">|A<sub>1</sub> - A<sub>2</sub>|</span><span class="beraber">,</span><span class="sol-teref">A<sub>(A<sub>1</sub>=A<sub>2</sub>)</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
+              <span class="dustur-setir"><span class="sol-teref">I<sub>minimum</sub></span><span class="beraber">=</span><span class="sag-teref">I<sub>1</sub> + I<sub>2</sub> - 2√(I<sub>1</sub> · I<sub>2</sub>)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="d · sinφ = k · λ | d = l / N | k_max ≤ d / λ" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Δd(max) = kλ, Δφ(max) = 2πk, Imax = I1 + I2 + 2√(I1I2) | Δd(min) = (2k-1)λ/2, Δφ(min) = (2k-1)π, Imin = I1 + I2 - 2√(I1I2)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Difraksiya qəfəsi düsturu: d — qəfəs periodu / sabiti (m), l — qəfəsin eni (m), N — cizgilərin sayı, φ — difraksiya bucağı, k — spektrin tərtibi</div>
+          <div class="dustur-menasi"><strong>İşığın interferensiyası (maksimum və minimum şərtləri):</strong> koherent dalğalar (λ<sub>1</sub> = λ<sub>2</sub>, φ<sub>1</sub> - φ<sub>2</sub> = const) üçün k — tərtibdir (0, 1, 2, ...); optikanın şəffaflaşdırılması interferensiyaya əsaslanır</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">d<sub>qəfəs</sub></span><span class="beraber">=</span><span class="sag-teref">a + b</span></span>
+              <span class="dustur-setir"><span class="sol-teref">d<sub>qəfəs(cizgi sayı ilə)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">l</span><span class="mexrec">N</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">d · sinφ</span><span class="beraber">=</span><span class="sag-teref">k · λ</span><span class="sag-teref">(maksimum şərti)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">d · sinφ</span><span class="beraber">=</span><span class="sag-teref">(2k - 1) ·</span><span class="sag-teref kesr"><span class="suret">λ</span><span class="mexrec">2</span></span><span class="sag-teref">(minimum şərti)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">k<sub>max</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">d</span><span class="mexrec">λ</span></span><span class="sag-teref">(φ = 90° olduqda)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="d = a + b = l/N | d·sinφ = kλ | d·sinφ = (2k-1)λ/2 | kmax = d/λ" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>İşığın difraksiyası və difraksiya qəfəsi:</strong> [d] = 1 m; a — şəffaf zolağın eni, b — qeyri-şəffaf zolağın eni, φ — şüanın meyl bucağı; difraksiya qəfəsində qırmızı şüa ən çox, bənövşəyi şüa ən az meyl edir</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">I</span><span class="beraber">=</span><span class="sag-teref">I<sub>0</sub> · cos<sup>2</sup>α</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="I = I0 · cos²α" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>İşığın polyarlaşması (Malyus qanunu):</strong> işığın eninə elektromaqnit dalğa olduğunu sübut edir; α — kristalların oxları arasındakı bucaq (α = 0° olduqda I = I<sub>0</sub> max, α = 90° olduqda I = 0)</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
@@ -4558,57 +4613,82 @@
         </div>
       </section>
 
-      <section id="isiq-kvantlari" class="movzu-mezmun">
-        <h1>27. İşıq kvantları</h1>
-        <p class="qisa-izah">Fotonun enerjisi və impulsu, fotoeffekt hadisəsi, Eynşteyn tənliyi, qırmızı sərhəd və işığın təzyiqi.</p>
+     <section id="isiq-kvantlari" class="movzu-mezmun">
+        <h1>25. İşıq kvantları</h1>
+        <p class="qisa-izah">Fotonun enerjisi, kütləsi və impulsu, fotonun mühitə keçməsi, fotoeffekt hadisəsi və qanunları, doyma cərəyanı, saxlayıcı gərginlik, Eynşteyn tənliyi və fotoeffektin qırmızı sərhədi.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: foton, Plank, fotoeffekt, Eynşteyn, çıxış işi)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: foton, plank, impuls, fotoeffekt, saxlayıcı, eynşteyn, qırmızı sərhəd)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">E</span><span class="beraber">=</span><span class="sag-teref">h · ν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · c</span><span class="mexrec">λ</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">p</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">E</span><span class="mexrec">c</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · ν</span><span class="mexrec">c</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h</span><span class="mexrec">λ</span></span><span class="beraber">,</span><span class="sol-teref">m</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">E</span><span class="mexrec">c²</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h</span><span class="mexrec">c · λ</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">E</span><span class="beraber">=</span><span class="sag-teref">h · ν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · c</span><span class="mexrec">λ</span></span><span class="beraber">=</span><span class="sag-teref">m · c<sup>2</sup></span></span>
+              <span class="dustur-setir"><span class="sol-teref">m<sub>foton</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">E</span><span class="mexrec">c<sup>2</sup></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · ν</span><span class="mexrec">c<sup>2</sup></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h</span><span class="mexrec">c · λ</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">p<sub>vakuum</sub></span><span class="beraber">=</span><span class="sag-teref">m · c</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">E</span><span class="mexrec">c</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · ν</span><span class="mexrec">c</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h</span><span class="mexrec">λ<sub>0</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">p<sub>mühit</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h</span><span class="mexrec">λ</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · n</span><span class="mexrec">λ<sub>0</sub></span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="E = h·ν = h·c/λ | p = E/c = h/λ | m = E/c² = h/(c·λ)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="E = hν = hc/λ = mc² | m = hν/c² = h/(cλ) | p = mc = E/c = hν/c = h/λ0 | pmühit = hn/λ0" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Fotonun enerjisi E (C), impulsu p (kq·m/s) və kütləsi m (kq): h = 6,63·10⁻³⁴ C·s (Plank sabiti), 1 eV = 1,6·10⁻¹⁹ C; sükunət kütləsi m₀ = 0</div>
+          <div class="dustur-menasi"><strong>Fotonun enerjisi (E), hərəkət kütləsi (m) və impulsu (p):</strong> h = 6,63·10⁻³⁴ C·san; fotonun sükunət kütləsi (m<sub>0</sub> = 0) və yükü (q = 0) yoxdur, c = 3·10⁸ m/san sabit sürətlə hərəkət edir; vakuumdan mühitə keçdikdə v və λ n dəfə azalır, p n dəfə artır, ν, T və E dəyişmir</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">h · ν</span><span class="beraber">=</span><span class="sag-teref">A_çıx + Eₖ_max</span></span>
-              <span class="dustur-setir"><span class="sol-teref">Eₖ_max</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m · v_max²</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref">e · U_sax</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">I<sub>doyma</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N · e</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">E<sub>k,max</sub></span><span class="beraber">=</span><span class="sag-teref">e · U<sub>sax</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">m · v<sub>max</sub><sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">p<sub>max</sub><sup>2</sup></span><span class="mexrec">2m</span></span><span class="beraber">=</span><span class="sag-teref">e · U<sub>sax</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v<sub>max</sub></span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">2 · e · U<sub>sax</sub></span><span class="mexrec">m</span></span><span class="sag-teref">)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">p<sub>max</sub></span><span class="beraber">=</span><span class="sag-teref">√(2 · m · e · U<sub>sax</sub>)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="h·ν = A_çıx + Eₖ_max | Eₖ_max = mv_max²/2 = e·U_sax" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Idoyma = Ne/t | Ek,max = e·Usax | mvmax²/2 = pmax²/(2m) = e·Usax | vmax = √(2eUsax/m) | pmax = √(2meUsax)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Fotoeffekt üçün Eynşteyn tənliyi: A_çıx — elektronun metaldan çıxış işi (C), Eₖ_max — fotoelektronların maksimal kinetik enerjisi, U_sax — saxlayıcı gərginlik (V)</div>
+          <div class="dustur-menasi"><strong>Fotoeffekt hadisəsi, doyma cərəyanı (I<sub>doyma</sub>) və saxlayıcı gərginlik (U<sub>sax</sub>):</strong> I qanun: N və I<sub>doyma</sub> işığın intensivliyi ilə düz asılıdır (ν, λ-dan asılı deyil); II qanun: v<sub>max</sub>, p<sub>max</sub>, E<sub>k,max</sub> və U<sub>sax</sub> işığın tezliyi ilə düz asılıdır (intensivlikdən asılı deyil)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">A_çıx</span><span class="beraber">=</span><span class="sag-teref">h · ν_min</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · c</span><span class="mexrec">λ_max</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">ν_min</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">A_çıx</span><span class="mexrec">h</span></span><span class="beraber">,</span><span class="sol-teref">λ_max</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · c</span><span class="mexrec">A_çıx</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">E<sub>foton</sub></span><span class="beraber">=</span><span class="sag-teref">A<sub>ç</sub> + E<sub>k,max</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">h · ν</span><span class="beraber">=</span><span class="sag-teref">A<sub>ç</sub> +</span><span class="sag-teref kesr"><span class="suret">m · v<sub>max</sub><sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref">A<sub>ç</sub> +</span><span class="sag-teref kesr"><span class="suret">p<sub>max</sub><sup>2</sup></span><span class="mexrec">2m</span></span><span class="beraber">=</span><span class="sag-teref">A<sub>ç</sub> + e · U<sub>sax</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">h · c</span><span class="mexrec">λ</span></span><span class="beraber">=</span><span class="sag-teref">A<sub>ç</sub> +</span><span class="sag-teref kesr"><span class="suret">m · v<sub>max</sub><sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref">A<sub>ç</sub> +</span><span class="sag-teref kesr"><span class="suret">p<sub>max</sub><sup>2</sup></span><span class="mexrec">2m</span></span><span class="beraber">=</span><span class="sag-teref">A<sub>ç</sub> + e · U<sub>sax</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">U<sub>sax</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · ν - A<sub>ç</sub></span><span class="mexrec">e</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">v<sub>max</sub></span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">2h(ν - ν<sub>min</sub>)</span><span class="mexrec">m</span></span><span class="sag-teref">)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="A_çıx = h·ν_min = h·c/λ_max | ν_min = A_çıx/h | λ_max = h·c/A_çıx" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="hν = Aç + Ek,max = Aç + mvmax²/2 = Aç + eUsax | hc/λ = Aç + eUsax | Usax = (hν - Aç)/e" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Fotoeffektin qırmızı sərhədi: fotoeffektin baş verməsi üçün ν ≥ ν_min və λ ≤ λ_max olmalıdır</div>
+          <div class="dustur-menasi"><strong>Fotoeffekt üçün Eynşteyn tənliyi və çıxış işi (A<sub>ç</sub>):</strong> [A<sub>ç</sub>] = 1 eV = 1,6·10⁻¹⁹ C; çıxış işi yalnız metalın növündən asılıdır</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">p</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I</span><span class="mexrec">c</span></span><span class="sag-teref">(1 + R)</span><span class="beraber">=</span><span class="sag-teref">w · (1 + R)</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">ν<sub>min</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">A<sub>ç</sub></span><span class="mexrec">h</span></span><span class="beraber">,</span><span class="sol-teref">A<sub>ç</sub></span><span class="beraber">=</span><span class="sag-teref">h · ν<sub>min</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">λ<sub>max</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · c</span><span class="mexrec">A<sub>ç</sub></span></span><span class="beraber">,</span><span class="sol-teref">A<sub>ç</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · c</span><span class="mexrec">λ<sub>max</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">h · ν</span><span class="beraber">=</span><span class="sag-teref">h · ν<sub>min</sub> + E<sub>k,max</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">h · c</span><span class="mexrec">λ</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · c</span><span class="mexrec">λ<sub>max</sub></span></span><span class="beraber">+ E<sub>k,max</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">ν</span><span class="mexrec">ν<sub>min</sub></span></span><span class="beraber">=</span><span class="sag-teref">1 +</span><span class="sag-teref kesr"><span class="suret">E<sub>k,max</sub></span><span class="mexrec">A<sub>ç</sub></span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="p = (I/c)·(1 + R) = w·(1 + R)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="νmin = Aç/h | λmax = hc/Aç | hν = hνmin + Ek,max | ν/νmin = 1 + Ek,max/Aç" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">İşığın səthə göstərdiyi təzyiq (Lebedev): I — işığın intensivliyi (Vt/m²), R — əksetmə əmsalı (qara səth üçün R = 0 ⇒ p = I/c; güzgü səth üçün R = 1 ⇒ p = 2I/c)</div>
+          <div class="dustur-menasi"><strong>Fotoeffektin III qanunu və qırmızı sərhədi (ν<sub>min</sub>, λ<sub>max</sub>):</strong> fotoeffektin baş verməsi üçün E<sub>f</sub> ≥ A<sub>ç</sub>, ν ≥ ν<sub>min</sub> və ya λ ≤ λ<sub>max</sub> olmalıdır; ν<sub>min</sub> və λ<sub>max</sub> yalnız metalın növündən asılıdır</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">P<sub>mənbə</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N · h · ν</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">η</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N · h · ν</span><span class="mexrec">P · t</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N · h · c</span><span class="mexrec">P · t · λ</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">N · h · ν</span><span class="beraber">=</span><span class="sag-teref">c · m · ΔT</span></span>
+              <span class="dustur-setir"><span class="sol-teref">m<sub>e</sub> · v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h · ν</span><span class="mexrec">c</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">h</span><span class="mexrec">λ</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="P = Nhν/t | η = Nhν/(Pt) = Nhc/(Ptλ) | Nhν = cmΔT | mev = hν/c = h/λ" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>İşıq mənbəyinin gücü, FİƏ-si və istilik tarazlığı:</strong> N sayda fotonun enerjisi və impulsu ilə bağlı məsələ düsturları</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
@@ -4619,58 +4699,91 @@
       </section>
 
       <section id="atom-nuve-fizikasi" class="movzu-mezmun">
-        <h1>28. Atom və nüvə fizikası</h1>
-        <p class="qisa-izah">Bor postulatları, atom nüvəsinin tərkibi, kütlə defekti, rabitə enerjisi və radioaktiv parçalanma qanunu.</p>
+        <h1>26. Atom və nüvə fizikası</h1>
+        <p class="qisa-izah">Atom nüvəsinin tərkibi və izotoplar, kütlə defekti, rabitə və xüsusi rabitə enerjisi, Bor postulatları və hidrogen atomunun enerji səviyyələri, radioaktiv çevrilmələr, yarımçevrilmə qanunu, aktivlik, zəncirvari və istilik-nüvə reaksiyaları, şüalanmanın udulma dozası və elementar zərrəciklərin qeydə alınması.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: Bor, nüvə, rabitə enerjisi, yarımparçalanma)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: nuklon, kütlə defekti, rabitə enerjisi, bor, yarımçevrilmə, aktivlik, doza)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">h · ν</span><span class="beraber">=</span><span class="sag-teref">|E_m - E_n|</span></span>
-              <span class="dustur-setir"><span class="sol-teref">E_n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">E₁</span><span class="mexrec">n²</span></span><span class="beraber">=</span><span class="sag-teref">-</span><span class="sag-teref kesr"><span class="suret">13,6 eV</span><span class="mexrec">n²</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">A</span><span class="beraber">=</span><span class="sag-teref">Z + N</span></span>
+              <span class="dustur-setir"><span class="sol-teref">N</span><span class="beraber">=</span><span class="sag-teref">A - Z</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="h·ν = |E_m - E_n| | Hidrogen atomu: E_n = E₁ / n² = -13,6 eV / n²" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="A = Z + N | N = A - Z" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Borun II postulatı (tezliklər qaydası) və hidrogen atomunun n-ci stasionar halındakı enerjisi (n = 1, 2, 3...)</div>
+          <div class="dustur-menasi"><strong>Atom nüvəsinin tərkibi və izotoplar (<sub>Z</sub><sup>A</sup>X):</strong> A — kütlə ədədi (nuklonların — proton və neytronların ümumi sayı), Z — yük ədədi (protonların sayı, elementin dövri sistemdə sıra nömrəsi), N — neytronların sayı; izotoplar — Z-i eyni, N-i (və A-sı) müxtəlif olan nüvələrdir (<sup>1</sup><sub>1</sub>H — protium, <sup>2</sup><sub>1</sub>H — deyterium, <sup>3</sup><sub>1</sub>H — tritium)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">A</span><span class="beraber">=</span><span class="sag-teref">Z + N</span><span class="beraber">⇒</span><span class="sag-teref">N = A - Z</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">Δm</span><span class="beraber">=</span><span class="sag-teref">Z · m<sub>p</sub> + N · m<sub>n</sub> - M<sub>nüvə</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">M<sub>nüvə</sub></span><span class="beraber">=</span><span class="sag-teref">Z · m<sub>p</sub> + N · m<sub>n</sub> - Δm</span></span>
+              <span class="dustur-setir"><span class="sol-teref">E<sub>rabitə</sub></span><span class="beraber">=</span><span class="sag-teref">Δm · c<sup>2</sup></span><span class="beraber">=</span><span class="sag-teref">(Z · m<sub>p</sub> + N · m<sub>n</sub> - M<sub>nüvə</sub>) · c<sup>2</sup></span></span>
+              <span class="dustur-setir"><span class="sol-teref">E<sub>0(nüvə)</sub></span><span class="beraber">=</span><span class="sag-teref">M<sub>nüvə</sub> · c<sup>2</sup></span><span class="beraber">=</span><span class="sag-teref">(Z · m<sub>p</sub> + N · m<sub>n</sub> - Δm) · c<sup>2</sup></span></span>
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>xüsusi</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">E<sub>rabitə</sub></span><span class="mexrec">A</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">(Z · m<sub>p</sub> + N · m<sub>n</sub> - M<sub>nüvə</sub>) · c<sup>2</sup></span><span class="mexrec">A</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="A = Z + N ⇒ N = A - Z" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Δm = Zmp + Nmn - Mnüvə | Erabitə = Δm·c² | εxüsusi = Erabitə/A" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Atom nüvəsinin tərkibi (ᴬ_Z X): A — kütlə ədədi (nuklonların sayı), Z — yük ədədi (protonların və elektronların sayı), N — neytronların sayı</div>
+          <div class="dustur-menasi"><strong>Kütlə defekti (Δm), nüvənin rabitə enerjisi (E<sub>rabitə</sub>) və xüsusi rabitə enerjisi (ε):</strong> m<sub>p</sub> — protonun sükunət kütləsi, m<sub>n</sub> — sərbəst neytronun sükunət kütləsi, M<sub>nüvə</sub> — nüvənin sükunət kütləsi; [E<sub>rabitə</sub>] = 1 MeV, [ε] = 1 MeV/nuklon; Δm və ε böyük olan nüvə daha dayanıqlıdır</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">Δm</span><span class="beraber">=</span><span class="sag-teref">(Z · m_p + N · m_n) - M_nüvə</span></span>
-              <span class="dustur-setir"><span class="sol-teref">E_rab</span><span class="beraber">=</span><span class="sag-teref">Δm · c²</span><span class="beraber">=</span><span class="sag-teref">Δm(a.k.v.) · 931,5 MeV</span></span>
-              <span class="dustur-setir"><span class="sol-teref">ε_xüs</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">E_rab</span><span class="mexrec">A</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">E<sub>foton</sub></span><span class="beraber">=</span><span class="sag-teref">|E<sub>n</sub> - E<sub>k</sub>|</span></span>
+              <span class="dustur-setir"><span class="sol-teref">h · ν</span><span class="beraber">=</span><span class="sag-teref">|E<sub>n</sub> - E<sub>k</sub>|</span></span>
+              <span class="dustur-setir"><span class="sol-teref kesr"><span class="suret">h · c</span><span class="mexrec">λ</span></span><span class="beraber">=</span><span class="sag-teref">|E<sub>n</sub> - E<sub>k</sub>|</span></span>
+              <span class="dustur-setir"><span class="sol-teref">E<sub>n(hidrogen)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">E<sub>1</sub></span><span class="mexrec">n<sup>2</sup></span></span><span class="beraber">=</span><span class="sag-teref">-</span><span class="sag-teref kesr"><span class="suret">13,6 eV</span><span class="mexrec">n<sup>2</sup></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">W<sub>ionlaşma</sub></span><span class="beraber">=</span><span class="sag-teref">|E<sub>n</sub>|</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Δm = (Z·m_p + N·m_n) - M_nüvə | E_rab = Δm·c² = Δm(a.k.v.)·931,5 MeV | ε_xüs = E_rab / A" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Efoton = |En - Ek| | hν = hc/λ = |En - Ek| | En = -13,6/n² eV | Wionlaşma = |En|" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Kütlə defekti Δm, nüvənin rabitə enerjisi E_rab və xüsusi rabitə enerjisi ε_xüs (1 a.k.v. ≈ 1,66·10⁻²⁷ kq ≈ 931,5 MeV)</div>
+          <div class="dustur-menasi"><strong>Bor postulatları, hidrogen atomunun enerji səviyyələri və ionlaşma enerjisi:</strong> n — enerji səviyyəsinin nömrəsi (n = 1 əsas hal, n &gt; 1 həyəcanlanmış hal); atom yuxarı səviyyədən aşağıya keçdikdə foton şüalandırır, aşağıdan yuxarıya keçdikdə udur; Layman (n → 1, UB), Balmer (n → 2, görünən), Paşen (n → 3, İQ) seriyaları</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">N</span><span class="beraber">=</span><span class="sag-teref">N₀ · 2⁻ᵗ/ᵀ</span><span class="beraber">,</span><span class="sol-teref">ΔN</span><span class="beraber">=</span><span class="sag-teref">N₀ - N</span><span class="beraber">=</span><span class="sag-teref">N₀(1 - 2⁻ᵗ/ᵀ)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">α-parçalanma :</span><span class="sag-teref">A' = A - 4, Z' = Z - 2</span></span>
-              <span class="dustur-setir"><span class="sol-teref">β⁻-parçalanma :</span><span class="sag-teref">A' = A, Z' = Z + 1</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">α-çevrilmə:</span><span class="sag-teref"><sub>Z</sub><sup>A</sup>X → <sub>Z-2</sub><sup>A-4</sup>Y + <sub>2</sub><sup>4</sup>He</span></span>
+              <span class="dustur-setir"><span class="sol-teref">β<sup>-</sup>-çevrilmə:</span><span class="sag-teref"><sub>Z</sub><sup>A</sup>X → <sub>Z+1</sub><sup>A</sup>Y + <sub>-1</sub><sup>0</sup>e</span></span>
+              <span class="dustur-setir"><span class="sol-teref">β<sup>+</sup>-çevrilmə:</span><span class="sag-teref"><sub>Z</sub><sup>A</sup>X → <sub>Z-1</sub><sup>A</sup>Y + <sub>+1</sub><sup>0</sup>e</span></span>
+              <span class="dustur-setir"><span class="sol-teref">γ-çevrilmə:</span><span class="sag-teref"><sub>Z</sub><sup>A</sup>X → <sub>Z</sub><sup>A</sup>Y + <sub>0</sub><sup>0</sup>γ</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="N = N₀ · 2^(-t/T) | ΔN = N₀(1 - 2^(-t/T)) | α: A-4, Z-2 | β⁻: A, Z+1" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="α: X(A,Z) → Y(A-4,Z-2) + He(4,2) | β-: X(A,Z) → Y(A,Z+1) + e(0,-1) | β+: X(A,Z) → Y(A,Z-1) + e(0,+1)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Radioaktiv parçalanma qanunu (N — parçalanmamış nüvələrin sayı, ΔN — parçalanmış nüvələrin sayı, T — yarımparçalanma periodu) və Soddinin yerdəyişmə qaydaları</div>
+          <div class="dustur-menasi"><strong>Radioaktiv yerdəyişmə qaydaları (α, β<sup>-</sup>, β<sup>+</sup>, γ çevrilmələri):</strong> α-çevrilmədə element dövri sistemin əvvəlinə 2 xana, β<sup>-</sup>-də axırına 1 xana, β<sup>+</sup>-da əvvəlinə 1 xana sürüşür, γ-şüalanmada isə yeri dəyişmir</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">N<sub>qalan</sub></span><span class="beraber">=</span><span class="sag-teref">N<sub>0</sub> · 2<sup>-t/T</sup></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N<sub>0</sub></span><span class="mexrec">2<sup>t/T</sup></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">m<sub>qalan</sub></span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub> · 2<sup>-t/T</sup></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m<sub>0</sub></span><span class="mexrec">2<sup>t/T</sup></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">ΔN<sub>çevrilən</sub></span><span class="beraber">=</span><span class="sag-teref">N<sub>0</sub>(1 - 2<sup>-t/T</sup>)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Δm<sub>çevrilən</sub></span><span class="beraber">=</span><span class="sag-teref">m<sub>0</sub>(1 - 2<sup>-t/T</sup>)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">A</span><span class="beraber">=</span><span class="sag-teref">A<sub>0</sub> · 2<sup>-t/T</sup></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="N = N0·2^(-t/T) | m = m0·2^(-t/T) | ΔN = N0(1 - 2^(-t/T)) | Δm = m0(1 - 2^(-t/T)) | A = A0·2^(-t/T)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Radioaktiv çevrilmə qanunu və aktivlik (A):</strong> T — yarımçevrilmə periodu (yalnız radioaktiv maddənin növündən asılıdır), N<sub>0</sub> və m<sub>0</sub> — başlanğıc nüvələrin sayı və kütləsi, t — zaman; [A] = 1 san⁻¹ = 1 Bk (Bekkerel) — vahid zamanda çevrilən nüvələrin sayıdır</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">k</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N<sub>sonrakı</sub></span><span class="mexrec">N<sub>əvvəlki</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">D</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">E</span><span class="mexrec">m</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">E<sub>ümumi</sub></span><span class="beraber">=</span><span class="sag-teref">N · E<sub>0</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m</span><span class="mexrec">M</span></span><span class="sag-teref">· N<sub>A</sub> · E<sub>0</sub></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="k = Nsonrakı/Nəvvəlki | D = E/m | E = N·E0 = (m/M)·NA·E0" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Zəncirvari nüvə reaksiyaları, şüalanmanın udulma dozası (D) və ayrılan enerji:</strong> k — neytronların artma əmsalı (k &lt; 1 reaksiya sönür, k = 1 idarəolunan reaksiya, k &gt; 1 partlayış); D — udulma dozası ([D] = 1 C/kq = 1 Qr (Qrey)), E — udulan şüalanma enerjisi, m — cismin kütləsi, E<sub>0</sub> — 1 nüvənin bölünmə enerjisi; qeydəalma cihazları: Heyger sayğacı, Vilson kamerası, qabarcıqlı kamera</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
