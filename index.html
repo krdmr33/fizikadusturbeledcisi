@@ -1423,6 +1423,55 @@
         font-size: 12px;
       }
     }
+	.sidebar-contact-card {
+  margin: 10px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(16, 42, 33, 0.75);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-contact-note {
+  margin: 0 0 2px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #94a3b8;
+}
+
+.sidebar-contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 12.5px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-contact-link span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.sidebar-contact-link strong {
+  color: #34d399;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.sidebar-contact-link:hover {
+  background: rgba(52, 211, 153, 0.12);
+  border-color: rgba(52, 211, 153, 0.45);
+  transform: translateY(-1px);
+}
   </style>
 </head>
 <body data-tema="gece-ag">
@@ -1702,6 +1751,17 @@
           <span>Kəmiyyətlərin vahidləri</span>
           <span>→</span>
         </button>
+		<div class="sidebar-contact-card">
+  <p class="sidebar-contact-note">Təklif və iradlarınız üçün bizimlə əlaqə saxlayın:</p>
+  <a href="https://instagram.com/ichbin_saidoo" target="_blank" rel="noopener noreferrer" class="sidebar-contact-link">
+    <span>Instagram:</span>
+    <strong>@ichbin_saidoo</strong>
+  </a>
+  <a href="https://wa.me/994556621525" target="_blank" rel="noopener noreferrer" class="sidebar-contact-link">
+    <span>Əlaqə / WP:</span>
+    <strong>+994 55 662 15 25</strong>
+  </a>
+</div>
 
         <button type="button" class="giris-qayit-btn" onclick="giriseQayit()">← Giriş səhifəsi</button>
       </div>
