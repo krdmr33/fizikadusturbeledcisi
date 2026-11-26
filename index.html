@@ -4116,54 +4116,83 @@
       </section>
 
       <section id="maqnit-sahesi" class="movzu-mezmun">
-        <h1>21. Maqnit sahəsi</h1>
-        <p class="qisa-izah">Maqnit induksiya vektoru, Amper qüvvəsi, Lorens qüvvəsi və maqnit seli.</p>
+        <h1>19. Maqnit sahəsi</h1>
+        <p class="qisa-izah">Maqnit sahəsinin induksiyası, düz cərəyanlı naqilin maqnit sahəsi, Amper qüvvəsi, maddələrin maqnit xassələri, Lorens qüvvəsi, yüklü zərrəciyin maqnit sahəsində çevrə üzrə hərəkəti və kütlə spektroqrafı.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: induksiya, Amper, Lorens, maqnit seli)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: induksiya, amper, maqnit nüfuzluğu, lorens, radius, period)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">B</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F_max</span><span class="mexrec">I · l</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">M_max</span><span class="mexrec">I · S</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">B</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F<sub>max</sub></span><span class="mexrec">I · l</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">B<sub>düz naqil</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">μ · μ<sub>0</sub> · I</span><span class="mexrec">2πr</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="B = F_max / (I · l) = M_max / (I · S)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="B = Fmax/(I·l) | Bdüz naqil = μ·μ0·I/(2πr)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Maqnit sahəsinin induksiyası: B — maqnit induksiyası (Tl = N/(A·m)), I — cərəyan şiddəti (A), l — naqilin aktiv uzunluğu (m), S — cərəyanlı çərçivənin sahəsi (m²)</div>
+          <div class="dustur-menasi"><strong>Maqnit sahəsinin induksiyası (B) və sonsuz uzun düz cərəyanlı naqilin maqnit sahəsi:</strong> [B] = 1 Tl (Tesla) = 1 N/(A·m); istiqaməti sağ əl və ya burğu qaydası ilə təyin olunur; qüvvə xətləri qapalıdır (burulğanlı sahə)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">F_A</span><span class="beraber">=</span><span class="sag-teref">I · B · l · sinα</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">F<sub>A</sub></span><span class="beraber">=</span><span class="sag-teref">I · B · l · sinα</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>A(max)</sub></span><span class="beraber">=</span><span class="sag-teref">I · B · l</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>A(min)</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
+              <span class="dustur-setir"><span class="sol-teref">I · B · l</span><span class="beraber">=</span><span class="sag-teref">m · g</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="F_A = I · B · l · sinα" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="FA = I·B·l·sinα | FA(max) = I·B·l | FA(min) = 0 | I·B·l = mg" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Amper qüvvəsi (istiqaməti sol əl qaydası ilə təyin olunur): α — cərəyan istiqaməti ilə B vektoru arasındakı bucaq (α = 90° ⇒ F_max = IBl; α = 0° və ya 180° ⇒ F_A = 0)</div>
+          <div class="dustur-menasi"><strong>Amper qüvvəsi (F<sub>A</sub>):</strong> α = 90° olduqda maksimum, α = 0° və 180° olduqda sıfır olur; istiqaməti sol əl qaydası ilə təyin edilir; eyni istiqamətli cərəyanlı naqillər cəzb edir, əks istiqamətli naqillər itələyir</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">F_L</span><span class="beraber">=</span><span class="sag-teref">|q| · v · B · sinα</span></span>
-              <span class="dustur-setir"><span class="sol-teref">R</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m · v</span><span class="mexrec">|q| · B</span></span><span class="beraber">,</span><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2π · m</span><span class="mexrec">|q| · B</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">μ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">B</span><span class="mexrec">B<sub>0</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">μ<sub>paramagnit</sub></span><span class="beraber">&gt;</span><span class="sag-teref">1</span></span>
+              <span class="dustur-setir"><span class="sol-teref">μ<sub>diamaqnit</sub></span><span class="beraber">&lt;</span><span class="sag-teref">1</span></span>
+              <span class="dustur-setir"><span class="sol-teref">μ<sub>ferromaqnit</sub></span><span class="beraber">&gt;&gt;</span><span class="sag-teref">1</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="F_L = |q|·v·B·sinα | R = mv/(|q|B) | T = 2πm/(|q|B)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="μ = B/B0 | μ(paramagnit) > 1 | μ(diamaqnit) < 1 | μ(ferromaqnit) >> 1" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Lorens qüvvəsi (iş görmür, yalnız sürətin istiqamətini dəyişir) və bircins maqnit sahəsinə perpendikulyar daxil olan zərrəciyin çevrə üzrə radiusu R və periodu T</div>
+          <div class="dustur-menasi"><strong>Mühitin maqnit nüfuzluğu (μ):</strong> adsız kəmiyyətdir, yalnız maddənin növündən asılıdır; ferromaqnitlər Küri nöqtəsindən yuxarı qızdırıldıqda paramaqnitə çevrilir (dəmir üçün 769°C)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">Φ</span><span class="beraber">=</span><span class="sag-teref">B · S · cosα</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">F<sub>L</sub></span><span class="beraber">=</span><span class="sag-teref">|q| · v · B · sinα</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>L(max)</sub></span><span class="beraber">=</span><span class="sag-teref">|q| · v · B</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>L(kinetik enerji ilə)</sub></span><span class="beraber">=</span><span class="sag-teref">|q| · √(</span><span class="sag-teref kesr"><span class="suret">2W<sub>k</sub></span><span class="mexrec">m</span></span><span class="sag-teref">) · B</span></span>
+              <span class="dustur-setir"><span class="sol-teref">F<sub>L(gərginlik ilə)</sub></span><span class="beraber">=</span><span class="sag-teref">|q| · √(</span><span class="sag-teref kesr"><span class="suret">2|q|U</span><span class="mexrec">m</span></span><span class="sag-teref">) · B</span></span>
+              <span class="dustur-setir"><span class="sol-teref">a</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">|q| · v · B</span><span class="mexrec">m</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">A<sub>Lorens</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Φ = B · S · cosα" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="FL = |q|·v·B·sinα | FL(max) = |q|·v·B | FL = |q|·√(2Wk/m)·B | a = |q|vB/m | ALorens = 0" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Maqnit seli: Φ — maqnit seli (Vb = Tl·m²), S — konturun sahəsi (m²), α — konturun normalı ilə B vektoru arasındakı bucaq</div>
+          <div class="dustur-menasi"><strong>Lorens qüvvəsi (F<sub>L</sub>) və zərrəciyin təcili:</strong> istiqaməti sol əl qaydası ilə təyin olunur (mənfi yük üçün əksinə); sürətə həmişə perpendikulyar olduğu üçün iş görmür (A = 0, v = const, W<sub>k</sub> = const)</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">R</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">m · v</span><span class="mexrec">|q| · B</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">R<sub>(impuls ilə)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">p</span><span class="mexrec">|q| · B</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">R<sub>(kinetik enerji ilə)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">√(2mW<sub>k</sub>)</span><span class="mexrec">|q| · B</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">R<sub>(xüsusi yük ilə)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v</span><span class="mexrec">q' · B</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">p</span><span class="beraber">=</span><span class="sag-teref">|q| · B · R</span></span>
+              <span class="dustur-setir"><span class="sol-teref">W<sub>k</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">F<sub>L</sub> · R</span><span class="mexrec">2</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2πm</span><span class="mexrec">|q| · B</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">n</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">|q| · B</span><span class="mexrec">2πm</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">|q| · B</span><span class="mexrec">m</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="R = mv/(|q|B) | R = p/(|q|B) | R = √(2mWk)/(|q|B) | p = |q|BR | Wk = FL·R/2 | T = 2πm/(|q|B) | n = |q|B/(2πm) | ω = |q|B/m" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Yüklü zərrəciyin bircins maqnit sahəsində çevrə üzrə hərəkəti (α = 90°):</strong> dövretmə periodu (T), tezliyi (n) və bucaq sürəti (ω) v, p, W<sub>k</sub> və R-dən asılı deyil; α ≠ 90° olduqda spiralvari hərəkət edir</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
@@ -4173,55 +4202,70 @@
         </div>
       </section>
 <section id="elektromaqnit-induksiya" class="movzu-mezmun">
-        <h1>22. Elektromaqnit induksiya hadisəsi</h1>
-        <p class="qisa-izah">Maqnit selinin dəyişməsi nəticəsində induksiya EHQ-nin yaranması, Lens qaydası, öz-özünə induksiya və maqnit sahəsinin enerjisi.</p>
+        <h1>20. Elektromaqnit induksiya hadisəsi</h1>
+        <p class="qisa-izah">Maqnit seli, elektromaqnit induksiya hadisəsi, Faradeyin induksiya qanunu, induksiya cərəyanı və yükü, Lens qaydası, öz-özünə induksiya, induktivlik və maqnit sahəsində hərəkət edən naqildə induksiya EHQ.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: induksiya, induktivlik, Henri, Lens)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: maqnit seli, induksiya, lens, öz-özünə induksiya, induktivlik)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">εᵢ</span><span class="beraber">=</span><span class="sag-teref">-</span><span class="sag-teref kesr"><span class="suret">ΔΦ</span><span class="mexrec">Δt</span></span><span class="beraber">=</span><span class="sag-teref">-N ·</span><span class="sag-teref kesr"><span class="suret">ΔΦ₁</span><span class="mexrec">Δt</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">Iᵢ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">|εᵢ|</span><span class="mexrec">R</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">|ΔΦ|</span><span class="mexrec">R · Δt</span></span><span class="beraber">,</span><span class="sol-teref">qᵢ</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">|ΔΦ|</span><span class="mexrec">R</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">Φ</span><span class="beraber">=</span><span class="sag-teref">B · S · cosα</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Φ<sub>(β bucağı ilə)</sub></span><span class="beraber">=</span><span class="sag-teref">B · S · sinβ</span><span class="beraber">=</span><span class="sag-teref">B · S · cos(90° - β)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Φ<sub>dairəvi</sub></span><span class="beraber">=</span><span class="sag-teref">B · πr<sup>2</sup></span><span class="beraber">=</span><span class="sag-teref">B</span><span class="sag-teref kesr"><span class="suret">πd<sup>2</sup></span><span class="mexrec">4</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Φ<sub>kvadrat</sub></span><span class="beraber">=</span><span class="sag-teref">B · a<sup>2</sup></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Φ<sub>max</sub></span><span class="beraber">=</span><span class="sag-teref">B · S</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Φ<sub>min</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Φ<sub>içlikli</sub></span><span class="beraber">=</span><span class="sag-teref">B · S</span><span class="beraber">=</span><span class="sag-teref">μ · B<sub>0</sub> · S</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="εᵢ = -ΔΦ/Δt = -N·(ΔΦ₁/Δt) | Iᵢ = |εᵢ|/R | qᵢ = |ΔΦ|/R" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Φ = B·S·cosα | Φ = B·S·sinβ | Φmax = B·S | Φmin = 0 | Φiçlikli = μ·B0·S" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Faradeyin elektromaqnit induksiya qanunu: εᵢ — induksiya EHQ-si (V), ΔΦ — maqnit selinin dəyişməsi (Vb), N — sarğıların sayı, qᵢ — induksiya yükü (Kl)</div>
+          <div class="dustur-menasi"><strong>Maqnit seli (Φ):</strong> [Φ] = 1 Vb (Veber) = 1 Tl·m²; α — səthin normalı ilə B arasındakı bucaq (α = 0° olduqda Φ = Φ<sub>max</sub>, α = 90° olduqda Φ = 0); ferromaqnit içlik daxil edildikdə Φ artır</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">εᵢ</span><span class="beraber">=</span><span class="sag-teref">B · l · v · sinα</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>in(1 sarğı)</sub></span><span class="beraber">=</span><span class="sag-teref">-</span><span class="sag-teref kesr"><span class="suret">ΔΦ</span><span class="mexrec">Δt</span></span><span class="beraber">=</span><span class="sag-teref">-Φ'(t)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>in(N sarğı)</sub></span><span class="beraber">=</span><span class="sag-teref">-N</span><span class="sag-teref kesr"><span class="suret">ΔΦ</span><span class="mexrec">Δt</span></span><span class="beraber">=</span><span class="sag-teref">-N · Φ'(t)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">I<sub>in</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">|ε<sub>in</sub>|</span><span class="mexrec">R</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ΔΦ</span><span class="mexrec">Δt · R</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Φ'(t)</span><span class="mexrec">R</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">q<sub>in</sub></span><span class="beraber">=</span><span class="sag-teref">I<sub>in</sub> · t</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ΔΦ</span><span class="mexrec">R</span></span><span class="beraber">=</span><span class="sag-teref">N · e</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ΔΦ</span><span class="beraber">=</span><span class="sag-teref">q · R</span><span class="beraber">=</span><span class="sag-teref">S<sub>fiqur(ε<sub>in</sub>-t)</sub></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="εᵢ = B · l · v · sinα" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="εin = -ΔΦ/Δt = -Φ'(t) | εin(N) = -N·ΔΦ/Δt | Iin = |εin|/R = ΔΦ/(Δt·R) | qin = ΔΦ/R" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Bircins maqnit sahəsində hərəkət edən düz naqildə yaranan induksiya EHQ-si: l — naqilin uzunluğu (m), v — hərəkət sürəti (m/s), α — v və B vektorları arasındakı bucaq</div>
+          <div class="dustur-menasi"><strong>Elektromaqnit induksiya qanunu (Faradey qanunu), induksiya cərəyanı və yükü:</strong> [ε<sub>in</sub>] = 1 V = 1 Vb/san; qapalı konturdan keçən maqnit selinin dəyişməsi zamanı induksiya cərəyanı yaranır; Lens qaydasına görə induksiya cərəyanı özünü yaradan maqnit selinin dəyişməsinə əks təsir göstərir</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">Φ</span><span class="beraber">=</span><span class="sag-teref">L · I</span><span class="beraber">,</span><span class="sol-teref">ε_öi</span><span class="beraber">=</span><span class="sag-teref">-L ·</span><span class="sag-teref kesr"><span class="suret">ΔI</span><span class="mexrec">Δt</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">Φ</span><span class="beraber">=</span><span class="sag-teref">L · I</span></span>
+              <span class="dustur-setir"><span class="sol-teref">L</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Φ</span><span class="mexrec">I</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">L<sub>sarğac</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">μ · μ<sub>0</sub> · N<sup>2</sup> · S</span><span class="mexrec">l</span></span><span class="beraber">=</span><span class="sag-teref">μ · L<sub>0</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>öz</sub></span><span class="beraber">=</span><span class="sag-teref">-</span><span class="sag-teref kesr"><span class="suret">ΔΦ</span><span class="mexrec">Δt</span></span><span class="beraber">=</span><span class="sag-teref">-L</span><span class="sag-teref kesr"><span class="suret">ΔI</span><span class="mexrec">Δt</span></span><span class="beraber">=</span><span class="sag-teref">-L · I'(t)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">L</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ε<sub>öz</sub> · t</span><span class="mexrec">ΔI</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>üm(cərəyan artanda)</sub></span><span class="beraber">=</span><span class="sag-teref">ε - L</span><span class="sag-teref kesr"><span class="suret">ΔI</span><span class="mexrec">Δt</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>üm(cərəyan azalanda)</sub></span><span class="beraber">=</span><span class="sag-teref">ε + L</span><span class="sag-teref kesr"><span class="suret">ΔI</span><span class="mexrec">Δt</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Φ = L · I | ε_öi = -L · (ΔI / Δt)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Φ = L·I | L = Φ/I | L = μ·μ0·N²·S/l = μ·L0 | εöz = -L·ΔI/Δt = -L·I'(t)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Öz-özünə induksiya: L — sarğacın induktivliyi (Hn = Vb/A), ε_öi — öz-özünə induksiya EHQ-si (V); L yalnız sarğacın ölçülərindən, sarğı sayından və içliyin maqnit nüfuzluğundan asılıdır</div>
+          <div class="dustur-menasi"><strong>Öz-özünə induksiya hadisəsi və induktivlik (L):</strong> [L] = 1 Hn (Henri) = 1 Vb/A; induktivlik cərəyan şiddətindən asılı deyil, yalnız μ, N, S və l-dən asılıdır</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">W_m</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">L · I²</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Φ²</span><span class="mexrec">2L</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Φ · I</span><span class="mexrec">2</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">w_m</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">W_m</span><span class="mexrec">V</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">B²</span><span class="mexrec">2μ₀μ</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>in(naqil)</sub></span><span class="beraber">=</span><span class="sag-teref">v · B · l · sinα</span></span>
+              <span class="dustur-setir"><span class="sol-teref">I<sub>in(naqil)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ε<sub>in</sub></span><span class="mexrec">R</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">v · B · l · sinα</span><span class="mexrec">R</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="W_m = LI²/2 = Φ²/(2L) = ΦI/2 | w_m = W_m/V = B²/(2μ₀μ)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="εin = v·B·l·sinα | Iin = (v·B·l·sinα)/R" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Cərəyanlı sarğacın maqnit sahəsinin enerjisi W_m (C) və maqnit sahəsinin enerji sıxlığı w_m (C/m³); μ₀ = 4π·10⁻⁷ Hn/m (maqnit sabiti)</div>
+          <div class="dustur-menasi"><strong>Maqnit sahəsində hərəkət edən naqildə induksiya EHQ və induksiya cərəyanı:</strong> α — sürət vektoru (v) ilə maqnit induksiyası (B) arasındakı bucaq; 1 Vb = 1 Tl·m² = 1 V·san = 1 Hn·A = 1 Kl·Om</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
@@ -4232,56 +4276,79 @@
       </section>
 
       <section id="elektromaqnit-reqslər-dalgalar" class="movzu-mezmun">
-        <h1>23. Elektromaqnit rəqsləri və dalğaları</h1>
-        <p class="qisa-izah">Rəqs konturunda sərbəst elektromaqnit rəqsləri, Tomson düsturu, tam enerji və elektromaqnit dalğalarının yayılması.</p>
+        <h1>21. Elektromaqnit rəqsləri və dalğaları</h1>
+        <p class="qisa-izah">Rəqs konturunda elektrik və maqnit enerjisi, tam enerji, Tomson düsturu, rəqslərin periodu, tezliyi və dairəvi tezliyi, amplitud qiymətləri, rezonans, elektromaqnit dalğaları, şüalanma gücü və intensivliyi, radiolokasiya.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: Tomson, kontur, elektromaqnit, dalğa)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: rəqs konturu, tomson, period, amplitud, rezonans, dalğa, radiolokasiya)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref">2π√(L · C)</span><span class="beraber">,</span><span class="sol-teref">ν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">2π√(L · C)</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">ω₀</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">√(L · C)</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">W<sub>e</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">CU<sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">q<sup>2</sup></span><span class="mexrec">2C</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">qU</span><span class="mexrec">2</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">W<sub>m</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">LI<sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Φ<sup>2</sup></span><span class="mexrec">2L</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ΦI</span><span class="mexrec">2</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">W<sub>tam</sub></span><span class="beraber">=</span><span class="sag-teref">W<sub>e</sub> + W<sub>m</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">W<sub>tam(amplitud)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">CU<sub>m</sub><sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">q<sub>m</sub><sup>2</sup></span><span class="mexrec">2C</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">LI<sub>m</sub><sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Φ<sub>m</sub><sup>2</sup></span><span class="mexrec">2L</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">q<sub>(W<sub>m</sub> = nW<sub>e</sub>)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">q<sub>m</sub></span><span class="mexrec">√(n + 1)</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">I<sub>(W<sub>e</sub> = nW<sub>m</sub>)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I<sub>m</sub></span><span class="mexrec">√(n + 1)</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">W<sub>e(t = T/8)</sub></span><span class="beraber">=</span><span class="sag-teref">W<sub>m(t = T/8)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">W<sub>tam</sub></span><span class="mexrec">2</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Tomson: T = 2π√(LC) | ν = 1/(2π√(LC)) | ω₀ = 1/√(LC)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="We = CU²/2 = q²/(2C) = qU/2 | Wm = LI²/2 = Φ²/(2L) = ΦI/2 | Wtam = We + Wm | We = Wm = Wtam/2 (t=T/8)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Tomson düsturu: rəqs konturunun məxsusi rəqs periodu T (s), tezliyi ν (Hs) və dairəvi tezliyi ω₀ (rad/s)</div>
+          <div class="dustur-menasi"><strong>Rəqs konturunda elektrik enerjisi (W<sub>e</sub>), maqnit enerjisi (W<sub>m</sub>) və tam enerji:</strong> kondensatorda elektrik sahəsinin, sarğacda maqnit sahəsinin enerjisi toplanır; t = T/8 anında enerjilər bərabər olur</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">q</span><span class="beraber">=</span><span class="sag-teref">q_m · cos(ω₀t)</span><span class="beraber">,</span><span class="sol-teref">i</span><span class="beraber">=</span><span class="sag-teref">-I_m · sin(ω₀t)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">I_m</span><span class="beraber">=</span><span class="sag-teref">ω₀ · q_m</span><span class="beraber">=</span><span class="sag-teref">U_m · √(</span><span class="sag-teref kesr"><span class="suret">C</span><span class="mexrec">L</span></span><span class="sag-teref">)</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref">2π√(L · C)</span><span class="beraber">=</span><span class="sag-teref">2π√(μL<sub>0</sub> ·</span><span class="sag-teref kesr"><span class="suret">εε<sub>0</sub>S</span><span class="mexrec">d</span></span><span class="sag-teref">)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">2π√(L · C)</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">2π</span></span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">d</span><span class="mexrec">μL<sub>0</sub> · εε<sub>0</sub>S</span></span><span class="sag-teref">)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">√(L · C)</span></span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">d</span><span class="mexrec">μL<sub>0</sub> · εε<sub>0</sub>S</span></span><span class="sag-teref">)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="q = q_m·cos(ω₀t) | i = -I_m·sin(ω₀t) | I_m = ω₀·q_m = U_m·√(C/L)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="T = 2π√(LC) | ν = 1/(2π√(LC)) | ω = 1/√(LC)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Rəqs konturunda yükün və cərəyan şiddətinin harmonik rəqs tənlikləri; I_m — cərəyan şiddətinin amplitudu, U_m — gərginliyin amplitudu</div>
+          <div class="dustur-menasi"><strong>Elektromaqnit rəqslərinin periodu (Tomson düsturu), tezliyi (ν) və dairəvi tezliyi (ω):</strong> q<sub>m</sub> və U<sub>m</sub> amplitud qiymətlərindən asılı deyil</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">W_tam</span><span class="beraber">=</span><span class="sag-teref">W_el + W_m</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">q_m²</span><span class="mexrec">2C</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">C · U_m²</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">L · I_m²</span><span class="mexrec">2</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">I<sub>m</sub></span><span class="beraber">=</span><span class="sag-teref">q<sub>m</sub> · ω</span><span class="beraber">=</span><span class="sag-teref">q<sub>m</sub> · 2πν</span><span class="beraber">=</span><span class="sag-teref">q<sub>m</sub></span><span class="sag-teref kesr"><span class="suret">2π</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">q<sub>m</sub></span><span class="mexrec">√(LC<sup>2</sup>)</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Φ<sub>m</sub></span><span class="beraber">=</span><span class="sag-teref">L · I<sub>m</sub></span><span class="beraber">=</span><span class="sag-teref">L · q<sub>m</sub> · ω</span><span class="beraber">=</span><span class="sag-teref">L · q<sub>m</sub> · 2πν</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>m</sub></span><span class="beraber">=</span><span class="sag-teref">Φ<sub>m</sub> · ω</span><span class="beraber">=</span><span class="sag-teref">L · I<sub>m</sub> · ω</span><span class="beraber">=</span><span class="sag-teref">L · q<sub>m</sub> · ω<sup>2</sup></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">q<sub>m</sub></span><span class="mexrec">C</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="W_tam = W_el + W_m = q_m²/(2C) = CU_m²/2 = LI_m²/2" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Im = qm·ω = 2πνqm | Φm = L·Im = L·qm·ω | εm = Φm·ω = L·qm·ω² = qm/C" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">İdeal rəqs konturunda tam elektromaqnit enerjisinin saxlanması</div>
+          <div class="dustur-menasi"><strong>Cərəyan şiddətinin (I<sub>m</sub>), maqnit selinin (Φ<sub>m</sub>) və EHQ-nin (ε<sub>m</sub>) amplitud qiymətləri:</strong> harmonik rəqslərdə törəmə və amplitud əlaqələri</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">λ</span><span class="beraber">=</span><span class="sag-teref">c · T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">c</span><span class="mexrec">ν</span></span><span class="beraber">=</span><span class="sag-teref">2πc√(L · C)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">v</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">c</span><span class="mexrec">√(ε · μ)</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">c</span><span class="mexrec">n</span></span><span class="beraber">,</span><span class="sol-teref">S</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">c · t</span><span class="mexrec">2</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">ω<sub>0</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">√(L · C)</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">T<sub>ardıcıl</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">T<sub>1</sub> · T<sub>2</sub></span><span class="mexrec">√(T<sub>1</sub><sup>2</sup> + T<sub>2</sub><sup>2</sup>)</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">T<sub>paralel</sub></span><span class="beraber">=</span><span class="sag-teref">√(T<sub>1</sub><sup>2</sup> + T<sub>2</sub><sup>2</sup>)</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="λ = c·T = c/ν = 2πc√(LC) | v = c/√(εμ) = c/n | Radiolokasiya: S = c·t/2" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="ω0 = 1/√(LC) | Tardıcıl = T1·T2 / √(T1² + T2²) | Tparalel = √(T1² + T2²)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Elektromaqnit dalğasının uzunluğu λ (m) və sürəti: c = 3·10⁸ m/s (vakuumda işıq sürəti), S = c·t/2 — radiolokasiyada hədəfə qədər məsafə</div>
+          <div class="dustur-menasi"><strong>Rezonans tezliyi (ω<sub>0</sub>) və kondensatorların ardıcıl / paralel qoşulmasında period:</strong> ω = ω<sub>0</sub> olduqda rəqslərin amplitudu maksimal qiymət alır</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">λ<sub>0(vakuum)</sub></span><span class="beraber">=</span><span class="sag-teref">c · T</span><span class="beraber">=</span><span class="sag-teref">c · 2π√(L · C)</span><span class="beraber">=</span><span class="sag-teref">2π√(μL<sub>0</sub> ·</span><span class="sag-teref kesr"><span class="suret">εε<sub>0</sub>S</span><span class="mexrec">d</span></span><span class="sag-teref">)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>şüalanma</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ΔW</span><span class="mexrec">Δt</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">j<sub>intensivlik</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">P</span><span class="mexrec">S</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ΔW</span><span class="mexrec">S · Δt</span></span><span class="beraber">=</span><span class="sag-teref">ω · c</span></span>
+              <span class="dustur-setir"><span class="sol-teref">j<sub>nöqtəvi mənbə</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">P</span><span class="mexrec">4πR<sup>2</sup></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ΔW</span><span class="mexrec">Δt · 4πR<sup>2</sup></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">S<sub>radiolokasiya</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">c · t</span><span class="mexrec">2</span></span><span class="beraber">,</span><span class="sol-teref">S<sub>(N impuls)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">c · t</span><span class="mexrec">2N</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="λ0 = c·T = c·2π√(LC) | P = ΔW/Δt | j = P/S = ω·c | j = P/(4πR²) | Sradiolokasiya = c·t/2" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Elektromaqnit dalğaları, şüalanma gücü (P), intensivliyi (j) və radiolokasiya:</strong> c = 3·10⁸ m/san; [P] = 1 Vt, [j] = 1 Vt/m²; dalğa vakuumdan mühitə keçdikdə ν və T dəyişmir, v və λ isə n dəfə azalır; E ⊥ B ⊥ v; R-İ-G-U-R-Q şkalasında tezlik, enerji və impuls artır</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
@@ -4292,57 +4359,98 @@
       </section>
 
       <section id="deyisen-cereyan" class="movzu-mezmun">
-        <h1>24. Dəyişən elektrik cərəyanı</h1>
-        <p class="qisa-izah">Dəyişən cərəyanın təsiredici qiymətləri, aktiv, tutum və induktiv müqavimətlər, rezonans və transformator.</p>
+        <h1>22. Dəyişən elektrik cərəyanı</h1>
+        <p class="qisa-izah">Dəyişən cərəyan generatoru, induksiya EHQ-nin amplitud qiyməti, transformator və transformasiya əmsalı, təsiredici qiymətlər, aktiv, tutum və induktiv müqavimətlər, tam müqavimət və rezonans şərti.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
-          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: təsiredici, tutum müqaviməti, rezonans, transformator)..." oninput="dusturlariAxtar()">
+          <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət, qanun və ya düstur axtar (məs: transformator, təsiredici, aktiv, tutum, induktiv, tam müqavimət, rezonans)..." oninput="dusturlariAxtar()">
           <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">I</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I_m</span><span class="mexrec">√2</span></span><span class="beraber">,</span><span class="sol-teref">U</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U_m</span><span class="mexrec">√2</span></span><span class="beraber">,</span><span class="sol-teref">ε</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ε_m</span><span class="mexrec">√2</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">ε_m</span><span class="beraber">=</span><span class="sag-teref">N · B · S · ω</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">Φ<sub>m(1 sarğı)</sub></span><span class="beraber">=</span><span class="sag-teref">B · S</span></span>
+              <span class="dustur-setir"><span class="sol-teref">Φ<sub>m(N sarğı)</sub></span><span class="beraber">=</span><span class="sag-teref">B · S · N</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>m</sub></span><span class="beraber">=</span><span class="sag-teref">Φ<sub>m</sub> · ω</span><span class="beraber">=</span><span class="sag-teref">B · S · N · ω</span><span class="beraber">=</span><span class="sag-teref">B · S · N · 2πν</span><span class="beraber">=</span><span class="sag-teref">B · S · N</span><span class="sag-teref kesr"><span class="suret">2π</span><span class="mexrec">T</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="I = I_m/√2 | U = U_m/√2 | ε = ε_m/√2 | ε_m = N·B·S·ω" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Φm = B·S | Φm(N) = B·S·N | εm = Φm·ω = B·S·N·2πν = B·S·N·(2π/T)" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Dəyişən cərəyanın, gərginliyin və EHQ-nin təsiredici qiymətləri; P = I · U = I² · R = U² / R (aktiv müqavimətdə orta güc)</div>
+          <div class="dustur-menasi"><strong>Dəyişən cərəyan generatoru və induksiya EHQ-nin amplitudu (ε<sub>m</sub>):</strong> mexaniki enerjini elektrik enerjisinə çevirir; iş prinsipi elektromaqnit induksiya qanununa əsaslanır</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">X_C</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">ω · C</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">2πνC</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">X_L</span><span class="beraber">=</span><span class="sag-teref">ω · L</span><span class="beraber">=</span><span class="sag-teref">2πνL</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">K</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>1</sub></span><span class="mexrec">U<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ε<sub>1</sub></span><span class="mexrec">ε<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N<sub>1</sub></span><span class="mexrec">N<sub>2</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I<sub>2</sub></span><span class="mexrec">I<sub>1</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">P<sub>2</sub></span><span class="beraber">,</span><span class="sol-teref">ν<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">ν<sub>2</sub></span><span class="beraber">,</span><span class="sol-teref">ω<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">ω<sub>2</sub></span><span class="beraber">,</span><span class="sol-teref">T<sub>1</sub></span><span class="beraber">=</span><span class="sag-teref">T<sub>2</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">η<sub>transformator</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">P<sub>2</sub></span><span class="mexrec">P<sub>1</sub></span></span><span class="sag-teref">· 100%</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I<sub>2</sub> · U<sub>2</sub></span><span class="mexrec">I<sub>1</sub> · U<sub>1</sub></span></span><span class="sag-teref">· 100%</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="X_C = 1/(ωC) = 1/(2πνC) | X_L = ωL = 2πνL" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="K = U1/U2 = ε1/ε2 = N1/N2 = I2/I1 | P1 = P2, ν1 = ν2 | η = (P2/P1)·100%" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Tutum müqaviməti X_C (Om) və induktiv müqavimət X_L (Om); sabit cərəyanda (ν = 0) X_C = ∞ (kondensator sabit cərəyanı keçirmir), X_L = 0</div>
+          <div class="dustur-menasi"><strong>Transformator və transformasiya əmsalı (K):</strong> K &lt; 1 olduqda yüksəldici (U<sub>2</sub> &gt; U<sub>1</sub>, I<sub>2</sub> &lt; I<sub>1</sub>, N<sub>2</sub> &gt; N<sub>1</sub>), K &gt; 1 olduqda alçaldıcı transformatordur (U<sub>2</sub> &lt; U<sub>1</sub>, I<sub>2</sub> &gt; I<sub>1</sub>, N<sub>2</sub> &lt; N<sub>1</sub>)</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">Z</span><span class="beraber">=</span><span class="sag-teref">√(R² + (X_L - X_C)²)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">Rezonans (X_L = X_C) :</span><span class="sag-teref">Z_min = R, I_max =</span><span class="sag-teref kesr"><span class="suret">U</span><span class="mexrec">R</span></span><span class="sag-teref">, ω_rez =</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">√(LC)</span></span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">I<sub>t</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I<sub>m</sub></span><span class="mexrec">√2</span></span><span class="beraber">,</span><span class="sol-teref">I<sub>m</sub></span><span class="beraber">=</span><span class="sag-teref">I<sub>t</sub> · √2</span></span>
+              <span class="dustur-setir"><span class="sol-teref">U<sub>t</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>m</sub></span><span class="mexrec">√2</span></span><span class="beraber">,</span><span class="sol-teref">U<sub>m</sub></span><span class="beraber">=</span><span class="sag-teref">U<sub>t</sub> · √2</span></span>
+              <span class="dustur-setir"><span class="sol-teref">ε<sub>t</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ε<sub>m</sub></span><span class="mexrec">√2</span></span><span class="beraber">,</span><span class="sol-teref">ε<sub>m</sub></span><span class="beraber">=</span><span class="sag-teref">ε<sub>t</sub> · √2</span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Z = √(R² + (X_L - X_C)²) | Rezonans: X_L = X_C, Z_min = R, ω_rez = 1/√(LC)" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="It = Im/√2 | Ut = Um/√2 | εt = εm/√2" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Dəyişən cərəyan dövrəsinin tam müqaviməti Z (Om) və gərginliklər rezonansı şərti</div>
+          <div class="dustur-menasi"><strong>Təsiredici qiymətlər (I<sub>t</sub>, U<sub>t</sub>, ε<sub>t</sub>):</strong> amplitud qiymətlərindən √2 dəfə kiçikdir; dəyişən cərəyan dövrəsində ampermetr və voltmetr təsiredici qiymətləri göstərir</div>
         </div>
 
         <div class="dustur-kart">
           <div class="dustur-ust">
-            <div class="dustur-dustur">
-              <span class="dustur-setir"><span class="sol-teref">k</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N₁</span><span class="mexrec">N₂</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U₁</span><span class="mexrec">U₂</span></span><span class="beraber">≈</span><span class="sag-teref kesr"><span class="suret">I₂</span><span class="mexrec">I₁</span></span></span>
-              <span class="dustur-setir"><span class="sol-teref">η</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">P₂</span><span class="mexrec">P₁</span></span><span class="sag-teref">· 100%</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I₂ · U₂</span><span class="mexrec">I₁ · U₁</span></span><span class="sag-teref">· 100%</span></span>
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">I<sub>m(aktiv)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>m</sub></span><span class="mexrec">R</span></span><span class="beraber">,</span><span class="sol-teref">I<sub>t(aktiv)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>t</sub></span><span class="mexrec">R</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">Q<sub>aktiv</sub></span><span class="beraber">=</span><span class="sag-teref">I<sub>t</sub> · U<sub>t</sub> · t</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I<sub>m</sub> · U<sub>m</sub> · t</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I<sub>m</sub><sup>2</sup> · R · t</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>m</sub><sup>2</sup> · t</span><span class="mexrec">2R</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P̄<sub>aktiv</sub></span><span class="beraber">=</span><span class="sag-teref">I<sub>t</sub> · U<sub>t</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I<sub>m</sub> · U<sub>m</sub></span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">I<sub>m</sub><sup>2</sup> · R</span><span class="mexrec">2</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>m</sub><sup>2</sup></span><span class="mexrec">2R</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="k = N₁/N₂ = U₁/U₂ ≈ I₂/I₁ | η = (P₂/P₁)·100% = (I₂U₂ / (I₁U₁))·100%" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Im = Um/R, It = Ut/R | Q = It·Ut·t = Im·Um·t/2 | P̄ = It·Ut = Im·Um/2" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi">Transformator: k — transformasiya əmsalı (k &gt; 1 alçaldıcı, k &lt; 1 yüksəldici transformator), N₁, N₂ — birinci və ikinci dolaqların sarğı sayı</div>
+          <div class="dustur-menasi"><strong>Aktiv müqavimət (R):</strong> I və U eyni fazada rəqs edir; R tezlikdən, perioddan, I<sub>m</sub> və U<sub>m</sub>-dən asılı deyil</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">X<sub>C</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">ω · C</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">2πν · C</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">T</span><span class="mexrec">2πC</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">d</span><span class="mexrec">ω · εε<sub>0</sub>S</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">I<sub>m(tutum)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>m</sub></span><span class="mexrec">X<sub>C</sub></span></span><span class="beraber">=</span><span class="sag-teref">U<sub>m</sub> · ω · C</span><span class="beraber">,</span><span class="sol-teref">I<sub>t(tutum)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>t</sub></span><span class="mexrec">X<sub>C</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P̄<sub>tutum</sub></span><span class="beraber">=</span><span class="sag-teref">0</span><span class="beraber">,</span><span class="sol-teref">Q<sub>tutum</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="XC = 1/(ωC) = 1/(2πνC) = T/(2πC) | Im = Um/XC = Um·ωC | P̄ = 0, Q = 0" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Tutum müqaviməti (X<sub>C</sub>):</strong> [X<sub>C</sub>] = 1 Om; yalnız kondensator qoşulmuş dövrədə cərəyan şiddəti rəqsi gərginlik rəqsini π/2 qədər qabaqlayır; orta güc və ayrılan istilik 0-dır</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">X<sub>L</sub></span><span class="beraber">=</span><span class="sag-teref">ω · L</span><span class="beraber">=</span><span class="sag-teref">2πν · L</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2π</span><span class="mexrec">T</span></span><span class="sag-teref">· L</span><span class="beraber">=</span><span class="sag-teref">ω · μL<sub>0</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">I<sub>m(induktiv)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>m</sub></span><span class="mexrec">X<sub>L</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>m</sub></span><span class="mexrec">ω · L</span></span><span class="beraber">,</span><span class="sol-teref">I<sub>t(induktiv)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>t</sub></span><span class="mexrec">X<sub>L</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">P̄<sub>induktiv</sub></span><span class="beraber">=</span><span class="sag-teref">0</span><span class="beraber">,</span><span class="sol-teref">Q<sub>induktiv</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="XL = ωL = 2πνL = (2π/T)L | Im = Um/XL = Um/(ωL) | P̄ = 0, Q = 0" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>İnduktiv müqavimət (X<sub>L</sub>):</strong> [X<sub>L</sub>] = 1 Om; yalnız sarğac qoşulmuş dövrədə gərginlik rəqsi cərəyan şiddəti rəqsini π/2 qədər qabaqlayır (cərəyan π/2 gecikir); orta güc və istilik 0-dır</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">Z</span><span class="beraber">=</span><span class="sag-teref">√(R<sup>2</sup> + (X<sub>L</sub> - X<sub>C</sub>)<sup>2</sup>)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">U<sub>üm</sub></span><span class="beraber">=</span><span class="sag-teref">√(U<sub>R</sub><sup>2</sup> + (U<sub>L</sub> - U<sub>C</sub>)<sup>2</sup>)</span></span>
+              <span class="dustur-setir"><span class="sol-teref">I<sub>m(tam dövrə)</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>m</sub></span><span class="mexrec">Z</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">U<sub>m</sub></span><span class="mexrec">√(R<sup>2</sup> + (X<sub>L</sub> - X<sub>C</sub>)<sup>2</sup>)</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">X<sub>L</sub></span><span class="beraber">=</span><span class="sag-teref">X<sub>C</sub></span><span class="beraber">,</span><span class="sol-teref">U<sub>L</sub></span><span class="beraber">=</span><span class="sag-teref">U<sub>C</sub></span><span class="sag-teref">(rezonans şərti: ω<sub>0</sub> =</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">√(LC)</span></span><span class="sag-teref">)</span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="Z = √(R² + (XL - XC)²) | U = √(UR² + (UL - UC)²) | Im = Um/Z | Rezonans: XL = XC, ω0 = 1/√(LC)" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi"><strong>Tam müqavimət (Z) və rezonans şərti:</strong> R, X<sub>C</sub> və X<sub>L</sub>-in ardıcıl birləşməsində X<sub>L</sub> = X<sub>C</sub> olduqda tam müqavimət minimum, cərəyan şiddəti isə maksimal olur</div>
         </div>
 
         <div class="axtaris-tapilmadi-qutu">
