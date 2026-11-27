@@ -470,7 +470,7 @@
       position: fixed;
       top: 14px;
       bottom: 14px;
-      left: 304px;
+      right: 18px;
       width: 248px;
       z-index: 2;
       display: flex;
@@ -482,7 +482,7 @@
 
     .reklam-panel {
       width: 100%;
-      min-height: 92px;
+      min-height: 120px;
       flex-shrink: 0;
       background: var(--box-bg);
       border: 1px dashed var(--border-soft);
@@ -844,21 +844,21 @@
 .sag-panel {
       flex: 1;
       min-width: 0;
-      padding: 28px 34px 92px 276px;
+      padding: 28px 284px 92px 34px;
       overflow-x: clip;
       position: relative;
       z-index: 2;
     }
     .ust-basliq {
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       align-items: flex-start;
       gap: 20px;
       border-bottom: 1px solid var(--border-soft);
       padding-bottom: 18px;
       margin-bottom: 26px;
     }
-    .sayt-adi { text-align: right; margin-left: auto; max-width: 760px; }
+    .sayt-adi { text-align: left; margin-right: auto; max-width: 760px; }
     .ust-etiket {
       display: inline-block;
       font-size: 11px;
@@ -888,7 +888,7 @@
       border-radius: 18px;
       padding: 26px;
       max-width: 760px;
-      margin-left: auto;
+      margin-right: auto;
       counter-reset: dustur-saygac;
     }
     .movzu-mezmun.gorunen { display: block; animation: yaziGelisi 0.28s ease-out; }
@@ -1138,7 +1138,7 @@
     .kecid-panel {
       position: fixed;
       bottom: 24px;
-      right: 34px;
+      right: 284px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -1177,8 +1177,8 @@
 
     @media (max-width: 1360px) and (min-width: 981px) {
       .sol-yan-sutun {
-        left: 300px;
-        width: 174px;
+        right: 14px;
+        width: 184px;
       }
       .reklam-panel {
         min-height: 82px;
@@ -1187,10 +1187,10 @@
         height: 245px;
       }
       .sag-panel {
-        padding: 24px 24px 92px 198px;
+        padding: 24px 212px 92px 24px;
       }
       .kecid-panel {
-        right: 24px;
+        right: 212px;
       }
     }
 
@@ -1993,7 +1993,16 @@
           <span>Yazılışı yoxlayın və ya başqa açar söz daxil edin.</span>
         </div>
       </section>
-<section id="beraberttecilli" class="movzu-mezmun">
+
+      <section id="beraberttecilli" class="movzu-mezmun">
+  <h1>2. düzxətli bərabərtəcilli hərəkət</h1>
+  <p class="qisa-izah">Qeydlərdəki əsas düsturlar və onların içindəki kəmiyyətlərin tapılması: təcil, başlanğıc sürət, son sürət, yol, proyeksiya, koordinat, tormoz müddəti, sərbəstdüşmə.</p>
+
+  <div class="dustur-axtaris-panel">
+    <span class="dustur-axtaris-ikon">🔎</span>
+    <input type="text" class="dustur-axtaris-input" placeholder="Kəmiyyət və ya düstur axtar (məs: təcil, koordinat, tormoz müddəti)..." oninput="dusturlariAxtar()">
+    <button type="button" class="dustur-axtaris-temizle" onclick="dusturAxtarisTemizle(this)">✕ Təmizlə</button>
+  </div>  
         <div class="dustur-kart">
           <div class="dustur-ust">
             <div class="dustur-dustur">
@@ -2752,7 +2761,7 @@
 </section>
 
       <section id="statika" class="movzu-mezmun">
-        <h1>6. Statikanın əsasları</h1>
+        <h1>7. Statikanın əsasları</h1>
         <p class="qisa-izah">Cismin tarazlıq növləri, qüvvə momenti, momentlər qaydası, ling, tərpənməz və tərpənən bloklar, mail müstəvi və xüsusi hallar.</p>
 
         <div class="dustur-axtaris-panel">
@@ -2857,7 +2866,7 @@
         </div>
       </section>
 <section id="impuls" class="movzu-mezmun">
-        <h1>7. İmpuls</h1>
+        <h1>8. İmpuls</h1>
         <p class="qisa-izah">Cismin impulsu, çevrə üzrə hərəkətdə impuls, nisbi impuls, sistemin impulsu, qüvvə impulsu, qapalı sistem və toqquşmalar.</p>
 
         <div class="dustur-axtaris-panel">
@@ -2929,7 +2938,7 @@
       </section>
 
       <section id="enerji" class="movzu-mezmun">
-        <h1>8. Enerji və enerjinin saxlanması</h1>
+        <h1>9. Enerji və enerjinin saxlanması</h1>
         <p class="qisa-izah">Kinetik enerji, potensial enerji (ağırlıq və yay), tam mexaniki enerji, enerjinin saxlanma qanunu və şaquli yuxarı atılan cisim.</p>
 
         <div class="dustur-axtaris-panel">
@@ -3005,7 +3014,7 @@
       </section>
 
       <section id="mexaniki-is-guc" class="movzu-mezmun">
-        <h1>8. Mexaniki iş</h1>
+        <h1>10. Mexaniki iş</h1>
         <p class="qisa-izah">Mexaniki iş, qrafikdən işin tapılması, sabit əvəzləyici qüvvənin işi, ağırlıq, sürtünmə, elastiklik, dartı, reaksiya və mərkəzəqaçma qüvvələrinin işi, kinetik enerji teoremi.</p>
 
         <div class="dustur-axtaris-panel">
@@ -3098,7 +3107,7 @@
       </section>
 
       <section id="mexaniki-reqslər-dalgalar" class="movzu-mezmun">
-        <h1>9. Mexaniki rəqslər və dalğalar</h1>
+        <h1>11. Mexaniki rəqslər və dalğalar</h1>
         <p class="qisa-izah">Rəqs periodu, tezlik, dairəvi tezlik, faza, amplitud, harmonik rəqs tənlikləri, enerji, yaylı və riyazi rəqqas, mexaniki dalğalar, rezonans və səs dalğaları.</p>
 
         <div class="dustur-axtaris-panel">
@@ -3205,7 +3214,7 @@
       </section>
 
       <section id="aerohidrostatika" class="movzu-mezmun">
-        <h1>10. Aerohidrostatika</h1>
+        <h1>12. Aerohidrostatika</h1>
         <p class="qisa-izah">Təzyiq və təzyiq qüvvəsi, bərk cisimlərin təzyiqi, Paskal qanunu, mayelərin təzyiqi, birləşmiş qablar, hidravlik pres, axının kəsilməzliyi, atmosfer təzyiqi, Arximed qanunu və mayedə üzən/hərəkət edən cisimlər.</p>
 
         <div class="dustur-axtaris-panel">
@@ -3324,7 +3333,7 @@
       </section>
 
       <section id="mkn-ideal-qaz" class="movzu-mezmun">
-        <h1>11. MKN. İdeal qaz qanunları</h1>
+        <h1>13. MKN. İdeal qaz qanunları</h1>
         <p class="qisa-izah">MKN-in əsas anlayışları, əsas tənliyi, orta kinetik enerji, orta kvadratik sürət, temperatur şkalaları, Mendeleyev-Klaperon tənliyi və izoproseslər.</p>
 
         <div class="dustur-axtaris-panel">
@@ -3446,7 +3455,7 @@
       </section>
 
       <section id="termodinamika" class="movzu-mezmun">
-        <h1>12. Termodinamikanın əsasları</h1>
+        <h1>14. Termodinamikanın əsasları</h1>
         <p class="qisa-izah">Daxili enerji, daxili enerjinin dəyişməsi, istilik miqdarı, xüsusi istilik tutumu, qarışığın temperaturu, yanma istiliyi, termodinamikanın I qanunu və istilik mühərrikləri (Karno düsturu).</p>
 
         <div class="dustur-axtaris-panel">
@@ -3561,7 +3570,7 @@
         </div>
       </section>
 <section id="doyan-doymayan-buxar" class="movzu-mezmun">
-        <h1>13. Doyan və doymayan buxar</h1>
+        <h1>15. Doyan və doymayan buxar</h1>
         <p class="qisa-izah">Buxarlanma və kondensasiya, buxarlanma istiliyi, doyan və doymayan buxar, böhran temperaturu, qaynama, mütləq və nisbi rütubət, psixrometr və şeh nöqtəsi.</p>
 
         <div class="dustur-axtaris-panel">
@@ -3654,7 +3663,7 @@
       </section>
 
       <section id="berk-cisimler-maye" class="movzu-mezmun">
-        <h1>14. Bərk cisimlərin və mayelərin xassələri</h1>
+        <h1>16. Bərk cisimlərin və mayelərin xassələri</h1>
         <p class="qisa-izah">Səthi gərilmə qüvvəsi və əmsalı, islatma hadisələri, Laplas təzyiqi, kapilyar boruda mayenin qalxması, bərk cisimlərin deformasiyası, mexaniki gərginlik, Huk qanunu, Yunq modulu və ərimə istiliyi.</p>
 
         <div class="dustur-axtaris-panel">
@@ -3757,7 +3766,7 @@
       </section>
 
       <section id="elektrik-yuku-sahesi" class="movzu-mezmun">
-        <h1>15. Elektrik yükü. Elektrik sahəsi</h1>
+        <h1>17. Elektrik yükü. Elektrik sahəsi</h1>
         <p class="qisa-izah">Elektrik yükü və xassələri, toxunan kürələrin yükləri, Kulon qanunu, elektrik sahəsinin intensivliyi, yükün potensial enerjisi və potensialı, gərginlik, sahədə iş və yüklü zərrəciklərin hərəkəti.</p>
 
         <div class="dustur-axtaris-panel">
@@ -3876,7 +3885,7 @@
       </section>
 
       <section id="elektrik-tutumu" class="movzu-mezmun">
-        <h1>16. Elektrik tutumu</h1>
+        <h1>18. Elektrik tutumu</h1>
         <p class="qisa-izah">Elektrik tutumu, müstəvi kondensator, kondensatorların ardıcıl və paralel birləşməsi, elektrik sahəsinin enerjisi və enerji sıxlığı, mənbəyə qoşulu və mənbədən ayrılmış kondensatorlar.</p>
 
         <div class="dustur-axtaris-panel">
@@ -3982,7 +3991,7 @@
       </section>
 
       <section id="sabit-cereyan" class="movzu-mezmun">
-        <h1>17. Sabit cərəyan qanunları</h1>
+        <h1>19. Sabit cərəyan qanunları</h1>
         <p class="qisa-izah">Cərəyan şiddəti, dövrə hissəsi üçün Om qanunu, naqilin müqaviməti və xüsusi müqavimət, rezistorların ardıcıl və paralel birləşməsi, EHQ, tam dövrə üçün Om qanunu, qısaqapanma və qapalı dövrənin FİƏ-si.</p>
 
         <div class="dustur-axtaris-panel">
@@ -4087,7 +4096,7 @@
         </div>
       </section>
      <section id="muxtelif-muhitlerde-cereyan" class="movzu-mezmun">
-        <h1>18. Müxtəlif mühitlərdə elektrik cərəyanı</h1>
+        <h1>20. Müxtəlif mühitlərdə elektrik cərəyanı</h1>
         <p class="qisa-izah">Metallarda cərəyan və temperatur əmsalı, ifratkeçiricilik, elektrolitlərdə cərəyan və Faradeyin I elektroliz qanunu, vakuumda termoelektron emissiya və doyma cərəyanı, qazlarda ionlaşma, yarımkeçiricilər, p-n keçidi, tranzistor və plazma.</p>
 
         <div class="dustur-axtaris-panel">
@@ -4176,7 +4185,7 @@
       </section>
 
       <section id="maqnit-sahesi" class="movzu-mezmun">
-        <h1>19. Maqnit sahəsi</h1>
+        <h1>21. Maqnit sahəsi</h1>
         <p class="qisa-izah">Maqnit sahəsinin induksiyası, düz cərəyanlı naqilin maqnit sahəsi, Amper qüvvəsi, maddələrin maqnit xassələri, Lorens qüvvəsi, yüklü zərrəciyin maqnit sahəsində çevrə üzrə hərəkəti və kütlə spektroqrafı.</p>
 
         <div class="dustur-axtaris-panel">
@@ -4262,7 +4271,7 @@
         </div>
       </section>
 <section id="elektromaqnit-induksiya" class="movzu-mezmun">
-        <h1>20. Elektromaqnit induksiya hadisəsi</h1>
+        <h1>22. Elektromaqnit induksiya hadisəsi</h1>
         <p class="qisa-izah">Maqnit seli, elektromaqnit induksiya hadisəsi, Faradeyin induksiya qanunu, induksiya cərəyanı və yükü, Lens qaydası, öz-özünə induksiya, induktivlik və maqnit sahəsində hərəkət edən naqildə induksiya EHQ.</p>
 
         <div class="dustur-axtaris-panel">
@@ -4336,7 +4345,7 @@
       </section>
 
       <section id="elektromaqnit-reqslər-dalgalar" class="movzu-mezmun">
-        <h1>21. Elektromaqnit rəqsləri və dalğaları</h1>
+        <h1>23. Elektromaqnit rəqsləri və dalğaları</h1>
         <p class="qisa-izah">Rəqs konturunda elektrik və maqnit enerjisi, tam enerji, Tomson düsturu, rəqslərin periodu, tezliyi və dairəvi tezliyi, amplitud qiymətləri, rezonans, elektromaqnit dalğaları, şüalanma gücü və intensivliyi, radiolokasiya.</p>
 
         <div class="dustur-axtaris-panel">
@@ -4419,7 +4428,7 @@
       </section>
 
       <section id="deyisen-cereyan" class="movzu-mezmun">
-        <h1>22. Dəyişən elektrik cərəyanı</h1>
+        <h1>24. Dəyişən elektrik cərəyanı</h1>
         <p class="qisa-izah">Dəyişən cərəyan generatoru, induksiya EHQ-nin amplitud qiyməti, transformator və transformasiya əmsalı, təsiredici qiymətlər, aktiv, tutum və induktiv müqavimətlər, tam müqavimət və rezonans şərti.</p>
 
         <div class="dustur-axtaris-panel">
@@ -4521,7 +4530,7 @@
       </section>
 
       <section id="hendesi-optika" class="movzu-mezmun">
-        <h1>23. Həndəsi optika</h1>
+        <h1>25. Həndəsi optika</h1>
         <p class="qisa-izah">İşığın qayıtma və sınma qanunları, sındırma əmsalı, tam daxili qayıtma, müstəvi güzgü, nazik linzalar, optik qüvvə, xətti böyütmə, nazik linza düsturları və sferik güzgülər.</p>
 
         <div class="dustur-axtaris-panel">
@@ -4605,7 +4614,7 @@
       </section>
 
       <section id="dalga-optikasi" class="movzu-mezmun">
-        <h1>24. Dalğa optikası</h1>
+        <h1>26. Dalğa optikası</h1>
         <p class="qisa-izah">İşığın dispersiyası, rənglərin ardıcıllığı və əsas rənglər, işığın interferensiyası (maksimum və minimum şərtləri), işığın difraksiyası, difraksiya qəfəsi və işığın polyarlaşması (Malyus qanunu).</p>
 
         <div class="dustur-axtaris-panel">
@@ -4674,7 +4683,7 @@
       </section>
 
      <section id="isiq-kvantlari" class="movzu-mezmun">
-        <h1>25. İşıq kvantları</h1>
+        <h1>27. İşıq kvantları</h1>
         <p class="qisa-izah">Fotonun enerjisi, kütləsi və impulsu, fotonun mühitə keçməsi, fotoeffekt hadisəsi və qanunları, doyma cərəyanı, saxlayıcı gərginlik, Eynşteyn tənliyi və fotoeffektin qırmızı sərhədi.</p>
 
         <div class="dustur-axtaris-panel">
@@ -4759,7 +4768,7 @@
       </section>
 
       <section id="atom-nuve-fizikasi" class="movzu-mezmun">
-        <h1>26. Atom və nüvə fizikası</h1>
+        <h1>28. Atom və nüvə fizikası</h1>
         <p class="qisa-izah">Atom nüvəsinin tərkibi və izotoplar, kütlə defekti, rabitə və xüsusi rabitə enerjisi, Bor postulatları və hidrogen atomunun enerji səviyyələri, radioaktiv çevrilmələr, yarımçevrilmə qanunu, aktivlik, zəncirvari və istilik-nüvə reaksiyaları, şüalanmanın udulma dozası və elementar zərrəciklərin qeydə alınması.</p>
 
         <div class="dustur-axtaris-panel">
