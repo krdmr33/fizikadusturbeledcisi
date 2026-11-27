@@ -1472,6 +1472,21 @@
   border-color: rgba(52, 211, 153, 0.45);
   transform: translateY(-1px);
 }
+
+    /* Movzular üçün ortaq reklam yerləri */
+    .movzu-reklam { margin: 20px 0; min-height: 112px; overflow: visible; }
+    .movzu-reklam .reklam-icerik { min-height: 80px; overflow: visible; }
+    .movzu-reklam[hidden] { display: none !important; }
+    .movzu-mezmun { max-width: none; }
+    @media (min-width: 981px) {
+      .sol-yan-sutun { width: 120px; justify-content: center; }
+      .sag-panel { padding-right: 154px; }
+      .kecid-panel { right: 154px; }
+    }
+    @media (max-width: 760px) {
+      .movzu-reklam { min-height: 100px; margin: 18px 0; }
+      .movzu-reklam .reklam-icerik { min-height: 70px; }
+    }
   </style>
 </head>
 <body data-tema="gece-ag">
@@ -1520,7 +1535,7 @@
       <div class="giris-kartlar">
         <div class="giris-kart giris-anim giris-d-3">
           <h3 id="giris-k1-basliq">Hazır Mövzu Bölmələri</h3>
-          <p id="giris-k1-metn">1–7 mövzularla yanaşı <strong>8. İmpuls</strong>, <strong>9. Enerji</strong> və <strong>10. Mexaniki iş, güc</strong> bölmələri aydın simvollar və izahlarla hazır vəziyyətdədir.</p>
+          <p id="giris-k1-metn">1–7 mövzularla yanaşı <strong>8. İmpuls</strong>, <strong>9. Enerji</strong> və <strong>10. Mexaniki iş, güc, FİƏ</strong> bölmələri aydın simvollar və izahlarla hazır vəziyyətdədir.</p>
         </div>
         <div class="giris-kart giris-anim giris-d-4">
           <h3 id="giris-k2-basliq">Kəmiyyətlər və Onların Vahidləri</h3>
@@ -1558,10 +1573,6 @@
     </div>
 
     <div class="sol-yan-sutun">
-      <aside id="reklam-panel-1" class="reklam-panel" aria-label="Reklam yeri 1">
-        <span class="reklam-basliq">Reklam</span>
-        <div id="reklam-icerik-1" class="reklam-icerik"></div>
-      </aside>
 
       <div class="sol-dalga-qutu" aria-hidden="true">
         <svg id="sol-dalga-svg" viewBox="0 0 248 290" preserveAspectRatio="none">
@@ -1609,15 +1620,7 @@
         </svg>
       </div>
 
-      <aside id="reklam-panel-2" class="reklam-panel" aria-label="Reklam yeri 2">
-        <span class="reklam-basliq">Reklam</span>
-        <div id="reklam-icerik-2" class="reklam-icerik"></div>
-      </aside>
 
-      <aside id="elave-sol-panel" class="elave-sol-panel" aria-label="Reklam yeri 3">
-        <span class="reklam-basliq">Reklam</span>
-        <div id="elave-panel-icerik" class="reklam-icerik"></div>
-      </aside>
     </div>
 
     <aside id="sol-panel" class="sol-panel">
@@ -1671,7 +1674,7 @@
         </button>
         <button type="button" class="movzu-btn" onclick="movzuAc('mexaniki-is-guc', this)">
           <span class="movzu-sira">10.</span>
-          <span>Mexaniki iş, güc</span>
+          <span>Mexaniki iş, güc, FİƏ</span>
         </button>
         <button type="button" class="movzu-btn" onclick="movzuAc('mexaniki-reqslər-dalgalar', this)">
           <span class="movzu-sira">11.</span>
@@ -1775,16 +1778,14 @@
         </div>
       </header>
 
-      <div class="mobil-reklam-qutu" aria-label="Mobil reklam panelləri">
-        <aside class="reklam-panel">
-          <span class="reklam-basliq">Reklam</span>
-          <div class="reklam-icerik"></div>
-        </aside>
-        <aside class="reklam-panel">
-          <span class="reklam-basliq">Reklam</span>
-          <div class="reklam-icerik"></div>
-        </aside>
-      </div>
+      <aside id="reklam-panel-1" class="reklam-panel movzu-reklam" hidden aria-label="Reklam yeri 1">
+        <span class="reklam-basliq">Reklam</span>
+        <div id="reklam-icerik-1" class="reklam-icerik"></div>
+      </aside>
+      <aside id="reklam-panel-2" class="reklam-panel movzu-reklam" hidden aria-label="Reklam yeri 2">
+        <span class="reklam-basliq">Reklam</span>
+        <div id="reklam-icerik-2" class="reklam-icerik"></div>
+      </aside>
 
       <section id="duzxetli" class="movzu-mezmun gorunen">
         <h1>1. Düzxətli bərabərsürətli hərəkət</h1>
@@ -2732,9 +2733,8 @@
         <span class="dustur-setir"><span class="sol-teref">F<sub>sür</sub> (mail müstəvi)</span><span class="beraber">=</span><span class="sag-teref">μN</span><span class="beraber">=</span><span class="sag-teref">μmg · cosα</span></span>
         <span class="dustur-setir"><span class="sol-teref">a (aşağı sürüşmə)</span><span class="beraber">=</span><span class="sag-teref">g(sinα − μcosα)</span></span>
         <span class="dustur-setir"><span class="sol-teref">μ = 0 olduqda</span><span class="beraber">⇒</span><span class="sag-teref">a = g·sinα</span><span class="beraber">,</span><span class="sag-teref">v = √(2gh)</span><span class="beraber">,</span><span class="sag-teref">t = <span class="kesr kicik"><span class="suret">1</span><span class="mexrec">sinα</span></span>√(<span class="kesr kicik"><span class="suret">2h</span><span class="mexrec">g</span></span>)</span></span>
-        <span class="dustur-setir"><span class="sol-teref">F<sub>min</sub> (ortadakı cismi çəkmək)</span><span class="beraber">=</span><span class="sag-teref">F<sub>s1</sub> + F<sub>s2</sub></span><span class="beraber">=</span><span class="sag-teref">μm<sub>1</sub>g + μ(m<sub>1</sub> + m<sub>2</sub>)g</span></span>
       </div>
-      <button type="button" class="kopyala-btn" data-dustur="N = mg·cosα | F_sük = mg·sinα | F_sür = μmg·cosα | a = g(sinα - μcosα) | μ=0: a = g·sinα, v = √(2gh), t = (1/sinα)√(2h/g) | F_min = F_s1 + F_s2" onclick="dusturKopyala(this)">Kopyala</button>
+      <button type="button" class="kopyala-btn" data-dustur="N = mg·cosα | F_sük = mg·sinα | F_sür = μmg·cosα | a = g(sinα - μcosα) | μ=0: a = g·sinα, v = √(2gh), t = (1/sinα)√(2h/g)" onclick="dusturKopyala(this)">Kopyala</button>
     </div>
     <div class="dustur-menasi">Xüsusi hallar: μ &lt; tgα ⇒ bərabərtəcilli sürüşür; μ = tgα ⇒ bərabərsürətli sürüşür; μ &gt; tgα ⇒ sükunətdə qalır. Mail bucağı α artdıqca F<sub>sük</sub> artır, N və F<sub>sür</sub> azalır</div>
   </div>
@@ -2750,6 +2750,7 @@
       </div>
       <button type="button" class="kopyala-btn" data-dustur="Dartma: N = mg - F·sinα, a = (F·cosα - μ(mg - F·sinα))/m | İtələmə: N = mg + F·sinα, a = (F·cosα - μ(mg + F·sinα))/m | Yuxarı müqavimət: F_m = m(a - g) | Aşağı müqavimət: F_m = m(g - a)" onclick="dusturKopyala(this)">Kopyala</button>
     </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:12px 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 245" role="img" aria-label="Dartma qüvvələrinin sxemi" style="width:100%;max-width:340px;height:auto;color:inherit;"><defs><marker id="force-arrow-0" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="currentColor"/></marker></defs><text x="125" y="18" fill="currentColor" font-size="13">Dartma</text><path d="M36 190 L310 190" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-0)"/><path d="M36 190 L36 28" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-0)"/><text x="314" y="205" fill="currentColor" font-size="13">x</text><text x="22" y="27" fill="currentColor" font-size="13">y</text><rect x="105" y="145" width="100" height="28" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="125" cy="181" r="8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="185" cy="181" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M155 159 L155 88" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-0)"/><text x="142" y="82" fill="currentColor" font-size="13">N</text><path d="M155 159 L155 230" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-0)"/><text x="163" y="232" fill="currentColor" font-size="13">mg</text><path d="M105 190 L62 190" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-0)"/><text x="45" y="212" fill="currentColor" font-size="13">Fₛᵤ̈ᵣ = μN</text><path d="M215 30 L255 30" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-0)"/><text x="230" y="24" fill="currentColor" font-size="13">a</text><path d="M185 125 L255 43" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-0)"/><text x="262" y="43" fill="currentColor" font-size="13">F</text><path d="M185 125 L255 125" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-0)"/><path d="M185 125 L185 43" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-0)"/><path d="M185 43 L255 43" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><path d="M255 43 L255 125" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><text x="260" y="129" fill="currentColor" font-size="13">F cosα</text><text x="155" y="38" fill="currentColor" font-size="13">F sinα</text><text x="208" y="117" fill="currentColor" font-size="13">α</text></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 245" role="img" aria-label="İtələmə qüvvələrinin sxemi" style="width:100%;max-width:340px;height:auto;color:inherit;"><defs><marker id="force-arrow-1" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="currentColor"/></marker></defs><text x="125" y="18" fill="currentColor" font-size="13">İtələmə</text><path d="M36 190 L310 190" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-1)"/><path d="M36 190 L36 28" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-1)"/><text x="314" y="205" fill="currentColor" font-size="13">x</text><text x="22" y="27" fill="currentColor" font-size="13">y</text><rect x="105" y="145" width="100" height="28" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="125" cy="181" r="8" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="185" cy="181" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M155 159 L155 88" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-1)"/><text x="142" y="82" fill="currentColor" font-size="13">N</text><path d="M155 159 L155 230" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-1)"/><text x="163" y="232" fill="currentColor" font-size="13">mg</text><path d="M105 190 L62 190" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-1)"/><text x="45" y="212" fill="currentColor" font-size="13">Fₛᵤ̈ᵣ = μN</text><path d="M215 30 L255 30" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-1)"/><text x="230" y="24" fill="currentColor" font-size="13">a</text><path d="M115 65 L185 145" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-1)"/><text x="100" y="57" fill="currentColor" font-size="13">F</text><path d="M115 65 L185 65" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><path d="M115 65 L115 145" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><path d="M115 145 L185 145" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-1)"/><path d="M185 65 L185 145" stroke="currentColor" stroke-width="1.8" fill="none" marker-end="url(#force-arrow-1)"/><text x="65" y="140" fill="currentColor" font-size="13">F cosα</text><text x="193" y="104" fill="currentColor" font-size="13">F sinα</text><text x="133" y="81" fill="currentColor" font-size="13">α</text></svg></div>
     <div class="dustur-menasi">F<sub>m</sub> — mühitin müqavimət qüvvəsi (N): həmişə cismin sürətinin əksinə yönəlir</div>
   </div>
 
@@ -3014,8 +3015,8 @@
       </section>
 
       <section id="mexaniki-is-guc" class="movzu-mezmun">
-        <h1>10. Mexaniki iş</h1>
-        <p class="qisa-izah">Mexaniki iş, qrafikdən işin tapılması, sabit əvəzləyici qüvvənin işi, ağırlıq, sürtünmə, elastiklik, dartı, reaksiya və mərkəzəqaçma qüvvələrinin işi, kinetik enerji teoremi.</p>
+        <h1>10. Mexaniki iş, güc, FİƏ</h1>
+        <p class="qisa-izah">Mexaniki iş, güc, faydalı iş əmsalı (FİƏ), qrafikdən işin tapılması, sabit əvəzləyici qüvvənin işi, ağırlıq, sürtünmə, elastiklik, dartı, reaksiya və mərkəzəqaçma qüvvələrinin işi, kinetik enerji teoremi.</p>
 
         <div class="dustur-axtaris-panel">
           <span class="dustur-axtaris-ikon">🔎</span>
@@ -3027,7 +3028,7 @@
           <div class="dustur-ust">
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
               <span class="dustur-setir"><span class="sol-teref">A</span><span class="beraber">=</span><span class="sag-teref">F · S · cosα</span></span>
-              <span class="dustur-setir"><span class="sol-teref">[A]</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1 N·m = 1 kq·m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span><span class="beraber">=</span><span class="sag-teref">1 C</span></span>
+              <span class="dustur-setir"><span class="sol-teref">[A]</span><span class="beraber">=</span><span class="sag-teref">1 N·m</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1 kq·m<sup>2</sup></span><span class="mexrec">san<sup>2</sup></span></span><span class="beraber">=</span><span class="sag-teref">1 C</span></span>
               <span class="dustur-setir"><span class="sol-teref">A</span><span class="beraber">=</span><span class="sag-teref">S<sub>fiqur(F-S / F-x)</sub></span></span>
             </div>
             <button type="button" class="kopyala-btn" data-dustur="A = F · S · cosα | [A] = 1 C | A = Sfiqur(F-S / F-x)" onclick="dusturKopyala(this)">Kopyala</button>
@@ -3053,7 +3054,7 @@
               <span class="dustur-setir"><span class="sol-teref">A<sub>ağ</sub></span><span class="beraber">=</span><span class="sag-teref">-ΔE<sub>p</sub> = E<sub>p1</sub> - E<sub>p2</sub> = mg(h<sub>1</sub> - h<sub>2</sub>)</span></span>
               <span class="dustur-setir"><span class="sol-teref">A<sub>xarici</sub></span><span class="beraber">=</span><span class="sag-teref">ΔE<sub>p</sub> = E<sub>p2</sub> - E<sub>p1</sub> = mg(h<sub>2</sub> - h<sub>1</sub>)</span></span>
               <span class="dustur-setir"><span class="sol-teref">A<sub>yuxarı</sub></span><span class="beraber">=</span><span class="sag-teref">-mgh</span><span class="beraber">,</span><span class="sol-teref">A<sub>aşağı</sub></span><span class="beraber">=</span><span class="sag-teref">mgh</span><span class="beraber">,</span><span class="sol-teref">A<sub>üfüqi</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
-              <span class="dustur-setir"><span class="sol-teref">A<sub>sərbəst</sub></span><span class="beraber">=</span><span class="sag-teref">mgh =</span><span class="sag-teref kesr"><span class="suret">mg<sup>2</sup>t<sup>2</sup></span><span class="mexrec">2</span></span><span class="beraber">,</span><span class="sol-teref">A<sub>I</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">4</span></span><span class="sag-teref">A</span><span class="beraber">,</span><span class="sol-teref">A<sub>II</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">3</span><span class="mexrec">4</span></span><span class="sag-teref">A = 3A<sub>I</sub></span></span>
+              <span class="dustur-setir"><span class="sol-teref">A<sub>sərbəst</sub></span><span class="beraber">=</span><span class="sag-teref">mgh =</span><span class="sag-teref kesr"><span class="suret">mg<sup>2</sup>t<sup>2</sup></span><span class="mexrec">2</span></span></span>
             </div>
             <button type="button" class="kopyala-btn" data-dustur="Aağ = -ΔEp = mg(h1 - h2) | Axarici = ΔEp = mg(h2 - h1) | Ayuxarı = -mgh, Aaşağı = mgh, Aüfüqi = 0" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
@@ -3099,6 +3100,31 @@
           <div class="dustur-menasi">Reaksiya və mərkəzəqaçma qüvvələrinin işi, cismi mayedə bərabərsürətlə qaldırmaq üçün xarici qüvvənin minimum işi və kinetik enerjinin dəyişməsi haqqında teorem</div>
         </div>
 
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">N<sub>orta</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">A</span><span class="mexrec">t</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">N</span><span class="beraber">=</span><span class="sag-teref">F · v · cosα</span></span>
+              <span class="dustur-setir"><span class="sol-teref">A</span><span class="beraber">=</span><span class="sag-teref">N · t</span></span>
+              <span class="dustur-setir"><span class="sol-teref">[N]</span><span class="beraber">=</span><span class="sag-teref">1 Vt</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1 C</span><span class="mexrec">san</span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="N_orta = A/t | N = F·v·cosα | A = N·t (N = const) | [N] = 1 Vt = 1 C/san" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Mexaniki güc: vahid zamanda görülən iş; A = N · t sabit güc üçün doğrudur. α — qüvvə ilə sürət arasındakı bucaqdır.</div>
+        </div>
+
+        <div class="dustur-kart">
+          <div class="dustur-ust">
+            <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
+              <span class="dustur-setir"><span class="sol-teref">η</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">A<sub>faydalı</sub></span><span class="mexrec">A<sub>tam</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">η (%)</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">A<sub>faydalı</sub> · 100%</span><span class="mexrec">A<sub>tam</sub></span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">η</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N<sub>faydalı</sub></span><span class="mexrec">N<sub>tam</sub></span></span></span>
+            </div>
+            <button type="button" class="kopyala-btn" data-dustur="η = A_faydalı/A_tam | η (%) = (A_faydalı/A_tam)·100% | η = N_faydalı/N_tam" onclick="dusturKopyala(this)">Kopyala</button>
+          </div>
+          <div class="dustur-menasi">Faydalı iş əmsalı (FİƏ): faydalı işin sərf olunan tam işə nisbəti; güclərin nisbəti eyni zaman intervalı üçün tətbiq edilir.</div>
+        </div>
+
         <div class="axtaris-tapilmadi-qutu">
           <span class="tapilmadi-ikon">🔍</span>
           <strong>Axtarışa uyğun düstur tapılmadı</strong>
@@ -3121,7 +3147,7 @@
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
               <span class="dustur-setir"><span class="sol-teref">T</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">t</span><span class="mexrec">N</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">ν</span></span></span>
               <span class="dustur-setir"><span class="sol-teref">ν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">N</span><span class="mexrec">t</span></span><span class="beraber">,</span><span class="sol-teref">[ν]</span><span class="beraber">=</span><span class="sag-teref">1 san<sup>-1</sup> = 1 Hs (Hers)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Δφ</span><span class="mexrec">t</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2π</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">2πν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2πN</span><span class="mexrec">t</span></span><span class="beraber">,</span><span class="sol-teref">[ω]</span><span class="beraber">=</span><span class="sag-teref">1 rad/san = 1 san<sup>-1</sup></span></span>
+              <span class="dustur-setir"><span class="sol-teref">ω</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Δφ</span><span class="mexrec">t</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2π</span><span class="mexrec">T</span></span><span class="beraber">=</span><span class="sag-teref">2πν</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">2πN</span><span class="mexrec">t</span></span><span class="beraber">,</span><span class="sol-teref">[ω]</span><span class="beraber">=</span><span class="sag-teref">1 san<sup>-1</sup></span></span>
             </div>
             <button type="button" class="kopyala-btn" data-dustur="T = t / N = 1 / ν | ν = 1 / T = N / t | ω = Δφ / t = 2π / T = 2πν = 2πN / t" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
@@ -3184,11 +3210,10 @@
           <div class="dustur-ust">
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
               <span class="dustur-setir"><span class="sol-teref">T<sub>riyazi</sub></span><span class="beraber">=</span><span class="sag-teref">2π√(</span><span class="sag-teref kesr"><span class="suret">l</span><span class="mexrec">g</span></span><span class="sag-teref">)</span><span class="beraber">,</span><span class="sol-teref">ν<sub>riyazi</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">2π</span></span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">g</span><span class="mexrec">l</span></span><span class="sag-teref">)</span><span class="beraber">,</span><span class="sol-teref">ω<sub>riyazi</sub></span><span class="beraber">=</span><span class="sag-teref">√(</span><span class="sag-teref kesr"><span class="suret">g</span><span class="mexrec">l</span></span><span class="sag-teref">)</span></span>
-              <span class="dustur-setir"><span class="sol-teref">T<sub>cəm</sub></span><span class="beraber">=</span><span class="sag-teref">√(T<sub>1</sub><sup>2</sup> + T<sub>2</sub><sup>2</sup>)</span><span class="beraber">,</span><span class="sol-teref">T<sub>fərq</sub></span><span class="beraber">=</span><span class="sag-teref">√(T<sub>1</sub><sup>2</sup> - T<sub>2</sub><sup>2</sup>)</span></span>
               <span class="dustur-setir"><span class="sol-teref">T<sub>yuxarı</sub></span><span class="beraber">=</span><span class="sag-teref">2π√(</span><span class="sag-teref kesr"><span class="suret">l</span><span class="mexrec">g + a</span></span><span class="sag-teref">)</span><span class="beraber">,</span><span class="sol-teref">T<sub>aşağı</sub></span><span class="beraber">=</span><span class="sag-teref">2π√(</span><span class="sag-teref kesr"><span class="suret">l</span><span class="mexrec">g - a</span></span><span class="sag-teref">)</span></span>
               <span class="dustur-setir"><span class="sag-teref kesr"><span class="suret">T</span><span class="mexrec">T<sub>0</sub></span></span><span class="beraber">=</span><span class="sag-teref">1 +</span><span class="sag-teref kesr"><span class="suret">h</span><span class="mexrec">R</span></span><span class="beraber">,</span><span class="sag-teref kesr"><span class="suret">ν</span><span class="mexrec">ν<sub>0</sub></span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">R</span><span class="mexrec">R + h</span></span></span>
             </div>
-            <button type="button" class="kopyala-btn" data-dustur="Triyazi = 2π√(l/g) | Tcəm = √(T1²+T2²) | Tfərq = √(T1²-T2²) | Tyuxarı = 2π√(l/(g+a)) | Taşağı = 2π√(l/(g-a))" onclick="dusturKopyala(this)">Kopyala</button>
+            <button type="button" class="kopyala-btn" data-dustur="Triyazi = 2π√(l/g) | Tyuxarı = 2π√(l/(g+a)) | Taşağı = 2π√(l/(g-a))" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
           <div class="dustur-menasi">Riyazi rəqqas: period, tezlik və dairəvi tezlik xətkeşlə ölçülür; t, x<sub>m</sub> və m-dən asılı deyil; a təcili ilə hərəkət və Yer səthindən h hündürlüyə qalxma halları</div>
         </div>
@@ -3268,8 +3293,6 @@
               <span class="dustur-setir"><span class="sol-teref">F<sub>aşağı(a)</sub></span><span class="beraber">=</span><span class="sag-teref">ρ(g - a)h · S</span></span>
               <span class="dustur-setir"><span class="sol-teref">P<sub>sərbəst düşən qab</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
               <span class="dustur-setir"><span class="sol-teref">F<sub>sərbəst düşən qab</sub></span><span class="beraber">=</span><span class="sag-teref">0</span></span>
-              <span class="dustur-setir"><span class="sol-teref">P<sub>A</sub></span><span class="beraber">=</span><span class="sag-teref">ρ<sub>1</sub>gh<sub>1</sub></span></span>
-              <span class="dustur-setir"><span class="sol-teref">P<sub>B</sub></span><span class="beraber">=</span><span class="sag-teref">ρ<sub>1</sub>gh<sub>1</sub> + ρ<sub>2</sub>gh<sub>2</sub></span></span>
               <span class="dustur-setir"><span class="sol-teref">P<sub>divar</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρgh</span><span class="mexrec">2</span></span></span>
               <span class="dustur-setir"><span class="sol-teref">F<sub>divar</sub></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ρgh</span><span class="mexrec">2</span></span><span class="sag-teref">· S<sub>divar</sub></span></span>
             </div>
@@ -3492,7 +3515,7 @@
           <div class="dustur-ust">
             <div class="dustur-dustur" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
               <span class="dustur-setir"><span class="sol-teref">Q</span><span class="beraber">=</span><span class="sag-teref">c · m · (t<sub>2</sub> - t<sub>1</sub>)</span><span class="beraber">=</span><span class="sag-teref">c · m · Δt</span><span class="beraber">=</span><span class="sag-teref">C · Δt</span></span>
-              <span class="dustur-setir"><span class="sol-teref">c</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Q</span><span class="mexrec">m · Δt</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">1</span><span class="mexrec">tgα · m</span></span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">ctgα</span><span class="mexrec">m</span></span></span>
+              <span class="dustur-setir"><span class="sol-teref">c</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Q</span><span class="mexrec">m · Δt</span></span></span>
               <span class="dustur-setir"><span class="sol-teref">C</span><span class="beraber">=</span><span class="sag-teref">c · m</span><span class="beraber">=</span><span class="sag-teref kesr"><span class="suret">Q</span><span class="mexrec">Δt</span></span></span>
             </div>
             <button type="button" class="kopyala-btn" data-dustur="Q = cmΔt = CΔt | c = Q/(mΔt) | C = cm = Q/Δt" onclick="dusturKopyala(this)">Kopyala</button>
@@ -4127,7 +4150,7 @@
             </div>
             <button type="button" class="kopyala-btn" data-dustur="α = (Nparçalanan/Nümumi)·100% | ρ = ρ0(1 - |α|t) | m = kq = kIt = kW/U | k = (1/(eNA))·(M/n) | V = m/ρ | ν = m/M" onclick="dusturKopyala(this)">Kopyala</button>
           </div>
-          <div class="dustur-menasi"><strong>Elektrolitlərdə cərəyan və Faradeyin I elektroliz qanunu:</strong> [k] = 1 Kl/kq = 1 kq/(A·san); əsas yükdaşıyıcılar müsbət və mənfi ionlardır; elektrolitlərdə α &lt; 0 (qızdırdıqda müqavimət azalır)</div>
+          <div class="dustur-menasi"><strong>Elektrolitlərdə cərəyan və Faradeyin I elektroliz qanunu:</strong> [k] = 1 kq/Kl = 1 kq/(A·san); əsas yükdaşıyıcılar müsbət və mənfi ionlardır; elektrolitlərdə α &lt; 0 (qızdırdıqda müqavimət azalır)</div>
         </div>
 
         <div class="dustur-kart">
@@ -5456,6 +5479,20 @@
       btn.textContent = panel.classList.contains("menyu-aciq") ? "✕ Bağla" : "☰ Mövzular";
     }
 
+    function reklamYerleriniYenile() {
+      const bolme = document.querySelector(".movzu-mezmun.gorunen");
+      const ust = document.getElementById("reklam-panel-1");
+      const alt = document.getElementById("reklam-panel-2");
+      if (!bolme || !ust || !alt) return;
+      const kartlar = Array.from(bolme.querySelectorAll(".dustur-kart"));
+      const gorunen = kartlar.filter(kart => kart.style.display !== "none");
+      ust.hidden = alt.hidden = gorunen.length === 0;
+      if (!gorunen.length) return;
+      const ilk = gorunen[0], son = gorunen[gorunen.length - 1];
+      if (ilk.previousElementSibling !== ust) ilk.before(ust);
+      if (son.nextElementSibling !== alt) son.after(alt);
+    }
+
     function movzuAc(id, btn) {
       document.querySelectorAll(".movzu-mezmun").forEach(sec => {
         sec.classList.remove("gorunen");
@@ -5486,6 +5523,7 @@
         document.getElementById("mobil-menyu-btn").textContent = "☰ Mövzular";
       }
 
+      reklamYerleriniYenile();
       kecidDuymeleriniYenile();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -5552,6 +5590,7 @@
       if (tapilmadi) {
         tapilmadi.style.display = gorunenKart === 0 ? "block" : "none";
       }
+      reklamYerleriniYenile();
     }
 
     function dusturAxtarisTemizle(btn) {
@@ -5665,6 +5704,7 @@
       if (basliqEl) {
         basliqHerfAnimasiyasi(basliqEl.textContent);
       }
+      reklamYerleriniYenile();
       kecidDuymeleriniYenile();
     });
   </script>
